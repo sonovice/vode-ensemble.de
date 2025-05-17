@@ -256,15 +256,14 @@ const Header: Component = () => {
 							stroke-linecap="round"
 							stroke-linejoin="round"
 						>
+							<title>{isMenuOpen() ? t('nav.closeMenu', {}, 'Close menu') : t('nav.openMenu', {}, 'Open menu')}</title>
 							{isMenuOpen() ? (
 								<>
-									<title>{t('nav.closeMenu', {}, 'Close menu')}</title>
 									<path d="M18 6 6 18" />
 									<path d="m6 6 12 12" />
 								</>
 							) : (
 								<>
-									<title>{t('nav.openMenu', {}, 'Open menu')}</title>
 									<line x1="3" x2="21" y1="6" y2="6" />
 									<line x1="3" x2="21" y1="12" y2="12" />
 									<line x1="3" x2="21" y1="18" y2="18" />

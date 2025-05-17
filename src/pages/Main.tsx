@@ -1,4 +1,4 @@
-import { Component } from "solid-js"
+import type { Component } from "solid-js"
 import Hero from "../sections/Hero"
 import Ensemble from "../sections/Ensemble";
 import Concerts from "../sections/Konzerte";

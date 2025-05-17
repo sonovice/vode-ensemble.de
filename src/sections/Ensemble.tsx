@@ -184,47 +184,53 @@ const Ensemble: Component = () => {
                         <Show when={selectedVoicePart()} keyed
                             fallback={<p class="text-[var(--color-light-text)]/60 italic text-center text-lg">{t('ensemble.selectVoiceGroupPrompt', {}, 'Bitte eine Stimmgruppe auswählen.')}</p>}
                         >
-                            {(voicePartKey) => (
-                                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8 md:gap-x-6 md:gap-y-10">
-                                    <For each={members[voicePartKey!]}>
-                                        {(singer) => (
-                                            <div class="group text-center">
-                                                <div class="aspect-square overflow-hidden rounded-lg shadow-lg mb-3 relative bg-[var(--color-surface-alt)] bg-opacity-80 transition-all duration-300 group-hover:shadow-2xl ring-1 ring-gray-600">
-                                                    <Show
-                                                        when={singer.image && singer.image !== "/images/members/placeholder.jpg"}
-                                                        fallback={
-                                                            <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50">
-                                                                <svg class="w-1/2 h-1/2 text-[var(--color-surface-alt)]/40" fill="currentColor" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" /></svg>
-                                                            </div>
-                                                        }
-                                                    >
-                                                        <img
-                                                            src={singer.image}
-                                                            alt={`Portrait von ${singer.name}`}
-                                                            class="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
-                                                            loading="lazy"
-                                                        />
+                            {(voicePartKey) => {
+                                const voicePartMembers = members[voicePartKey];
+                                return (
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8 md:gap-x-6 md:gap-y-10">
+                                        <For each={voicePartMembers}>
+                                            {(singer) => (
+                                                <div class="group text-center">
+                                                    <div class="aspect-square overflow-hidden rounded-lg shadow-lg mb-3 relative bg-[var(--color-surface-alt)] bg-opacity-80 transition-all duration-300 group-hover:shadow-2xl ring-1 ring-gray-600">
+                                                        <Show
+                                                            when={singer.image && singer.image !== "/images/members/placeholder.jpg"}
+                                                            fallback={
+                                                                <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50">
+                                                                    <svg class="w-1/2 h-1/2 text-[var(--color-surface-alt)]/40" fill="currentColor" viewBox="0 0 448 512">
+                                                                        <title>Placeholder user icon</title>
+                                                                        <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                                                                    </svg>
+                                                                </div>
+                                                            }
+                                                        >
+                                                            <img
+                                                                src={singer.image}
+                                                                alt={`Portrait von ${singer.name}`}
+                                                                class="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                                                                loading="lazy"
+                                                            />
+                                                        </Show>
+                                                    </div>
+                                                    <h3 class="font-semibold text-lg text-[var(--color-light-text)] group-hover:text-[var(--color-accent)] transition-colors duration-200">{singer.name}</h3>
+                                                    <Show when={singer.description}>
+                                                        <p class="text-sm text-[var(--color-light-text)]/70 mt-0.5 text-balance">{singer.description}</p>
+                                                    </Show>
+                                                    <Show when={singer.website}>
+                                                        <a
+                                                            href={singer.website}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            class="text-xs text-[var(--color-accent)] hover:underline transition-colors duration-200 mt-1 inline-block opacity-80 group-hover:opacity-100"
+                                                        >
+                                                            {t('ensemble.websiteLinkText', {}, 'Website')}
+                                                        </a>
                                                     </Show>
                                                 </div>
-                                                <h3 class="font-semibold text-lg text-[var(--color-light-text)] group-hover:text-[var(--color-accent)] transition-colors duration-200">{singer.name}</h3>
-                                                <Show when={singer.description}>
-                                                    <p class="text-sm text-[var(--color-light-text)]/70 mt-0.5 text-balance">{singer.description}</p>
-                                                </Show>
-                                                <Show when={singer.website}>
-                                                    <a
-                                                        href={singer.website}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        class="text-xs text-[var(--color-accent)] hover:underline transition-colors duration-200 mt-1 inline-block opacity-80 group-hover:opacity-100"
-                                                    >
-                                                        {t('ensemble.websiteLinkText', {}, 'Website')}
-                                                    </a>
-                                                </Show>
-                                            </div>
-                                        )}
-                                    </For>
-                                </div>
-                            )}
+                                            )}
+                                        </For>
+                                    </div>
+                                );
+                            }}
                         </Show>
                     </div>
 
@@ -238,13 +244,14 @@ const Ensemble: Component = () => {
                     {(() => {
                         const leitungNames = ["Katharina Gärtner", "Simon Herten", "Felicitas Grunden", "Maria Anna Waloschek"];
                         const leitungMembers: Singer[] = [];
-                        voicePartOrder.forEach(part => {
-                            members[part].forEach(member => {
+
+                        for (const part of voicePartOrder) {
+                            for (const member of members[part]) {
                                 if (leitungNames.includes(member.name)) {
                                     leitungMembers.push(member);
                                 }
-                            });
-                        });
+                            }
+                        }
 
                         // Ensure specific order if needed, or sort by name
                         // For now, they will appear in the order they are found
@@ -262,7 +269,10 @@ const Ensemble: Component = () => {
                                                     when={singer.image && singer.image !== "/images/members/placeholder.jpg"}
                                                     fallback={
                                                         <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50">
-                                                            <svg class="w-1/2 h-1/2 text-[var(--color-surface-alt)]/40" fill="currentColor" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" /></svg>
+                                                            <svg class="w-1/2 h-1/2 text-[var(--color-surface-alt)]/40" fill="currentColor" viewBox="0 0 448 512">
+                                                                <title>Placeholder user icon</title>
+                                                                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                                                            </svg>
                                                         </div>
                                                     }
                                                 >

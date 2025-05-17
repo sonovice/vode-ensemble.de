@@ -70,7 +70,10 @@ const Academy: Component = () => {
                                 class="w-full flex justify-between items-center px-6 py-5 text-left text-2xl font-semibold text-[var(--color-light-text)] hover:bg-[var(--color-surface-alt)] hover:bg-opacity-50 focus:outline-none transition-colors"
                             >
                                 <span>vode:expert</span>
-                                <svg class={`w-6 h-6 text-[var(--color-accent)] transform transition-transform duration-300 ${expertOpen() ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class={`w-6 h-6 text-[var(--color-accent)] transform transition-transform duration-300 ${expertOpen() ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Toggle expert section</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
                             </button>
                             <Show when={expertOpen()}>
                                 <div class="px-6 pb-6 pt-2 border-t border-[var(--color-accent)]">
@@ -87,7 +90,10 @@ const Academy: Component = () => {
                                 class="w-full flex justify-between items-center px-6 py-5 text-left text-2xl font-semibold text-[var(--color-light-text)] hover:bg-[var(--color-surface-alt)] hover:bg-opacity-50 focus:outline-none transition-colors"
                             >
                                 <span>{t('academy.collectiveTitle', {}, 'vode:collective')}</span>
-                                <svg class={`w-6 h-6 text-[var(--color-accent)] transform transition-transform duration-300 ${collectiveOpen() ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class={`w-6 h-6 text-[var(--color-accent)] transform transition-transform duration-300 ${collectiveOpen() ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Toggle collective section</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
                             </button>
                             <Show when={collectiveOpen()}>
                                 <div class="px-6 pb-6 pt-2 border-t border-[var(--color-accent)]">
