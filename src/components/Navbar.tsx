@@ -29,17 +29,18 @@ const Header: Component = () => {
 	const isRootPath = createMemo(() => location.pathname === '/');
 
 	const baseNavLinksConfig = createMemo(() => [
-		{ id: "ensemble", key: "nav.ensemble" },
-		{ id: "konzerte", key: "nav.konzerte" },
-		{ id: "academy", key: "nav.academy" },
-		{ id: "media", key: "nav.media" },
-		{ id: "kontakt", key: "nav.kontakt" },
+		{ id: "ensemble", key: "nav.ensemble", defaultLabel: "Ensemble" },
+		{ id: "konzerte", key: "nav.konzerte", defaultLabel: "Konzerte" },
+		{ id: "academy", key: "nav.academy", defaultLabel: "Academy" },
+		{ id: "media", key: "nav.media", defaultLabel: "Medien" },
+		{ id: "kontakt", key: "nav.kontakt", defaultLabel: "Kontakt" },
+		{ id: "support", key: "nav.supportAction", defaultLabel: "Support →" },
 	]);
 
 	const navLinks = createMemo(() =>
 		baseNavLinksConfig().map((link) => ({
 			id: link.id,
-			label: t(link.key, {}, link.id),
+			label: t(link.key, {}, link.defaultLabel),
 			href: `#${link.id}`,
 		})),
 	);
@@ -106,15 +107,9 @@ const Header: Component = () => {
 				const currentSectionEntry = intersectingEntries[0];
 
 				if (currentSectionEntry) {
-					if (currentSectionEntry.target.id === 'support') {
-						if (activeLinkHref() !== null) {
-							setActiveLinkHref(null);
-						}
-					} else {
-						const href = sectionIdToHrefMap.get(currentSectionEntry.target.id);
-						if (href && activeLinkHref() !== href) {
-							setActiveLinkHref(href);
-						}
+					const href = sectionIdToHrefMap.get(currentSectionEntry.target.id);
+					if (href && activeLinkHref() !== href) {
+						setActiveLinkHref(href);
 					}
 				}
 			}
@@ -178,42 +173,36 @@ const Header: Component = () => {
 				</a>
 
 				<nav class="hidden lg:flex flex-grow justify-center items-center">
-					<div class="flex space-x-6 items-center">
+					<div class="flex space-x-6 items-baseline">
 						<For each={navLinks()}>
 							{(link) => (
 								<a
 									href={link.href}
-									class={`text-lg hover:text-[var(--color-accent)] transition-colors pb-1 ${activeLinkHref() === link.href
-										? "text-[var(--color-accent)] border-b-2 border-[var(--color-accent)]"
-										: ""
-										}`}
+									class={
+										link.id === 'support'
+											? `text-lg bg-[var(--color-surface-alt)] hover:text-[var(--color-accent)] hover:filter hover:brightness-110 rounded-md px-3 py-1 transition-colors flex items-baseline ${activeLinkHref() === link.href ? 'filter brightness-90' : ''
+											}`
+											: `text-lg hover:text-[var(--color-accent)] transition-colors pb-1 ${activeLinkHref() === link.href
+												? "text-[var(--color-accent)] border-b-2 border-[var(--color-accent)]"
+												: ""
+											}`
+									}
 									onClick={(e) => handleNavLinkClick(e, link.href)}
 								>
 									{link.label}
+									{link.id === 'support' && (
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 ml-2 fill-red-400" aria-hidden="true">
+											<title>Support Heart Icon</title>
+											<path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+										</svg>
+									)}
 								</a>
 							)}
 						</For>
 					</div>
 				</nav>
 				<div class="hidden lg:flex items-center ml-4">
-					<button
-						type="button"
-						onClick={() => {
-							closeMenu();
-							if (isRootPath()) {
-								const supportSection = document.getElementById('support');
-								if (supportSection) supportSection.scrollIntoView({ behavior: 'smooth' });
-								else console.warn('Support section not found');
-							} else {
-								navigate('/#support');
-							}
-						}}
-						class="px-4 py-2 text-sm font-medium text-white bg-[var(--color-accent)] hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-opacity-50 rounded-md transition-colors"
-					>
-						{t('nav.supportAction', {}, 'Support →')}
-					</button>
-
-					<div class="ml-4">
+					<div class="">
 						<div class="flex flex-col h-9 rounded-md overflow-hidden">
 							<For each={allLocales}>
 								{(loc) => (
@@ -227,7 +216,7 @@ const Header: Component = () => {
 										class={`w-full h-1/2 flex items-center justify-center px-3 text-sm font-medium transition-colors focus:outline-none
 											${locale() === loc
 												? "bg-[var(--color-accent)] text-white font-semibold"
-												: "bg-[var(--color-surface-alt)] text-[var(--color-light-text)]/70 hover:bg-[var(--color-surface)] hover:text-[var(--color-accent)]"
+												: "bg-[var(--color-surface-alt)] text-[var(--color-light-text)]/70 hover:filter hover:brightness-110 hover:text-[var(--color-accent)]"
 											}`}
 									>
 										{LocalesLabels[loc as Locale]}
@@ -281,33 +270,27 @@ const Header: Component = () => {
 							{(link) => (
 								<a
 									href={link.href}
-									class={`text-lg py-1 hover:text-[var(--color-accent)] transition-colors ${activeLinkHref() === link.href ? "text-[var(--color-accent)]" : ""
-										}`}
+									class={
+										link.id === 'support'
+											? `text-lg bg-[var(--color-surface-alt)] hover:text-[var(--color-accent)] hover:filter hover:brightness-110 rounded-md px-4 py-1.5 transition-colors flex items-baseline ${activeLinkHref() === link.href ? 'filter brightness-90' : ''
+											}`
+											: `text-lg py-1 hover:text-[var(--color-accent)] transition-colors ${activeLinkHref() === link.href ? "text-[var(--color-accent)]" : ""
+											}`
+									}
 									onClick={(e) => {
 										handleNavLinkClick(e, link.href);
 									}}
 								>
 									{link.label}
+									{link.id === 'support' && (
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 ml-2 fill-red-400" aria-hidden="true">
+											<title>Support Heart Icon</title>
+											<path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+										</svg>
+									)}
 								</a>
 							)}
 						</For>
-						<button
-							type="button"
-							onClick={() => {
-								closeMenu();
-								if (isRootPath()) {
-									const supportSection = document.getElementById('support');
-									if (supportSection) supportSection.scrollIntoView({ behavior: 'smooth' });
-									else console.warn('Support section not found');
-								} else {
-									navigate('/#support');
-								}
-							}}
-							class="mt-2 px-6 py-2 text-base font-medium text-white bg-[var(--color-accent)] hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-opacity-50 rounded-md transition-colors"
-						>
-							{t('nav.supportAction', {}, 'Support →')}
-						</button>
-
 						<div class="mt-4 flex items-center justify-center border-t border-[var(--color-surface)] pt-4">
 							<div class="flex items-center rounded-md overflow-hidden">
 								<For each={allLocales}>
@@ -323,7 +306,7 @@ const Header: Component = () => {
 											class={`px-4 py-1.5 text-sm font-medium transition-colors focus:outline-none
 												${locale() === loc
 													? "bg-[var(--color-accent)] text-white font-semibold"
-													: "bg-[var(--color-surface-alt)] text-[var(--color-light-text)]/70 hover:bg-[var(--color-surface)] hover:text-[var(--color-accent)]"
+													: "bg-[var(--color-surface-alt)] text-[var(--color-light-text)]/70 hover:filter hover:brightness-110 hover:text-[var(--color-accent)]"
 												}`}
 										>
 											{LocalesLabels[loc as Locale]}

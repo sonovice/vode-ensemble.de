@@ -8,7 +8,7 @@ const de: BaseDictionary = {
     media: "Medien",
     kontakt: "Kontakt",
     support: "Unterstützen",
-    supportAction: "Unterstützen →", // For the button with arrow
+    supportAction: "Unterstützen", // For the button with arrow
     openMenu: "Menü öffnen",
     closeMenu: "Menü schließen",
     // Language switcher labels will be handled by LocalesLabels from config
@@ -75,8 +75,9 @@ const de: BaseDictionary = {
     sectionTag: "Kontakt",
     title: "So kannst du uns erreichen",
     subtitle1: "Bleib informiert",
-    paragraph1: "Möchtest du regelmäßig über unsere Musik und Auftritte erfahren? Hier kannst du dich für unseren Newsletter anmelden oder uns auf <a href=\"#media\" class=\"text-[var(--color-accent)] hover:underline\">Social Media</a> folgen.",
-    newsletterButton: "Zum Newsletter",
+    paragraph1: "Möchtest du regelmäßig über unsere Musik und Auftritte erfahren? Hier kannst du dich für unseren Newsletter anmelden oder uns auf Social Media folgen.",
+    newsletterButton: "Newsletter",
+    newsletterIconTitle: "Newsletter Icon",
     paragraph2: "Und wenn's noch etwas mehr sein darf und du mit exklusiven Einblicken, Backstage-News und der Möglichkeit, uns aktiv zu unterstützen dabei sein möchtest, dann kommst du hier zu unseren <a href=\"#support\" class=\"text-[var(--color-accent)] hover:underline\">Community-Updates</a>.",
     subtitle2: "Booking & Anfragen",
     paragraph3: "Für Buchungsanfragen oder sonstige Anliegen erreichst du Maria Waloschek und Felicitas Ammer über <a href=\"mailto:mail@vode-ensemble.de\" class=\"text-[var(--color-accent)] hover:underline\">mail@vode-ensemble.de</a>."

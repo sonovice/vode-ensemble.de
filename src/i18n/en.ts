@@ -8,7 +8,7 @@ const en: BaseDictionary = {
     media: "Media",
     kontakt: "Contact",
     support: "Support",
-    supportAction: "Support →",
+    supportAction: "Support",
     openMenu: "Open menu",
     closeMenu: "Close menu",
   },
@@ -44,7 +44,7 @@ const en: BaseDictionary = {
   academy: {
     sectionTag: "Education",
     title: "vode academy", // Or simply "Academy"
-    paragraph1: "Music for us is created together. To make our concerts special, we bring to our rehearsals what each of us does best: Some members of vode work as vocal coaches, helping to realize musical ideas vocally. Others teach at schools and develop innovative rehearsal formats for groups. Still others work as sound engineers and have a fine sense for sound and details.",
+    paragraph1: "For us, music is created in a spirit of collaboration. To make our concerts special, we bring to our rehearsals what each of us does best: Some members of vode work as vocal coaches, helping to realize musical ideas vocally. Others teach at schools and develop innovative rehearsal formats for groups. Still others work as sound engineers and have a fine sense for sound and details.",
     paragraph2: "These diverse experiences and strengths flow into our joint rehearsal work – and we all benefit from it. We don't just pass this knowledge on internally: We also share it with other choirs, having developed various workshop and coaching formats for this purpose.",
     paragraph3: "Our education project this year is aimed at youth choirs.",
     formatsTitle: "Our Formats",
@@ -73,8 +73,9 @@ const en: BaseDictionary = {
     sectionTag: "Contact",
     title: "How to reach us",
     subtitle1: "Stay informed",
-    paragraph1: "Would you like to receive regular updates about our music and performances? Here you can sign up for our newsletter or follow us on <a href=\"#media\" class=\"text-[var(--color-accent)] hover:underline\">Social Media</a>.",
-    newsletterButton: "Subscribe to Newsletter",
+    paragraph1: "Would you like to receive regular updates about our music and performances? Here you can sign up for our newsletter or follow us on Social Media.",
+    newsletterButton: "Newsletter",
+    newsletterIconTitle: "Newsletter Icon",
     paragraph2: "For even more, including exclusive insights, backstage news, and the opportunity to actively support us, you can find our <a href=\"#support\" class=\"text-[var(--color-accent)] hover:underline\">Community Updates</a> here.",
     subtitle2: "Booking & Inquiries",
     paragraph3: "For booking or general inquiries, you can reach Maria Waloschek and Felicitas Ammer at <a href=\"mailto:mail@vode-ensemble.de\" class=\"text-[var(--color-accent)] hover:underline\">mail@vode-ensemble.de</a>."

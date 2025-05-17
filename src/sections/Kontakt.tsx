@@ -24,7 +24,7 @@ const Kontakt: Component = () => {
                         </h2>
                         <p
                             class="text-lg text-[var(--color-light-text)]/80 mb-4"
-                            innerHTML={t('contact.paragraph1', {}, 'Möchtest du regelmäßig über unsere Musik und Auftritte erfahren? Hier kannst du dich für unseren Newsletter anmelden oder uns auf <a href="#media" class="text-[var(--color-accent)] hover:underline">Social Media</a> folgen.')}
+                            innerHTML={t('contact.paragraph1', {}, 'Möchtest du regelmäßig über unsere Musik und Auftritte erfahren? Hier kannst du dich für unseren Newsletter anmelden oder uns auf Social Media folgen.')}
                         />
                         <div class="flex flex-wrap gap-4 mb-4">
                             <a
@@ -34,7 +34,11 @@ const Kontakt: Component = () => {
                                 class="inline-flex items-center justify-center w-full sm:w-auto px-4 py-2 bg-[var(--color-accent)] text-white font-semibold rounded-lg hover:bg-opacity-80 transition-colors text-base"
                                 aria-label={t('contact.newsletterAriaLabel', {}, 'Melde dich für unseren Newsletter an')}
                             >
-                                {t('contact.newsletterButton', {}, 'Zum Newsletter')}
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 mr-2" fill="currentColor">
+                                    <title>{t('contact.newsletterIconTitle', {}, 'Newsletter Icon')}</title>
+                                    <path d="M96 96c0-35.3 28.7-64 64-64l288 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L80 480c-44.2 0-80-35.8-80-80L0 128c0-17.7 14.3-32 32-32s32 14.3 32 32l0 272c0 8.8 7.2 16 16 16s16-7.2 16-16L96 96zm64 24l0 80c0 13.3 10.7 24 24 24l112 0c13.3 0 24-10.7 24-24l0-80c0-13.3-10.7-24-24-24L184 96c-13.3 0-24 10.7-24 24zm208-8c0 8.8 7.2 16 16 16l48 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-48 0c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16l48 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-48 0c-8.8 0-16 7.2-16 16zM160 304c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-256 0c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-256 0c-8.8 0-16 7.2-16 16z" />
+                                </svg>
+                                {t('contact.newsletterButton', {}, 'Newsletter')}
                             </a>
                             <a href="https://www.instagram.com/vode.ensemble" target="_blank" rel="noopener noreferrer" aria-label={t('media.instagramAriaLabel', {}, 'Vode Ensemble auf Instagram')} class="inline-flex items-center justify-center w-full sm:w-auto px-4 py-2 bg-[var(--color-accent)] text-white font-semibold rounded-lg hover:bg-opacity-80 transition-colors text-base">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 mr-2" fill="currentColor">

@@ -1,4 +1,4 @@
-import { type Component } from "solid-js";
+import type { Component } from "solid-js";
 import { useI18n } from "../i18n";
 
 const Support: Component = () => {
@@ -76,7 +76,7 @@ const Support: Component = () => {
                     </div>
 
                     {/* Closing Paragraph */}
-                    <p class="mt-6 pt-4 text-gray-300 text-center text-xl font-semibold">
+                    <p class="mt-6 pt-4 text-gray-300 text-center text-xl font-semibold text-balance">
                         {t('support.closingParagraph', {}, 'Danke, dass durch eure finanziellen Beiträge Kultur ermöglicht wird und wir so gemeinsam musikalische Begegnungen schaffen können!')}
                     </p>
                 </div>
