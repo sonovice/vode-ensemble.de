@@ -1,4 +1,5 @@
-import { Component, createSignal, For, Show } from "solid-js"
+import { type Component, createSignal, For, Show } from "solid-js"
+import { useI18n } from "../i18n"
 
 // Member data and types
 interface Singer {
@@ -50,8 +51,21 @@ const members: Record<string, Singer[]> = {
 
 const voicePartOrder: string[] = ["Sopran", "Mezzosopran", "Alt", "Tenor", "Bariton", "Bass"];
 
+// Helper to map original voice part key to a translation key
+const getVoicePartTKey = (voicePartKey: string): string => {
+    switch (voicePartKey) {
+        case "Sopran": return "ensemble.voiceSoprano";
+        case "Mezzosopran": return "ensemble.voiceMezzo";
+        case "Alt": return "ensemble.voiceAlto";
+        case "Tenor": return "ensemble.voiceTenor";
+        case "Bariton": return "ensemble.voiceBaritone";
+        case "Bass": return "ensemble.voiceBass";
+        default: return voicePartKey; // Fallback, should not happen with voicePartOrder
+    }
+};
+
 const Ensemble: Component = () => {
-    // Set the first voice part as selected by default
+    const { t } = useI18n();
     const [selectedVoicePart, setSelectedVoicePart] = createSignal<string | null>(voicePartOrder[0] || null);
     const [isDropdownOpen, setIsDropdownOpen] = createSignal(false);
 
@@ -77,17 +91,17 @@ const Ensemble: Component = () => {
                     </div>
                     <div class="w-full lg:w-1/2 text-left xl:px-12 lg:mt-12">
                         <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
-                            Eine Familie
+                            {t('ensemble.sectionTag', {}, 'Eine Familie')}
                         </p>
                         <h2 class="lg:-ml-38 xl:-ml-48 text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-[var(--color-light-text)]">
-                            Das{" "}<br class="hidden lg:block" />Ensemble
+                            {/* The <br class="hidden lg:block" /> needs to be handled here if important */}
+                            {t('ensemble.title', {}, 'Das Ensemble')}
                         </h2>
-                        <p class="md:text-lg leading-relaxed text-[var(--color-light-text)]/80">
-                            <span class="italic">vode</span> ist ein Vokalensemble, das Jazz- und Popmusik macht. Wir haben uns 2021 gegründet, unsere gemeinsame Geschichte wurzelt aber schon in unserer Studienzeit an der Hochschule für Musik Detmold. Seitdem sind wir musikalisch und freundschaftlich miteinander verbunden.
+                        <p class="md:text-lg leading-relaxed text-[var(--color-light-text)]/80"
+                            innerHTML={t('ensemble.paragraph1', {}, 'Paragraph 1 missing') || ''}>
                         </p>
-                        <p class="md:text-lg leading-relaxed mt-4 text-[var(--color-light-text)]/80">
-                            Wir sind ein Kollektiv von rund 20 Musiker:innen, die unsere verschiedenen kreativen Ideen und Potenziale in das Ensemble einbringen. Zusammengewoben zu einem musikalischen Gesamtbild werden diese Ideen von Katharina Gärtner und Simon Herten. Seit 2022 haben wir mehrere Konzertprogramme auf die Bühnen gebracht (u. a. in der Elbphilharmonie in Hamburg und der Rudolf-Oetker-Halle in Bielefeld) und an Festivals teilgenommen (z. B. dem Black Forest Voices Festival in Freiburg und TotalChoral in Berlin).
-                            {/* Verschiedene Video- und Audioaufnahmen sind während der Zeit entstanden [und ein ganz besonderes Highlight ist hierbei unsere musikalische Kollaboration mit den New York Voices]. */}
+                        <p class="md:text-lg leading-relaxed mt-4 text-[var(--color-light-text)]/80"
+                            innerHTML={t('ensemble.paragraph2', {}, 'Paragraph 2 missing') || ''}>
                         </p>
                         {/* <p class="md:text-lg leading-relaxed mt-4">
                             Wir freuen uns darüber, dass wir in der Saison 2024/25 vom Kultursekretariat NRW Gütersloh gefördert werden und bedanken uns für die Unterstützung.
@@ -139,22 +153,22 @@ const Ensemble: Component = () => {
                         </Show>
                     </div> */}
 
-                    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-[var(--color-light-text)]">Mitglieder</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-[var(--color-light-text)]">{t('ensemble.membersTitle', {}, 'Mitglieder')}</h2>
 
 
                     {/* Desktop Tabs Filter - Hidden below md */}
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap md:justify-center gap-3 mb-12">
                         <For each={voicePartOrder}>
-                            {(voicePart) => (
-                                <button
-                                    onClick={() => selectVoicePart(voicePart)}
+                            {(voicePartKey) => (
+                                <button type="button"
+                                    onClick={() => selectVoicePart(voicePartKey)}
                                     class={`w-full md:w-auto py-2 px-5 md:px-6 text-base md:text-lg text-center rounded-md transition-all duration-300 font-medium border-2  
-                                    ${selectedVoicePart() === voicePart
+                                    ${selectedVoicePart() === voicePartKey
                                             ? 'bg-[var(--color-accent)] text-white border-[var(--color-accent)]'
                                             : 'bg-transparent border-[var(--color-light-text)]/30 text-[var(--color-light-text)]/70 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]'
                                         }`}
                                 >
-                                    {voicePart}
+                                    {t(getVoicePartTKey(voicePartKey), {}, voicePartKey)}
                                 </button>
                             )}
                         </For>
@@ -168,7 +182,7 @@ const Ensemble: Component = () => {
                         }}
                     >
                         <Show when={selectedVoicePart()} keyed
-                            fallback={<p class="text-[var(--color-light-text)]/60 italic text-center text-lg">Bitte eine Stimmgruppe auswählen.</p>}
+                            fallback={<p class="text-[var(--color-light-text)]/60 italic text-center text-lg">{t('ensemble.selectVoiceGroupPrompt', {}, 'Bitte eine Stimmgruppe auswählen.')}</p>}
                         >
                             {(voicePartKey) => (
                                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-8 md:gap-x-6 md:gap-y-10">
@@ -203,7 +217,7 @@ const Ensemble: Component = () => {
                                                         rel="noopener noreferrer"
                                                         class="text-xs text-[var(--color-accent)] hover:underline transition-colors duration-200 mt-1 inline-block opacity-80 group-hover:opacity-100"
                                                     >
-                                                        Website
+                                                        {t('ensemble.websiteLinkText', {}, 'Website')}
                                                     </a>
                                                 </Show>
                                             </div>
@@ -215,10 +229,10 @@ const Ensemble: Component = () => {
                     </div>
 
 
-                    <h2 class="text-3xl md:text-4xl font-bold mt-16 mb-10 text-[var(--color-light-text)]">Leitung</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-16 mb-10 text-[var(--color-light-text)]">{t('ensemble.leadershipTitle', {}, 'Leitung')}</h2>
 
-                    <p class="md:text-lg leading-relaxed text-[var(--color-light-text)]/80 mb-10 max-w-3xl text-left">
-                        Als Kollektiv verschiedener Musiker:innen werden solistische, kompositorische oder organisatorische Parts von verschiedenen Mitgliedern übernommen. Die künstlerische Gesamtverantwortung für den Probenprozess und die Konzertgestaltung liegen bei Katharina Gärtner (Dirigentin) und Simon Herten (Sänger und Dirigent). Die organisatorische Leitung des Ensembles und das Booking übernehmen Felicitas Grunden und Maria Anna Waloschek.
+                    <p class="md:text-lg leading-relaxed text-[var(--color-light-text)]/80 mb-10 max-w-3xl text-left"
+                        innerHTML={t('ensemble.leadershipParagraph', {}, 'Error loading paragraph.') || ''}>
                     </p>
 
                     {(() => {
@@ -271,7 +285,7 @@ const Ensemble: Component = () => {
                                                     rel="noopener noreferrer"
                                                     class="text-xs text-[var(--color-accent)] hover:underline transition-colors duration-200 mt-1 inline-block opacity-80 group-hover:opacity-100"
                                                 >
-                                                    Website
+                                                    {t('ensemble.websiteLinkText', {}, 'Website')}
                                                 </a>
                                             </Show>
                                         </div>

@@ -1,7 +1,17 @@
-import { Component, For, JSX, createSignal, Show, createMemo } from "solid-js";
+import { type Component, For, type JSX, createSignal, Show, createMemo } from "solid-js";
+import { useI18n } from "../i18n";
+
+// Define ConcertEntry type based on existing structure
+type ConcertEntry = {
+    datetime: Date;
+    location: string;
+    address: string;
+    title: string;
+    description: JSX.Element;
+};
 
 // Original concert data structure
-const concerts: Record<string, { datetime: Date, location: string, address: string, title: string, description: JSX.Element }[]> = {
+const concerts: Record<string, ConcertEntry[]> = {
     "2025": [
         {
             datetime: new Date("2025-05-10 20:00"),
@@ -15,7 +25,7 @@ const concerts: Record<string, { datetime: Date, location: string, address: stri
             location: "Herzfeld",
             address: "Wallfahrtskirche",
             title: "vode academy - Abschlusskonzert",
-            description: <>Abschluss des zweitägigen Workshops <a href="#academy" class="text-[var(--color-accent)] hover:underline">“Chor macht Schule”</a>.</>
+            description: <>Abschluss des zweitägigen Workshops <a href="#academy" class="text-[var(--color-accent)] hover:underline">"Chor macht Schule"</a>.</>
         },
         {
             datetime: new Date("2025-10-03 19:00"),
@@ -174,7 +184,8 @@ const concerts: Record<string, { datetime: Date, location: string, address: stri
 };
 
 const Konzerte: Component = () => {
-    const sortedYears = Object.keys(concerts).sort((a, b) => parseInt(b) - parseInt(a));
+    const { t, locale } = useI18n();
+    const sortedYears = Object.keys(concerts).sort((a, b) => Number.parseInt(b) - Number.parseInt(a));
     const [selectedYear, setSelectedYear] = createSignal<string>('');
     const now = new Date();
 
@@ -188,7 +199,7 @@ const Konzerte: Component = () => {
     });
 
     const allUpcomingConcertsGlobal = createMemo(() => {
-        let all = [];
+        const all: ConcertEntry[] = [];
         for (const year in concerts) {
             all.push(...concerts[year].filter(c => c.datetime > now));
         }
@@ -203,10 +214,10 @@ const Konzerte: Component = () => {
             <div class="container mx-auto px-4">
                 <div class="w-full text-left mb-2">
                     <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
-                        Konzerte
+                        {t('concerts.sectionTag', {}, 'Konzerte')}
                     </p>
                     <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-2 text-[var(--color-light-text)]">
-                        Anstehende Events
+                        {t('concerts.title', {}, 'Anstehende Events')}
                     </h1>
                     {/* <p class="text-[var(--color-light-text)]/70 mb-6">
                         Hier finden Sie eine Übersicht unserer nächsten Auftritte. Weiter unten können Sie im Archiv vergangener Konzerte stöbern.
@@ -217,21 +228,21 @@ const Konzerte: Component = () => {
                         {/* <h2 class="text-3xl font-semibold mb-6 text-left text-[var(--color-light-text)]">Alle Kommenden Termine</h2> */}
                         <Show
                             when={allUpcomingConcertsGlobal().length > 0}
-                            fallback={<p class="text-center md:text-left text-lg text-[var(--color-light-text)]/60 italic mb-12">Zurzeit sind keine weiteren Konzerte geplant. Schauen Sie bald wieder vorbei!</p>}
+                            fallback={<p class="text-center md:text-left text-lg text-[var(--color-light-text)]/60 italic mb-12">{t('concerts.noUpcomingFallback', {}, 'Fallback text')}</p>}
                         >
                             <div class="space-y-6 mb-12">
                                 <For each={allUpcomingConcertsGlobal()}>
                                     {(concert) => (
                                         <div class="flex flex-row items-start p-4 bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
                                             <div class="flex flex-col items-center justify-start text-center w-fit md:w-24 mr-5 shrink-0 mb-0">
-                                                <div class="text-sm uppercase text-[var(--color-accent)] font-semibold tracking-wider">{concert.datetime.toLocaleDateString("de", { month: 'short' })}</div>
-                                                <div class="font-black text-3xl text-[var(--color-light-text)] my-0.5">{concert.datetime.getDate().toLocaleString("de", { minimumIntegerDigits: 2 })}</div>
-                                                <div class="text-sm text-[var(--color-light-text)]/70 font-medium">{concert.datetime.toLocaleDateString("de", { weekday: 'short' })}.</div>
+                                                <div class="text-sm uppercase text-[var(--color-accent)] font-semibold tracking-wider">{concert.datetime.toLocaleDateString(locale(), { month: 'short' })}</div>
+                                                <div class="font-black text-3xl text-[var(--color-light-text)] my-0.5">{concert.datetime.getDate().toLocaleString(locale(), { minimumIntegerDigits: 2 })}</div>
+                                                <div class="text-sm text-[var(--color-light-text)]/70 font-medium">{concert.datetime.toLocaleDateString(locale(), { weekday: 'short' })}.</div>
                                             </div>
                                             <div class="flex-grow text-left">
                                                 <h3 class="text-xl font-bold text-[var(--color-light-text)] mb-2">{concert.title}</h3>
                                                 <div class="text-md mb-1">
-                                                    <span class="font-semibold mr-2 text-[var(--color-light-text)]/80">{concert.datetime.toLocaleTimeString("de", { hour: '2-digit', minute: '2-digit' })} Uhr</span>
+                                                    <span class="font-semibold mr-2 text-[var(--color-light-text)]/80">{concert.datetime.toLocaleTimeString(locale(), { hour: '2-digit', minute: '2-digit' })} {t('concerts.timeSuffix', {}, 'Uhr')}</span>
                                                     <span class="text-[var(--color-accent)] font-medium">{concert.location}</span>
                                                 </div>
                                                 <Show when={concert.address}>
@@ -245,12 +256,13 @@ const Konzerte: Component = () => {
                             </div>
                         </Show>
 
-                        <h2 class="text-3xl font-semibold mt-12 mb-6 text-left text-[var(--color-light-text)]">Vergangene Konzerte</h2>
+                        <h2 class="text-3xl font-semibold mt-12 mb-6 text-left text-[var(--color-light-text)]">{t('concerts.pastTitle', {}, 'Vergangene Konzerte')}</h2>
 
                         <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-10">
                             <For each={sortedYears}>
                                 {(year) => (
                                     <button
+                                        type="button"
                                         onClick={() => setSelectedYear(year)}
                                         class={`py-2 px-4 text-lg rounded-md transition-all duration-300 font-medium border-2
                                         ${selectedYear() === year
@@ -274,22 +286,22 @@ const Konzerte: Component = () => {
                                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
                                     <For each={yearConcerts().past}>
                                         {(concert) => (
-                                            <div class="p-4 bg-[var(--color-surface-alt)] rounded-lg shadow-lg text-left transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
-                                                <div class="flex items-start">
-                                                    <div class="flex flex-col items-center text-center mr-3 shrink-0 pt-0.5">
-                                                        <div class="text-xs uppercase text-[var(--color-accent)] font-medium tracking-wider">{concert.datetime.toLocaleDateString("de", { month: 'short' })}</div>
-                                                        <div class="font-bold text-xl text-[var(--color-light-text)]">{concert.datetime.getDate().toLocaleString("de", { minimumIntegerDigits: 2 })}</div>
+                                            <div class="flex flex-row items-start p-4 bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20 w-full">
+                                                <div class="flex flex-col items-center justify-center text-center w-fit md:w-24 mr-5 shrink-0">
+                                                    <div class="text-sm uppercase text-[var(--color-accent)] font-semibold tracking-wider">{concert.datetime.toLocaleDateString(locale(), { month: 'short' })}</div>
+                                                    <div class="font-black text-3xl text-[var(--color-light-text)] my-0.5">{concert.datetime.getDate().toLocaleString(locale(), { minimumIntegerDigits: 2 })}</div>
+                                                    <div class="text-sm text-[var(--color-light-text)]/70 font-medium">{concert.datetime.toLocaleDateString(locale(), { weekday: 'short' })}.</div>
+                                                </div>
+                                                <div class="flex-grow text-left">
+                                                    <h3 class="text-xl font-bold text-[var(--color-light-text)] mb-2">{concert.title}</h3>
+                                                    <div class="text-md mb-1">
+                                                        <span class="font-semibold mr-2 text-[var(--color-light-text)]/80">{concert.datetime.toLocaleTimeString(locale(), { hour: '2-digit', minute: '2-digit' })} {t('concerts.timeSuffix', {}, 'Uhr')}</span>
+                                                        <span class="text-[var(--color-accent)] font-medium">{concert.location}</span>
                                                     </div>
-                                                    <div class="flex-grow min-w-0">
-                                                        <h4 class="text-md font-semibold text-[var(--color-light-text)] mb-0.5 truncate" title={concert.title}>{concert.title}</h4>
-                                                        <div class="text-xs mb-0.5">
-                                                            <span class="text-[var(--color-light-text)]/70">{concert.datetime.toLocaleTimeString("de", { hour: '2-digit', minute: '2-digit' })} Uhr - </span>
-                                                            <span class="text-[var(--color-accent)] font-medium">{concert.location}</span>
-                                                        </div>
-                                                        {/* <Show when={concert.description && concert.description.toString().trim() !== ''}>
-                                                            <div class="text-xs text-[var(--color-light-text)]/70 prose prose-xs prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline mt-1">{concert.description}</div>
-                                                        </Show> */}
-                                                    </div>
+                                                    <Show when={concert.address}>
+                                                        <p class="text-sm text-[var(--color-light-text)]/70 mb-2">{concert.address}</p>
+                                                    </Show>
+                                                    <div class="text-sm text-[var(--color-light-text)]/80 prose prose-xs prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline">{concert.description}</div>
                                                 </div>
                                             </div>
                                         )}

@@ -1,4 +1,5 @@
-import { Component, createSignal, onMount, createEffect, on } from "solid-js";
+import { type Component, createSignal, onMount, createEffect, on } from "solid-js";
+import { useI18n } from "../i18n";
 
 const imagePaths = [
     "/images/ensemble/action_01.jpg",
@@ -9,6 +10,7 @@ const imagePaths = [
 
 const Hero: Component = () => {
     const [currentIndex, setCurrentIndex] = createSignal(0);
+    const { t } = useI18n();
 
     // Initial state: Layer 1 shows the first image, Layer 2 is hidden (can preload next)
     const [bgLayer1Style, setBgLayer1Style] = createSignal({
@@ -86,8 +88,8 @@ const Hero: Component = () => {
             {/* Text Content */}
             <div class="relative z-[3] text-center p-4">
                 <h1 class="font-bold leading-tight tracking-tight">
-                    <span class="block text-6xl md:text-8xl lg:text-9xl">Vocal Jazz</span>
-                    <span class="block text-6xl md:text-8xl lg:text-9xl mt-1 md:mt-2">& Pop</span>
+                    <span class="block text-6xl md:text-8xl lg:text-9xl">{t('hero.mainTitle', {}, 'Vocal Jazz')}</span>
+                    <span class="block text-6xl md:text-8xl lg:text-9xl mt-1 md:mt-2">{t('hero.subTitle', {}, '& Pop')}</span>
                 </h1>
             </div>
         </div>
