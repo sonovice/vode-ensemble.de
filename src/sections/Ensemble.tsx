@@ -7,20 +7,23 @@ interface Singer {
     image: string;
     description?: string;
     website?: string;
+    tKey?: string;
+    descriptionTKey?: string;
+    iconSvg?: string;
 }
 
 const members: Record<string, Singer[]> = {
     "Sopran": [
         { name: "Felicitas Grunden", image: "/images/portraits/f_grunden_1.jpg", website: "https://instagram.com/feliammer", description: "Sängerin, Musikpädagogin" },
-        { name: "Kristin Herten", image: "/images/portraits/k_herten_1.jpg" },
+        { name: "Tabea Sawatzki", image: "/images/portraits/t_sawatzki_1.jpg" },
         { name: "Liane Prager", image: "/images/portraits/l_prager_1.jpg" },
         { name: "Kristina Hügel", image: "/images/members/placeholder.jpg" },
     ],
     "Mezzosopran": [
+        { name: "Kristin Herten", image: "/images/portraits/k_herten_1.jpg" },
         { name: "Henriette Sauerwald", image: "/images/portraits/h_sauerwald_1.jpg", website: "https://instagram.com/frausauerwald", description: "Eis am Stiel, Speiseeis" },
-        { name: "Karin Peters", image: "/images/portraits/k_peters_1.jpg" },
+        { name: "Karin Peters", image: "/images/portraits/k_peters_1.jpg", website: "https://instagram.com/karin.peters.music", description: "Sängerin, Gesangspädagogin" },
         { name: "Sümeyye Ergün-Langer", image: "/images/portraits/s_erguen-langer_1.jpg", website: "https://www.sumeyye-ergun.de/", description: "Gitarristin, Musikpädagogin" },
-        { name: "Tabea Sawatzki", image: "/images/portraits/t_sawatzki_1.jpg" },
         { name: "Maria Anna Waloschek", image: "/images/portraits/m_waloschek_1.jpg", website: "https://www.maria-anna-waloschek.de", description: "Pianistin, Musikpädagogin, Musik|hoch|schuldidaktikerin" },
     ],
     "Alt": [
@@ -35,9 +38,9 @@ const members: Record<string, Singer[]> = {
         { name: "Philipp Kaiser", image: "/images/portraits/ph_kaiser_1.jpg", description: "Musiklehrer, Trompeter, Dirigent" },
         { name: "Sebastian Meyer", image: "/images/portraits/s_meyer_1.jpg" },
         { name: "Simon Herten", image: "/images/portraits/s_herten_1.jpg", description: "Sänger, Musikpädagoge, Dirigent" },
-        { name: "Tobias Hägele", image: "/images/portraits/t_haegele_1.jpg" },
     ],
     "Bariton": [
+        { name: "Tobias Hägele", image: "/images/portraits/t_haegele_1.jpg" },
         { name: "Christoph Stutzinger", image: "/images/portraits/ch_stutzinger_1.jpg", description: "Musiklehrer, Blockflötist, Chorleiter" },
         { name: "Martin Dreßler", image: "/images/portraits/m_dressler_1.jpg", website: "https://instagram.com/woodyturner92", description: "Tonmeister" },
         { name: "Martin Pilger", image: "/images/portraits/m_pilger_1.jpg" },
@@ -45,7 +48,8 @@ const members: Record<string, Singer[]> = {
     "Bass": [
         { name: "Lukas Kuhlmann", image: "/images/portraits/l_kuhlmann_1.jpg", description: "Tonmeister" },
         { name: "Manuel Grunden", image: "/images/portraits/m_grunden_1.jpg", website: "https://instagram.com/manuelgrunden", description: "Tonmeister, Arrangeur" },
-        { name: "Simon Waloschek", image: "/images/portraits/s_waloschek_1.jpg", description: "(Musik-)Softwaregingenieur" },
+        { name: "Simon Waloschek", image: "/images/portraits/s_waloschek_1.jpg", description: "(Musik-)Softwareingenieur" },
+        { name: "Vielleicht du?", image: "MAYBE_YOU_ICON", tKey: "ensemble.maybeYouName", descriptionTKey: "ensemble.maybeYouDescriptionBass", iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-1/2 h-1/2" fill="currentColor"><title>Question Mark Icon</title><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>' },
     ],
 };
 
@@ -91,7 +95,7 @@ const Ensemble: Component = () => {
                     </div>
                     <div class="w-full lg:w-1/2 text-left xl:px-12 lg:mt-12">
                         <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
-                            {t('ensemble.sectionTag', {}, 'Eine Familie')}
+                            {t('ensemble.sectionTag', {}, 'Über uns')}
                         </p>
                         <h2 class="lg:-ml-38 xl:-ml-48 text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-[var(--color-light-text)]">
                             {/* The <br class="hidden lg:block" /> needs to be handled here if important */}
@@ -102,6 +106,9 @@ const Ensemble: Component = () => {
                         </p>
                         <p class="md:text-lg leading-relaxed mt-4 text-[var(--color-light-text)]/80"
                             innerHTML={t('ensemble.paragraph2', {}, 'Paragraph 2 missing') || ''}>
+                        </p>
+                        <p class="md:text-lg leading-relaxed mt-4 text-[var(--color-light-text)]/80"
+                            innerHTML={t('ensemble.paragraph3', {}, 'Paragraph 3 missing') || ''}>
                         </p>
                         {/* <p class="md:text-lg leading-relaxed mt-4">
                             Wir freuen uns darüber, dass wir in der Saison 2024/25 vom Kultursekretariat NRW Gütersloh gefördert werden und bedanken uns für die Unterstützung.
@@ -193,27 +200,39 @@ const Ensemble: Component = () => {
                                                 <div class="group text-center">
                                                     <div class="aspect-square overflow-hidden rounded-lg shadow-lg mb-3 relative bg-[var(--color-surface-alt)] bg-opacity-80 transition-all duration-300 group-hover:shadow-2xl ring-1 ring-gray-600">
                                                         <Show
-                                                            when={singer.image && singer.image !== "/images/members/placeholder.jpg"}
+                                                            when={singer.image && singer.image !== "/images/members/placeholder.jpg" && singer.image !== "MAYBE_YOU_ICON"}
                                                             fallback={
-                                                                <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50">
-                                                                    <svg class="w-1/2 h-1/2 text-[var(--color-surface-alt)]/40" fill="currentColor" viewBox="0 0 448 512">
-                                                                        <title>Placeholder user icon</title>
-                                                                        <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
-                                                                    </svg>
-                                                                </div>
+                                                                <Show when={singer.iconSvg}
+                                                                    fallback={
+                                                                        <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50">
+                                                                            <svg class="w-1/2 h-1/2 text-[var(--color-surface-alt)]/40" fill="currentColor" viewBox="0 0 448 512">
+                                                                                <title>{t('ensemble.placeholderIconTitle', {}, 'Placeholder user icon')}</title>
+                                                                                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                                                                            </svg>
+                                                                        </div>
+                                                                    }
+                                                                >
+                                                                    <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50 text-[var(--color-surface-alt)]/40" innerHTML={singer.iconSvg}>
+                                                                        {/* The title inside SVG should be handled by the provided SVG string or i18n if needed */}
+                                                                    </div>
+                                                                </Show>
                                                             }
                                                         >
                                                             <img
                                                                 src={singer.image}
-                                                                alt={`Portrait von ${singer.name}`}
+                                                                alt={`${t('ensemble.portraitAltPrefix', {}, 'Portrait of')} ${singer.tKey ? t(singer.tKey, {}, singer.name) : singer.name}`}
                                                                 class="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
                                                                 loading="lazy"
                                                             />
                                                         </Show>
                                                     </div>
-                                                    <h3 class="font-semibold text-lg text-[var(--color-light-text)] group-hover:text-[var(--color-accent)] transition-colors duration-200">{singer.name}</h3>
-                                                    <Show when={singer.description}>
-                                                        <p class="text-sm text-[var(--color-light-text)]/70 mt-0.5 text-balance">{singer.description}</p>
+                                                    <h3 class="font-semibold text-lg text-[var(--color-light-text)]">
+                                                        {singer.tKey ? t(singer.tKey, {}, singer.name) : singer.name}
+                                                    </h3>
+                                                    {/* <Show when={singer.description || singer.descriptionTKey}>
+                                                        <p class="text-sm text-[var(--color-light-text)]/70 mt-0.5 text-balance">
+                                                            {singer.descriptionTKey ? t(singer.descriptionTKey, {}, singer.description || '') : singer.description}
+                                                        </p>
                                                     </Show>
                                                     <Show when={singer.website}>
                                                         <a
@@ -224,7 +243,7 @@ const Ensemble: Component = () => {
                                                         >
                                                             {t('ensemble.websiteLinkText', {}, 'Website')}
                                                         </a>
-                                                    </Show>
+                                                    </Show> */}
                                                 </div>
                                             )}
                                         </For>
@@ -266,38 +285,50 @@ const Ensemble: Component = () => {
                                         <div class="group text-center">
                                             <div class="aspect-square overflow-hidden rounded-lg shadow-lg mb-3 relative bg-[var(--color-surface-alt)] bg-opacity-80 transition-all duration-300 group-hover:shadow-2xl ring-1 ring-gray-600">
                                                 <Show
-                                                    when={singer.image && singer.image !== "/images/members/placeholder.jpg"}
+                                                    when={singer.image && singer.image !== "/images/members/placeholder.jpg" && singer.image !== "MAYBE_YOU_ICON"}
                                                     fallback={
-                                                        <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50">
-                                                            <svg class="w-1/2 h-1/2 text-[var(--color-surface-alt)]/40" fill="currentColor" viewBox="0 0 448 512">
-                                                                <title>Placeholder user icon</title>
-                                                                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
-                                                            </svg>
-                                                        </div>
+                                                        <Show when={singer.iconSvg}
+                                                            fallback={
+                                                                <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50">
+                                                                    <svg class="w-1/2 h-1/2 text-[var(--color-surface-alt)]/40" fill="currentColor" viewBox="0 0 448 512">
+                                                                        <title>{t('ensemble.placeholderIconTitle', {}, 'Placeholder user icon')}</title>
+                                                                        <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                                                                    </svg>
+                                                                </div>
+                                                            }
+                                                        >
+                                                            <div class="w-full h-full flex items-center justify-center bg-[#B4BEB0] bg-opacity-50 text-[var(--color-surface-alt)]/40" innerHTML={singer.iconSvg}>
+                                                                {/* The title inside SVG should be handled by the provided SVG string or i18n if needed */}
+                                                            </div>
+                                                        </Show>
                                                     }
                                                 >
                                                     <img
                                                         src={singer.image}
-                                                        alt={`Portrait von ${singer.name}`}
+                                                        alt={`${t('ensemble.portraitAltPrefix', {}, 'Portrait of')} ${singer.tKey ? t(singer.tKey, {}, singer.name) : singer.name}`}
                                                         class="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
                                                         loading="lazy"
                                                     />
                                                 </Show>
                                             </div>
-                                            <h3 class="font-semibold text-lg text-[var(--color-light-text)] group-hover:text-[var(--color-accent)] transition-colors duration-200">{singer.name}</h3>
-                                            <Show when={singer.description}>
-                                                <p class="text-sm text-[var(--color-light-text)]/70 mt-0.5">{singer.description}</p>
-                                            </Show>
-                                            <Show when={singer.website}>
-                                                <a
-                                                    href={singer.website}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    class="text-xs text-[var(--color-accent)] hover:underline transition-colors duration-200 mt-1 inline-block opacity-80 group-hover:opacity-100"
-                                                >
-                                                    {t('ensemble.websiteLinkText', {}, 'Website')}
-                                                </a>
-                                            </Show>
+                                            <h3 class="font-semibold text-lg text-[var(--color-light-text)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
+                                                {singer.tKey ? t(singer.tKey, {}, singer.name) : singer.name}
+                                            </h3>
+                                            {/* <Show when={singer.description || singer.descriptionTKey}>
+                                                        <p class="text-sm text-[var(--color-light-text)]/70 mt-0.5">
+                                                            {singer.descriptionTKey ? t(singer.descriptionTKey, {}, singer.description || '') : singer.description}
+                                                        </p>
+                                                    </Show>
+                                                    <Show when={singer.website}>
+                                                        <a
+                                                            href={singer.website}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            class="text-xs text-[var(--color-accent)] hover:underline transition-colors duration-200 mt-1 inline-block opacity-80 group-hover:opacity-100"
+                                                        >
+                                                            {t('ensemble.websiteLinkText', {}, 'Website')}
+                                                        </a>
+                                                    </Show> */}
                                         </div>
                                     )}
                                 </For>

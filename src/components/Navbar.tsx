@@ -180,10 +180,10 @@ const Header: Component = () => {
 									href={link.href}
 									class={
 										link.id === 'support'
-											? `text-lg bg-[var(--color-surface-alt)] hover:text-[var(--color-accent)] hover:filter hover:brightness-110 rounded-md px-3 py-1 transition-colors flex items-baseline ${activeLinkHref() === link.href ? 'filter brightness-90' : ''
+											? `text-lg bg-[var(--color-surface-alt)] hover:text-[var(--color-accent)] hover:filter hover:brightness-110 rounded-md px-3 py-1 transition-colors flex items-baseline ${activeLinkHref() === link.href ? 'text-[var(--color-accent)]' : ''
 											}`
 											: `text-lg hover:text-[var(--color-accent)] transition-colors pb-1 ${activeLinkHref() === link.href
-												? "text-[var(--color-accent)] border-b-2 border-[var(--color-accent)]"
+												? "text-[var(--color-accent)]"
 												: ""
 											}`
 									}
@@ -272,7 +272,7 @@ const Header: Component = () => {
 									href={link.href}
 									class={
 										link.id === 'support'
-											? `text-lg bg-[var(--color-surface-alt)] hover:text-[var(--color-accent)] hover:filter hover:brightness-110 rounded-md px-4 py-1.5 transition-colors flex items-baseline ${activeLinkHref() === link.href ? 'filter brightness-90' : ''
+											? `text-lg bg-[var(--color-surface-alt)] hover:text-[var(--color-accent)] hover:filter hover:brightness-110 rounded-md px-4 py-1.5 transition-colors flex items-baseline ${activeLinkHref() === link.href ? 'text-[var(--color-accent)]' : ''
 											}`
 											: `text-lg py-1 hover:text-[var(--color-accent)] transition-colors ${activeLinkHref() === link.href ? "text-[var(--color-accent)]" : ""
 											}`
