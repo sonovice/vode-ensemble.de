@@ -293,7 +293,7 @@ const Header: Component = () => {
 								</a>
 							)}
 						</For>
-						<div class="mt-4 flex items-center justify-center border-t border-[var(--color-surface)] pt-4">
+						<div class="mt-1.5 flex items-center justify-center border-t border-[var(--color-surface)] pt-4">
 							<div class="flex items-center rounded-md overflow-hidden">
 								<For each={allLocales}>
 									{(loc) => (

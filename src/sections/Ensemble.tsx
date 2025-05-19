@@ -90,7 +90,7 @@ const Ensemble: Component = () => {
                         <img
                             src="/images/ensemble/ensemble_portrait_01.jpg"
                             alt="Ensemble Gruppe"
-                            class="w-full object-contain aspect-square object-bottom lg:aspect-auto lg:h-full lg:object-center rounded-lg"
+                            class="w-full object-cover lg:object-contain aspect-square object-bottom lg:aspect-auto lg:h-full lg:object-center rounded-lg"
                         />
                     </div>
                     <div class="w-full lg:w-6/12 text-left xl:px-4 lg:mt-12">
@@ -282,7 +282,7 @@ const Ensemble: Component = () => {
 
 
                         return (
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8 md:gap-x-6 md:gap-y-10 px-6 pt-6 pb-3 rounded-xl bg-[var(--color-surface-alt)] shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
+                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8 md:gap-x-6 md:gap-y-10 px-6 pt-6 pb-3 rounded-xl bg-[var(--color-surface-alt)] shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
                                 <For each={leitungMembers}>
                                     {(singer) => (
                                         <div class="group text-center">
