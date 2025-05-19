@@ -85,15 +85,15 @@ const Ensemble: Component = () => {
         >
             <div class="container mx-auto px-4">
                 {/* "Eine Familie" Section */}
-                <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-16 lg:mb-24">
-                    <div class="w-full lg:w-1/2">
+                <div class="flex flex-col items-start lg:flex-row gap-8 lg:gap-16 mb-16 lg:mb-24">
+                    <div class="w-full lg:w-6/12">
                         <img
                             src="/images/ensemble/ensemble_portrait_01.jpg"
                             alt="Ensemble Gruppe"
-                            class="w-full object-cover aspect-square object-bottom lg:aspect-auto lg:h-full lg:object-center rounded-lg"
+                            class="w-full object-contain aspect-square object-bottom lg:aspect-auto lg:h-full lg:object-center rounded-lg"
                         />
                     </div>
-                    <div class="w-full lg:w-1/2 text-left xl:px-12 lg:mt-12">
+                    <div class="w-full lg:w-6/12 text-left xl:px-4 lg:mt-12">
                         <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
                             {t('ensemble.sectionTag', {}, 'Über uns')}
                         </p>
@@ -109,6 +109,9 @@ const Ensemble: Component = () => {
                         </p>
                         <p class="md:text-lg leading-relaxed mt-4 text-[var(--color-light-text)]/80"
                             innerHTML={t('ensemble.paragraph3', {}, 'Paragraph 3 missing') || ''}>
+                        </p>
+                        <p class="leading-relaxed mt-4 text-gray-400"
+                            innerHTML={t('ensemble.paragraph4', {}, 'Paragraph 4 missing') || ''}>
                         </p>
                         {/* <p class="md:text-lg leading-relaxed mt-4">
                             Wir freuen uns darüber, dass wir in der Saison 2024/25 vom Kultursekretariat NRW Gütersloh gefördert werden und bedanken uns für die Unterstützung.
@@ -183,7 +186,7 @@ const Ensemble: Component = () => {
 
                     {/* Member Cards Area */}
                     <div
-                        class="rounded-xl p-6 md:p-8 min-h-[200px] bg-[var(--color-surface-alt)] shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20"
+                        class="rounded-xl px-6 pt-6 pb-3 min-h-[200px] bg-[var(--color-surface-alt)] shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20"
                         classList={{
                             "flex items-center justify-center": !selectedVoicePart(),
                         }}
@@ -198,7 +201,7 @@ const Ensemble: Component = () => {
                                         <For each={voicePartMembers}>
                                             {(singer) => (
                                                 <div class="group text-center">
-                                                    <div class="aspect-square overflow-hidden rounded-lg shadow-lg mb-3 relative bg-[var(--color-surface-alt)] bg-opacity-80 transition-all duration-300 group-hover:shadow-2xl ring-1 ring-gray-600">
+                                                    <div class="aspect-square overflow-hidden rounded-lg shadow-lg mb-3 relative bg-[var(--color-surface-alt)] bg-opacity-80 transition-all duration-300 group-hover:shadow-2xl">
                                                         <Show
                                                             when={singer.image && singer.image !== "/images/members/placeholder.jpg" && singer.image !== "MAYBE_YOU_ICON"}
                                                             fallback={
@@ -279,11 +282,11 @@ const Ensemble: Component = () => {
 
 
                         return (
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8 md:gap-x-6 md:gap-y-10 p-6 md:p-8 rounded-xl bg-[var(--color-surface-alt)] shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8 md:gap-x-6 md:gap-y-10 px-6 pt-6 pb-3 rounded-xl bg-[var(--color-surface-alt)] shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
                                 <For each={leitungMembers}>
                                     {(singer) => (
                                         <div class="group text-center">
-                                            <div class="aspect-square overflow-hidden rounded-lg shadow-lg mb-3 relative bg-[var(--color-surface-alt)] bg-opacity-80 transition-all duration-300 group-hover:shadow-2xl ring-1 ring-gray-600">
+                                            <div class="aspect-square overflow-hidden rounded-lg shadow-lg mb-3 relative bg-[var(--color-surface-alt)] bg-opacity-80 transition-all duration-300 group-hover:shadow-2xl">
                                                 <Show
                                                     when={singer.image && singer.image !== "/images/members/placeholder.jpg" && singer.image !== "MAYBE_YOU_ICON"}
                                                     fallback={
@@ -311,7 +314,7 @@ const Ensemble: Component = () => {
                                                     />
                                                 </Show>
                                             </div>
-                                            <h3 class="font-semibold text-lg text-[var(--color-light-text)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
+                                            <h3 class="font-semibold text-lg text-[var(--color-light-text)]">
                                                 {singer.tKey ? t(singer.tKey, {}, singer.name) : singer.name}
                                             </h3>
                                             {/* <Show when={singer.description || singer.descriptionTKey}>

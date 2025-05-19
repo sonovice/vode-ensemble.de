@@ -24,8 +24,8 @@ const concerts: Record<string, ConcertEntry[]> = {
             datetime: new Date("2025-08-31 17:00"),
             location: "Herzfeld",
             address: "Wallfahrtskirche",
-            title: "vode academy - Abschlusskonzert",
-            description: <>Abschluss des zweitägigen Workshops <a href="#academy" class="text-[var(--color-accent)] hover:underline">"Chor macht Schule"</a>.</>
+            title: "A cappella Konzert",
+            description: <></>
         },
         {
             datetime: new Date("2025-10-03 19:00"),
