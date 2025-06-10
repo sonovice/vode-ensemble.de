@@ -12,6 +12,7 @@ const App: Component = () => {
       <Router base={import.meta.env.BASE_URL}>
         <Route path="/" component={() => <Layout><Main /></Layout>} />
         <Route path="/impressum" component={() => <Layout><Impressum /></Layout>} />
+        <Route path="/academy" component={() => <Layout><Academy2025 /></Layout>} />
         <Route path="/academy-2025" component={() => <Layout><Academy2025 /></Layout>} />
         <Route path="*" component={() => <Layout><Main /></Layout>} />
       </Router>

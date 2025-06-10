@@ -13,7 +13,7 @@ export default defineConfig(({ command }) => {
 			tailwindcss(),
 			sitemap({
 				hostname: "https://www.vode-ensemble.de",
-				dynamicRoutes: ["/impressum", "/academy-2025"],
+				dynamicRoutes: ["/impressum", "/academy-2025", "/academy"],
 			}),
 		],
 		server: {
