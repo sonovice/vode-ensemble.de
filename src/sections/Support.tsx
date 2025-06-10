@@ -66,7 +66,7 @@ const Support: Component = () => {
                             </div>
                             <div class="mt-6">
                                 <a
-                                    href="http://paypal.me/vodeensemble"
+                                    href="https://www.paypal.com/donate/?hosted_button_id=PHTXFZ5HHU89J"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     class="inline-flex items-center justify-center w-full sm:w-auto px-4 py-2 bg-[var(--color-accent)] text-white font-semibold rounded-lg hover:bg-opacity-80 transition-colors text-base"
