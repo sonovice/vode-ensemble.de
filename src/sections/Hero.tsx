@@ -2,10 +2,12 @@ import { type Component, createSignal, onMount, createEffect, on } from "solid-j
 import { useI18n } from "../i18n";
 
 const imagePaths = [
-    "/images/ensemble/action_01.jpg",
-    "/images/ensemble/action_02.jpg",
-    "/images/ensemble/action_03.jpg",
+    "/images/ensemble/action_06.jpg",
     "/images/ensemble/action_04.jpg",
+    "/images/ensemble/action_02.jpg",
+    "/images/ensemble/action_05.jpg",
+    "/images/ensemble/action_01.jpg",
+    "/images/ensemble/action_03.jpg",
 ];
 
 const Hero: Component = () => {
