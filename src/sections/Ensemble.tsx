@@ -17,7 +17,7 @@ const members: Record<string, Singer[]> = {
         { name: "Felicitas Grunden", image: "/images/portraits/f_grunden_1.jpg", website: "https://instagram.com/feliammer", description: "Sängerin, Musikpädagogin" },
         { name: "Tabea Sawatzki", image: "/images/portraits/t_sawatzki_1.jpg" },
         { name: "Liane Prager", image: "/images/portraits/l_prager_1.jpg" },
-        { name: "Kristina Hügel", image: "/images/members/placeholder.jpg" },
+        { name: "Kristina Hügel", image: "/images/portraits/k_huegel_1.jpg" },
     ],
     "Mezzosopran": [
         { name: "Kristin Herten", image: "/images/portraits/k_herten_1.jpg" },

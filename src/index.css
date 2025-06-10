@@ -12,8 +12,6 @@
     font-display: swap;
 }
 
-@import "@fontsource/comfortaa/400.css";
-@import "@fontsource/comfortaa/700.css";
 
 @theme {
     --color-dark: #111111;

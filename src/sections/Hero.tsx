@@ -75,15 +75,15 @@ const Hero: Component = () => {
             <div
                 class="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
                 style={bgLayer1Style()}
-            ></div>
+            />
             {/* Background Image Layer 2 */}
             <div
                 class="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
                 style={bgLayer2Style()}
-            ></div>
+            />
 
             {/* Overlay for better text readability */}
-            <div class="absolute inset-0 bg-black opacity-30 z-[2]"></div>
+            <div class="absolute inset-0 bg-black opacity-30 z-[2]" />
 
             {/* Text Content */}
             <div class="relative z-[3] text-center p-4">

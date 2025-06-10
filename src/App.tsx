@@ -3,6 +3,7 @@ import { Router, Route } from '@solidjs/router';
 import Main from './pages/Main';
 import Layout from './components/Layout';
 import Impressum from './pages/Impressum';
+import Academy2025 from './pages/Academy2025';
 import { I18nProvider } from './i18n';
 
 const App: Component = () => {
@@ -11,6 +12,7 @@ const App: Component = () => {
       <Router base={import.meta.env.BASE_URL}>
         <Route path="/" component={() => <Layout><Main /></Layout>} />
         <Route path="/impressum" component={() => <Layout><Impressum /></Layout>} />
+        <Route path="/academy-2025" component={() => <Layout><Academy2025 /></Layout>} />
       </Router>
     </I18nProvider>
   );
