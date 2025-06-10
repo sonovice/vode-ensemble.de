@@ -21,13 +21,13 @@ const members: Record<string, Singer[]> = {
     ],
     "Mezzosopran": [
         { name: "Kristin Herten", image: "/images/portraits/k_herten_1.jpg" },
+        { name: "Kristina Matthies", image: "/images/portraits/k_matthies_1.jpg", description: "Musiklehrerin" },
         { name: "Henriette Sauerwald", image: "/images/portraits/h_sauerwald_1.jpg", website: "https://instagram.com/frausauerwald", description: "Eis am Stiel, Speiseeis" },
         { name: "Karin Peters", image: "/images/portraits/k_peters_1.jpg", website: "https://instagram.com/karin.peters.music", description: "Sängerin, Gesangspädagogin" },
         { name: "Sümeyye Ergün-Langer", image: "/images/portraits/s_erguen-langer_1.jpg", website: "https://www.sumeyye-ergun.de/", description: "Gitarristin, Musikpädagogin" },
         { name: "Maria Anna Waloschek", image: "/images/portraits/m_waloschek_1.jpg", website: "https://www.maria-anna-waloschek.de", description: "Pianistin, Musikpädagogin, Musik|hoch|schuldidaktikerin" },
     ],
     "Alt": [
-        { name: "Kristina Matthies", image: "/images/portraits/k_matthies_1.jpg", description: "Musiklehrerin" },
         { name: "Anne-Fleur Cremers", image: "/images/portraits/a_cremers_1.jpg", website: "www.musik-in-muenster.de", description: "Sängerin, Musikpädagogin, Chorleiterin" },
         { name: "Clara Fabian", image: "/images/portraits/c_fabian_1.jpg", description: "Psychologische Beraterin, Sängerin, Gesangslehrerin" },
         { name: "Thea Henken", image: "/images/portraits/t_henken_1.jpg" },
