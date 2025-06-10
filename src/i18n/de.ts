@@ -76,6 +76,63 @@ const de: BaseDictionary = {
 		pastProjectsTitle: "Vergangene Projekte",
 		pastProjectYearLabel: "JAHR",
 		pastProjectLearnMore: "Mehr erfahren →",
+		// Academy2025 specific translations
+		academy2025: {
+			heroTitle: "vode academy 2025:",
+			heroSubtitle: "Chor macht Schule",
+			heroDescription:
+				"Schön, dass du den Weg zu uns gefunden hast! Hier findest du alle wichtigen Infos zum Projekt.",
+			timeLabel: "Zeitraum",
+			timeValue: "30. & 31. August",
+			locationLabel: "Ort & Adresse",
+			locationValue: "St. Ida in Herzfeld",
+			locationDetail: "Treffpunkt Haus Idenrast",
+			addressValue: "Lippstädter Str. 10, 59510 Herzfeld",
+			addressAlt: "oder",
+			transportTitle: "Anreise",
+			transportText:
+				"Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Dazu gibt es zwei Linien, die euch aus der Region zu uns nach Herzfeld fahren. Die genauen Abfahrtszeiten findest du demnächst hier auf der Seite.",
+			registerButton: "Jetzt kostenlos anmelden!",
+			registerSubtext: "Einzeln oder als ganzes Ensemble",
+			whatToExpectTitle: "Was erwartet dich bei unserem Projekt?",
+			whatToExpectSectionTag: "Unser Angebot",
+			teamworkTitle: "Teamgefühl",
+			teamworkText:
+				"Du probst gemeinsam mit anderen Jugendlichen aus der Region Lippe-Möhnesee und lernst neue Leute kennen – ganz ohne Leistungsdruck!",
+			coachingTitle: "Profi-Coaching",
+			coachingText:
+				"Katharina Gärtner und ihre Coaches von <strong>vode</strong> zeigen dir in lockeren Workshops, wie du deine Stimme richtig einsetzt und souverän auf der Bühne stehst.",
+			workshopConcertTitle: "Workshop-Konzert",
+			workshopConcertText:
+				"Am Ende des ersten Tages präsentierst du live im Workshop-Chor ein Werkstatt-Konzert. Gute Vibes und Fun garantiert!",
+			proConcertTitle: "Profi-Konzert",
+			proConcertText:
+				"Am zweiten Tag erlebst du <strong>vode</strong> hautnah, wenn sie die Basilika mit ihrem A-cappella-Mix aus Pop und Jazz in neue Klänge eintauchen.",
+			whyJoinTitle: "Warum solltest du dabei sein?",
+			whyJoinSectionTag: "Deine Vorteile",
+			funTitle: "Spaß am Singen",
+			funText:
+				'Gemeinsam Lieder lernen, die perfekt zu dir und deinen aktuellen "Vocal Skills" passen.',
+			newSongsTitle: "Neue Songs",
+			newSongsText:
+				"Viele Songs kannst du dir selbst erarbeiten und später auch mit deinem Chor an deiner Schule singen – so kannst du aus den Projekttagen noch lange etwas mitnehmen.",
+			experienceTitle: "Unvergessliche Erfahrung",
+			experienceText:
+				"Neue Freunde, magische Konzertstimmung und jede Menge Applaus!",
+			scheduleTitle: "Wie ist der Ablauf an den beiden Tagen?",
+			scheduleSectionTag: "Zeitplan",
+			saturdayTitle: "SAMSTAG",
+			sundayTitle: "SONNTAG",
+			additionalInfoTitle: "Was du noch wissen musst...",
+			additionalInfoSectionTag: "Wichtige Infos",
+			freeText:
+				"Das Projekt ist mit Mitteln aus dem LEADER-Programm gefördert und daher für dich <strong>komplett kostenfrei</strong>.",
+			snacksText:
+				"An beiden Tagen gibt es <strong>Snacks und etwas zu Trinken</strong> für dich.",
+			songsText:
+				"Aktuell komponieren und arrangieren wir noch fleißig für dich. Sobald wir alles zusammen haben, findest du den <strong>Zugang zu den Songs hier auf dieser Seite</strong>.",
+			formatsExpertiseTag: "Unsere Expertise",
+		},
 	},
 	media: {
 		sectionTag: "Medien",

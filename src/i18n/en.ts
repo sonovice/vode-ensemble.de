@@ -74,6 +74,63 @@ const en: BaseDictionary = {
 		pastProjectsTitle: "Past Projects",
 		pastProjectYearLabel: "YEAR",
 		pastProjectLearnMore: "Learn more →",
+		// Academy2025 specific translations
+		academy2025: {
+			heroTitle: "vode academy 2025:",
+			heroSubtitle: '"Chor macht Schule"',
+			heroDescription:
+				"Welcome! Here you'll find all the essential information about our project.",
+			timeLabel: "When",
+			timeValue: "August 30th & 31st",
+			locationLabel: "Where",
+			locationValue: "St. Ida in Herzfeld",
+			locationDetail: "Meet at Haus Idenrast",
+			addressValue: "Lippstädter Str. 10, 59510 Herzfeld",
+			addressAlt: "or",
+			transportTitle: "Getting There",
+			transportText:
+				"We provide eco-friendly transportation via shuttle buses! Two routes will bring you from the region to Herzfeld. Exact departure times will be posted on this page soon.",
+			registerButton: "Sign up now for free!",
+			registerSubtext: "Join as an individual or complete ensemble",
+			whatToExpectTitle: "What can you expect?",
+			whatToExpectSectionTag: "What We Offer",
+			teamworkTitle: "Team Building",
+			teamworkText:
+				"Rehearse alongside other young people from the Lippe-Möhnesee region and make new friends – no pressure, just fun!",
+			coachingTitle: "Expert Coaching",
+			coachingText:
+				"Katharina Gärtner and her <strong>vode</strong> coaches will guide you through relaxed workshops, teaching you proper vocal technique and confident stage presence.",
+			workshopConcertTitle: "Workshop Performance",
+			workshopConcertText:
+				"Cap off day one with a live workshop choir performance. Great vibes and guaranteed fun!",
+			proConcertTitle: "Professional Concert",
+			proConcertText:
+				"On day two, experience <strong>vode</strong> live as they fill the basilica with their stunning a cappella blend of pop and jazz.",
+			whyJoinTitle: "Why join us?",
+			whyJoinSectionTag: "Your Benefits",
+			funTitle: "Pure Joy",
+			funText:
+				"Learn songs perfectly tailored to you and your current vocal abilities.",
+			newSongsTitle: "Take Songs Home",
+			newSongsText:
+				"Many songs are yours to keep and perform with your school choir – extending the workshop experience long after it ends.",
+			experienceTitle: "Unforgettable Memories",
+			experienceText:
+				"New friendships, magical concert moments, and thunderous applause!",
+			scheduleTitle: "What's the daily schedule?",
+			scheduleSectionTag: "Schedule",
+			saturdayTitle: "SATURDAY",
+			sundayTitle: "SUNDAY",
+			additionalInfoTitle: "Important details...",
+			additionalInfoSectionTag: "Good to Know",
+			freeText:
+				"This project is funded through the LEADER program, making it <strong>completely free</strong> for participants.",
+			snacksText:
+				"<strong>Snacks and refreshments</strong> are provided both days.",
+			songsText:
+				"We're still hard at work composing and arranging your songs. Once ready, you'll find <strong>song access right here on this page</strong>.",
+			formatsExpertiseTag: "Our Expertise",
+		},
 	},
 	media: {
 		sectionTag: "Media",

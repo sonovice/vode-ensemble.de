@@ -51,13 +51,14 @@ const Academy: Component = () => {
                     </div>
 
                     {/* Image Column (Right) */}
-                    <div class="w-full lg:w-5/12">
+                    <a href="/academy-2025"
+                        class="w-full lg:w-5/12">
                         <img
                             src="/images/academy_2025.jpg"
                             alt="Academy Workshop Impression"
                             class="max-h-[500px] lg:max-h-full lg:w-full object-contain lg:h-full mx-auto rounded-lg"
                         />
-                    </div>
+                    </a>
                 </div>
 
                 {/* Bottom part: Past Projects - full or inset width */}
