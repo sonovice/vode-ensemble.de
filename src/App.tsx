@@ -13,6 +13,7 @@ const App: Component = () => {
         <Route path="/" component={() => <Layout><Main /></Layout>} />
         <Route path="/impressum" component={() => <Layout><Impressum /></Layout>} />
         <Route path="/academy-2025" component={() => <Layout><Academy2025 /></Layout>} />
+        <Route path="*" component={() => <Layout><Main /></Layout>} />
       </Router>
     </I18nProvider>
   );

@@ -44,8 +44,8 @@ async function fetchDictionary(locale: Locale): Promise<FlatDictionary> {
     return flatten(rawDict); // No cast needed if types align
 }
 
-// Translator function can accept Record<string, any> for params
-type TranslatorFunc = (key: string, params?: Record<string, any>, defaultValue?: string) => string | undefined;
+// Translator function can accept Record<string, unknown> for params
+type TranslatorFunc = (key: string, params?: Record<string, unknown>, defaultValue?: string) => string | undefined;
 
 export type I18nContextType = {
     t: TranslatorFunc;
@@ -115,7 +115,7 @@ export const LanguageSwitcher: Component = () => {
     };
 
     return (
-        <button onClick={toggleLanguage}>
+        <button type="button" onClick={toggleLanguage}>
             {locale() === "de" ? "EN" : "DE"}
         </button>
     );
