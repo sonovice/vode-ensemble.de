@@ -179,7 +179,8 @@ const de: BaseDictionary = {
 			'Für weitere Infos hierzu schreib uns unter <a href="mailto:mail@vode–ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode–ensemble.de</a>.',
 		donationsTitle: "Spenden",
 		donationsParagraph1:
-			"Wenn du uns unterstützen möchtest, dir ein Vereinsbeitritt aber nicht zusagt, freuen wir uns sehr über eine Spende per Überweisung.",
+			"Wenn du uns unterstützen möchtest, dir ein Vereinsbeitritt aber nicht zusagt, freuen wir uns sehr über eine Spende per Überweisung oder PayPal.",
+		paypalButtonText: "Über PayPal spenden",
 		donationsReferenceLabel: "Stichwort:",
 		donationsReferenceValue: "Spende",
 		sponsorsTitle: "Sponsoren",

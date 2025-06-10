@@ -177,7 +177,8 @@ const en: BaseDictionary = {
 			'For more information, please write to us at <a href="mailto:mail@vode–ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode–ensemble.de</a>.',
 		donationsTitle: "Donations",
 		donationsParagraph1:
-			"If you would like to support us but prefer not to become a member, we gratefully accept donations via bank transfer.",
+			"If you would like to support us but prefer not to become a member, we gratefully accept donations via bank transfer or PayPal.",
+		paypalButtonText: "Donate via PayPal",
 		donationsReferenceLabel: "Reference:",
 		donationsReferenceValue: "Donation",
 		sponsorsTitle: "Sponsors",
