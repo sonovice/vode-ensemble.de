@@ -172,12 +172,12 @@ const en: BaseDictionary = {
 			"As a non-profit association, we are able to issue certificates for contributions and donations. If required, please write to us at: mail@vode-ensemble.de",
 		friendsTitle: "Friends and Patrons",
 		friendsParagraph1:
-			"Become part of the vode community by joining the vode e. V. association as a supporting member. You can support our work with a regular contribution of your choice. This gives you access to our community updates, a behind-the-scenes look as new project ideas are developed, and insights into our rehearsal work. And, of course, you'll be the first to know about new concerts. This form of support enables us to plan long-term and is therefore very valuable to us. Payments can be conveniently made via SEPA direct debit mandate.",
+			"Become part of the vode community by supporting our work with a regular contribution of your choice. This gives you access to our community updates, a behind-the-scenes look at how new project ideas are developed, insights into our rehearsals, and of course, you'll be the first to know about new concerts. This form of support allows for long-term planning and is therefore very valuable to us.",
 		friendsParagraph2:
-			'For more information, please write to us at <a href="mailto:mail@vode–ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode–ensemble.de</a>.',
+			'For more information, write to us at <a href="mailto:mail@vode–ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode–ensemble.de</a>.',
 		donationsTitle: "Donations",
 		donationsParagraph1:
-			"If you would like to support us but prefer not to become a member, we gratefully accept donations via bank transfer or PayPal.",
+			"If you would like to support us with a one-time donation, we gratefully accept donations via bank transfer or PayPal.",
 		paypalButtonText: "Donate via PayPal",
 		donationsReferenceLabel: "Reference:",
 		donationsReferenceValue: "Donation",

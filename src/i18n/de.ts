@@ -174,12 +174,12 @@ const de: BaseDictionary = {
 			"Als gemeinnütziger Verein sind wir in der Lage, Bescheinigungen über Beiträge und Spenden auszustellen. Schreibt uns bei Bedarf bitte an: mail@vode-ensemble.de",
 		friendsTitle: "Freunde und Förderer",
 		friendsParagraph1:
-			"Werde Teil der vode-community, indem du als förderndes Mitglied dem Verein vode e. V. beitrittst. Mit einem selbst festgelegten regelmäßigen Beitrag kannst du unsere Arbeit unterstützen. Hierdurch hast du Zugang zu unseren Community-Updates, bist hautnah dabei, wie hinter den Kulissen neue Projekt-Ideen gesponnen werden und bekommst Einblicke in unsere Probenarbeit und natürlich weißt du dadurch als erstes über neue Konzerte Bescheid. Diese Form der Unterstützung ermöglicht uns eine langfristige Planung und ist deshalb sehr wertvoll für uns. Eine Abbuchung kann bequem über ein SEPA-Lastschriftmandat erfolgen.",
+			"Werde Teil der vode-community, indem du unsere Arbeit mit einem selbst festgelegten regelmäßigen Beitrag unterstützt. Hierdurch hast du Zugang zu unseren Community-Updates, bist hautnah dabei, wie hinter den Kulissen neue Projekt-Ideen gesponnen werden und bekommst Einblicke in unsere Probenarbeit und natürlich weißt du dadurch als erstes über neue Konzerte Bescheid. Diese Form der Unterstützung ermöglicht uns eine langfristige Planung und ist deshalb sehr wertvoll für uns.",
 		friendsParagraph2:
 			'Für weitere Infos hierzu schreib uns unter <a href="mailto:mail@vode–ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode–ensemble.de</a>.',
 		donationsTitle: "Spenden",
 		donationsParagraph1:
-			"Wenn du uns unterstützen möchtest, dir ein Vereinsbeitritt aber nicht zusagt, freuen wir uns sehr über eine Spende per Überweisung oder PayPal.",
+			"Wenn du uns einmalig unterstützen möchtest, freuen wir uns sehr über eine Spende per Überweisung oder PayPal.",
 		paypalButtonText: "Über PayPal spenden",
 		donationsReferenceLabel: "Stichwort:",
 		donationsReferenceValue: "Spende",
