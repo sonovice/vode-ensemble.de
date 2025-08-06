@@ -132,6 +132,14 @@ const de: BaseDictionary = {
 			songsText:
 				"Aktuell komponieren und arrangieren wir noch fleißig für dich. Sobald wir alles zusammen haben, findest du den <strong>Zugang zu den Songs hier auf dieser Seite</strong>.",
 			formatsExpertiseTag: "Unsere Expertise",
+			newsSectionTag: "News & Sheets",
+			newsTitle: 'Tutorial zu "The Voice Inside"',
+			newsIntro:
+				"Hier laden wir nach und nach neues Material für euch hoch. Schaut also immer mal wieder vorbei!",
+			voiceInsideTitle: "The Voice Inside - Tutorial",
+			newsText:
+				'Hey, habt ihr schon das "The Voice Inside" Tutorial gecheckt? Die Noten dazu findet ihr jetzt hier bei uns als Download! Perfekt, um schon mal reinzukommen und euch auf den Workshop vorzubereiten. Viel Spaß beim Üben!',
+			downloadButton: "Noten herunterladen",
 		},
 	},
 	media: {

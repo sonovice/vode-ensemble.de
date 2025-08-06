@@ -130,6 +130,14 @@ const en: BaseDictionary = {
 			songsText:
 				"We're still hard at work composing and arranging your songs. Once ready, you'll find <strong>song access right here on this page</strong>.",
 			formatsExpertiseTag: "Our Expertise",
+			newsSectionTag: "News & Sheets",
+			newsTitle: 'Tutorial for "The Voice Inside"',
+			newsIntro:
+				"We'll be uploading new material for you here gradually. So be sure to check back regularly!",
+			voiceInsideTitle: "The Voice Inside - Tutorial",
+			newsText:
+				'Hey, have you checked out the "The Voice Inside" tutorial yet? You can now download the sheet music right here! It\'s perfect for getting started and preparing for the workshop. Have fun practicing!',
+			downloadButton: "Download Sheets",
 		},
 	},
 	media: {
