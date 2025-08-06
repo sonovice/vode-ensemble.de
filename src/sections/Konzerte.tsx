@@ -23,7 +23,7 @@ const concerts: Record<string, ConcertEntry[]> = {
         {
             datetime: new Date("2025-08-31 17:00"),
             location: "Herzfeld",
-            address: "Wallfahrtskirche",
+            address: "Wallfahrtskirche St. Ida | Kirchplatz 3 | 59510 Lippetal",
             title: "A cappella Konzert",
             description: <></>
         },
@@ -39,7 +39,7 @@ const concerts: Record<string, ConcertEntry[]> = {
             location: "Wiesbaden",
             address: "Aula der Elly-Heuss-Schule Wiesbaden | Platz der Deutschen Einheit 2 | 65185 Wiesbaden",
             title: "Doppelkonzert mit perlemor",
-            description: <></>
+            description: <><a href="https://eventfrog.de/de/p/konzert/a-cappella-vocal/vocal-elements-zwei-ensembles-ein-leuchten-7351880902861939160.html" target="_blank" rel="noopener noreferrer"><button type="button" class="bg-[var(--color-accent)] cursor-pointer text-white font-bold px-4 py-2 rounded-md">Tickets</button></a></>
         }
     ],
     "2024": [
