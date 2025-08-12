@@ -141,6 +141,9 @@ const en: BaseDictionary = {
 			cloudyDayTitle: "Cloudy Day - Tutorial",
 			cloudyDayText:
 				'New online: our tutorial for "Cloudy Day"! It\'s a canon – perfect for singing together and warming up. Grab the sheet music here and have fun trying it out!',
+			lionLinesTitle: "Lion (Saint Mesa) – Vocal Lines",
+			lionLinesText:
+				"Today, Feli takes you along to learn two short lines from different songs. In the end, everything will fit into the song “Lion” by Saint Mesa so we can create a brand-new live version together at our workshop. Have fun singing along!",
 		},
 	},
 	media: {

@@ -439,6 +439,24 @@ const Academy2025: Component = () => {
                                     </a>
                                 </div>
                             </div>
+
+                            {/* --- Lion (Saint Mesa) - Vocal Lines --- */}
+                            <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
+                                <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.lionLinesTitle', {}, 'Lion (Saint Mesa) – Vocal Lines')}</h3>
+                                <div class="aspect-w-16 aspect-h-9 mb-6">
+                                    <iframe
+                                        class="w-full h-full rounded-lg aspect-video"
+                                        src="https://www.youtube.com/embed/wvnHlf83Oz8"
+                                        title="Lion (Saint Mesa) – Vocal Lines"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen
+                                    />
+                                </div>
+                                <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80">
+                                    {t('academy.academy2025.lionLinesText', {}, 'Heute nimmt euch Feli mit, um mit ihr zwei kleine Lines aus verschiedenen Songs zu lernen. Am Ende soll alles zu dem Song „Lion“ von Saint Mesa passen, sodass wir damit gemeinsam eine ganz neue Live-Version bei unserem Workshop kreieren können. Viel Spaß beim Mitsingen!')}
+                                </p>
+                            </div>
                             {/* --- The Voice Inside --- */}
                             <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
                                 <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.voiceInsideTitle', {}, 'The Voice Inside - Tutorial')}</h3>

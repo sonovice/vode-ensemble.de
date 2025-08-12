@@ -143,6 +143,9 @@ const de: BaseDictionary = {
 			cloudyDayTitle: "Cloudy Day - Tutorial",
 			cloudyDayText:
 				'Neu am Start: Unser Tutorial zu "Cloudy Day"! Der Song ist ein Kanon – ideal zum gemeinsamen Singen und zum Warmwerden. Die Noten gibt’s hier als Download. Viel Spaß beim Ausprobieren!',
+			lionLinesTitle: "Lion (Saint Mesa) – Vocal Lines",
+			lionLinesText:
+				"Heute nimmt euch Feli mit, um mit ihr zwei kleine Lines aus verschiedenen Songs zu lernen. Am Ende soll alles zu dem Song „Lion“ von Saint Mesa passen, sodass wir damit gemeinsam eine ganz neue Live-Version bei unserem Workshop kreieren können. Viel Spaß beim Mitsingen!",
 		},
 	},
 	media: {
