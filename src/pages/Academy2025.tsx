@@ -1,4 +1,4 @@
-import { type Component, Show, createSignal, For, createMemo } from "solid-js";
+import { type Component, Show, For, createMemo } from "solid-js";
 import { useI18n } from "../i18n";
 
 const Academy2025: Component = () => {
@@ -402,12 +402,43 @@ const Academy2025: Component = () => {
                             <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
                                 {t('academy.academy2025.newsSectionTag', {}, 'News & Sheets')}
                             </p>
-                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{t('academy.academy2025.newsTitle', {}, 'Tutorial zu "The Voice Inside"')}</h2>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{t('academy.academy2025.newsTitle', {}, 'Material & Tutorials')}</h2>
                             <p class="text-lg md:text-xl leading-relaxed text-[var(--color-light-text)]/80 max-w-3xl mx-auto">
                                 {t('academy.academy2025.newsIntro', {}, 'Hier laden wir nach und nach neues Material für euch hoch. Schaut also immer mal wieder vorbei!')}
                             </p>
                         </div>
                         <div class="space-y-12">
+                            {/* --- Cloudy Day --- */}
+                            <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
+                                <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.cloudyDayTitle', {}, 'Cloudy Day - Tutorial')}</h3>
+                                <div class="aspect-w-16 aspect-h-9 mb-6">
+                                    <iframe
+                                        class="w-full h-full rounded-lg aspect-video"
+                                        src="https://www.youtube.com/embed/uq88tT1HozU"
+                                        title="Cloudy Day - Tutorial"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen
+                                    />
+                                </div>
+                                <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
+                                    {t('academy.academy2025.cloudyDayText', {}, 'Neu am Start: Unser Tutorial zu "Cloudy Day"! Der Song ist ein Kanon – ideal zum gemeinsamen Singen und zum Warmwerden. Die Noten gibt’s hier als Download. Viel Spaß beim Ausprobieren!')}
+                                </p>
+                                <div class="text-center">
+                                    <a
+                                        href="/material/Cloudy Day - vode academy 2025.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-bold text-md rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                    >
+                                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <title>Download Icon</title>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                        </svg>
+                                        {t('academy.academy2025.downloadButton', {}, 'Noten herunterladen')}
+                                    </a>
+                                </div>
+                            </div>
                             {/* --- The Voice Inside --- */}
                             <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
                                 <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.voiceInsideTitle', {}, 'The Voice Inside - Tutorial')}</h3>
