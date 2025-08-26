@@ -166,7 +166,7 @@ const en: BaseDictionary = {
 							"How to improvise spontaneous musical ideas and capture them with recording techniques.",
 					},
 					"3": {
-						leaders: "Sümeye and Thea",
+						leaders: "Sümeyye and Thea",
 						topic: "Ukulele meets voice",
 						learn: "How to combine singing with playing the ukulele.",
 					},

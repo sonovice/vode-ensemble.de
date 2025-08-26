@@ -168,7 +168,7 @@ const de: BaseDictionary = {
 							"Wie man spontane, musikalische Ideen improvisiert und diese mit Aufnahmetechnik festhält.",
 					},
 					"3": {
-						leaders: "Sümeye und Thea",
+						leaders: "Sümeyye und Thea",
 						topic: "Ukulele meets voice",
 						learn: "Wie man Gesang und Ukulele-Spiel miteinander verbindet.",
 					},

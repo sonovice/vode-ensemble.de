@@ -44,8 +44,8 @@ const Academy2025: Component = () => {
                 { startTime: "15:15", endTime: "15:45", event: "Probe mit allen", duration: 30, isPause: false },
                 { startTime: "15:45", endTime: "16:00", event: "Pause", duration: 15, isPause: true },
                 { startTime: "16:00", endTime: "17:00", event: "Workshop II", duration: 60, isPause: false },
-                { startTime: "17:00", endTime: "17:45", event: "Warm-Up Konzert", duration: 45, isPause: false },
-                { startTime: "17:45", endTime: "18:30", event: "Werkstattkonzert", duration: 45, isPause: false },
+                { startTime: "17:00", endTime: "17:45", event: "Werkstattkonzert am Haus Idenrast", duration: 45, isPause: false },
+                { startTime: "17:45", endTime: "18:30", event: "Konzert-Appetizer in der Basilika St. Ida", duration: 45, isPause: false },
                 { startTime: "18:30", endTime: "19:00", event: "Rückfahrt", duration: 30, isPause: false },
             ],
             sunday: [
@@ -505,7 +505,7 @@ const Academy2025: Component = () => {
                                     {t('academy.academy2025.workshops.rows.3.learn', {}, 'Wie man Gesang und Ukulele-Spiel miteinander verbindet.')}
                                 </p>
                                 <p class="mt-6 font-semibold text-sm uppercase tracking-wider opacity-80">
-                                    {t('academy.academy2025.workshops.headers.leitung', {}, 'Leitung')}: {t('academy.academy2025.workshops.rows.3.leaders', {}, 'Sümeye und Thea')}
+                                    {t('academy.academy2025.workshops.headers.leitung', {}, 'Leitung')}: {t('academy.academy2025.workshops.rows.3.leaders', {}, 'Sümeyye und Thea')}
                                 </p>
                             </div>
 
