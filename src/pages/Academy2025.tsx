@@ -18,8 +18,8 @@ const Academy2025: Component = () => {
                     { startTime: "15:15", endTime: "15:45", event: "Full Group Rehearsal", duration: 30, isPause: false },
                     { startTime: "15:45", endTime: "16:00", event: "Break", duration: 15, isPause: true },
                     { startTime: "16:00", endTime: "17:00", event: "Workshop II", duration: 60, isPause: false },
-                    { startTime: "17:00", endTime: "17:45", event: "Concert Warm-Up", duration: 45, isPause: false },
-                    { startTime: "17:45", endTime: "18:30", event: "Workshop Performance", duration: 45, isPause: false },
+                    { startTime: "17:00", endTime: "17:45", event: "Workshop concert at Haus Idenrast", duration: 45, isPause: false },
+                    { startTime: "17:45", endTime: "18:30", event: "Concert appetizer in the Basilica St. Ida", duration: 45, isPause: false },
                     { startTime: "18:30", endTime: "19:00", event: "Departure", duration: 30, isPause: false },
                 ],
                 sunday: [
