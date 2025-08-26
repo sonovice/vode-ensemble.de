@@ -394,8 +394,102 @@ const Academy2025: Component = () => {
                 </div>
             </section>
 
-            {/* --- News and Sheets Section --- */}
+            {/* --- Workshops Section --- */}
             <section class="py-16 md:py-24 bg-[var(--color-dark-alt)] text-[var(--color-light-text)]">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="text-center mb-12">
+                            <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
+                                {t('academy.academy2025.workshops.sectionTag', {}, 'Unsere Workshops')}
+                            </p>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                                {t('academy.academy2025.workshops.title', {}, 'Wähle deinen Workshop')}
+                            </h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                            {/* Card 1: Drums & Voice */}
+                            <div
+                                class="rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center md:min-h-[350px] transition-all duration-300 transform hover:scale-105"
+                                style={{ "background-color": "#5a7d76" }}
+                            >
+                                <h3
+                                    class="text-3xl md:text-4xl font-bold uppercase text-balance"
+                                    style={{ "line-height": "1.2" }}
+                                >
+                                    {t('academy.academy2025.workshops.rows.4.topic', {}, 'Drums & Voice – all in your body')}
+                                </h3>
+                                <p class="mt-4 text-lg max-w-sm">
+                                    {t('academy.academy2025.workshops.rows.4.learn', {}, 'Wie man Rhythmusgefühl und Body Percussion mit der eigenen Stimme kombiniert.')}
+                                </p>
+                                <p class="mt-6 font-semibold text-sm uppercase tracking-wider opacity-80">
+                                    {t('academy.academy2025.workshops.headers.leitung', {}, 'Leitung')}: {t('academy.academy2025.workshops.rows.4.leaders', {}, 'Liane und Niklas')}
+                                </p>
+                            </div>
+
+                            {/* Card 2: Sing 'n Dance */}
+                            <div
+                                class="rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center md:min-h-[350px] transition-all duration-300 transform hover:scale-105"
+                                style={{ "background-color": "#d883b3" }}
+                            >
+                                <h3
+                                    class="text-3xl md:text-4xl font-bold uppercase text-balance"
+                                    style={{ "line-height": "1.2" }}
+                                >
+                                    {t('academy.academy2025.workshops.rows.1.topic', {}, "Sing 'n Dance with Dua Lipa")}
+                                </h3>
+                                <p class="mt-4 text-lg max-w-sm">
+                                    {t('academy.academy2025.workshops.rows.1.learn', {}, 'Du lernst einen bekannten Song von Dua Lipa und eine nice Choreo gleich mit.')}
+                                </p>
+                                <p class="mt-6 font-semibold text-sm uppercase tracking-wider opacity-80">
+                                    {t('academy.academy2025.workshops.headers.leitung', {}, 'Leitung')}: {t('academy.academy2025.workshops.rows.1.leaders', {}, 'Simon und Krissi')}
+                                </p>
+                            </div>
+
+                            {/* Card 3: Ukulele */}
+                            <div
+                                class="rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center md:min-h-[350px] transition-all duration-300 transform hover:scale-105"
+                                style={{ "background-color": "#458ac6" }}
+                            >
+                                <h3
+                                    class="text-3xl md:text-4xl font-bold uppercase text-balance"
+                                    style={{ "line-height": "1.2" }}
+                                >
+                                    {t('academy.academy2025.workshops.rows.3.topic', {}, 'Ukulele meets voice')}
+                                </h3>
+                                <p class="mt-4 text-lg max-w-sm">
+                                    {t('academy.academy2025.workshops.rows.3.learn', {}, 'Wie man Gesang und Ukulele-Spiel miteinander verbindet.')}
+                                </p>
+                                <p class="mt-6 font-semibold text-sm uppercase tracking-wider opacity-80">
+                                    {t('academy.academy2025.workshops.headers.leitung', {}, 'Leitung')}: {t('academy.academy2025.workshops.rows.3.leaders', {}, 'Sümeye und Thea')}
+                                </p>
+                            </div>
+
+                            {/* Card 4: Impro */}
+                            <div
+                                class="rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center md:min-h-[350px] transition-all duration-300 transform hover:scale-105"
+                                style={{ "background-color": "#e07632" }}
+                            >
+                                <h3
+                                    class="text-3xl md:text-4xl font-bold uppercase text-balance"
+                                    style={{ "line-height": "1.2" }}
+                                >
+                                    {t('academy.academy2025.workshops.rows.2.topic', {}, 'Catch the Sound of Impro')}
+                                </h3>
+                                <p class="mt-4 text-lg max-w-sm">
+                                    {t('academy.academy2025.workshops.rows.2.learn', {}, 'Wie man spontane, musikalische Ideen improvisiert und diese mit Aufnahmetechnik festhält.')}
+                                </p>
+                                <p class="mt-6 font-semibold text-sm uppercase tracking-wider opacity-80">
+                                    {t('academy.academy2025.workshops.headers.leitung', {}, 'Leitung')}: {t('academy.academy2025.workshops.rows.2.leaders', {}, 'Christoph und Martin')}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- News and Sheets Section --- */}
+            <section class="py-16 md:py-24 bg-[var(--color-dark)] text-[var(--color-light-text)]">
                 <div class="container mx-auto px-4">
                     <div class="max-w-4xl mx-auto">
                         <div class="text-center mb-12">

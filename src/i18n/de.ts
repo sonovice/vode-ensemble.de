@@ -146,6 +146,40 @@ const de: BaseDictionary = {
 			lionLinesTitle: "Lion (Saint Mesa) – Vocal Lines",
 			lionLinesText:
 				"Heute nimmt euch Feli mit, um mit ihr zwei kleine Lines aus verschiedenen Songs zu lernen. Am Ende soll alles zu dem Song „Lion“ von Saint Mesa passen, sodass wir damit gemeinsam eine ganz neue Live-Version bei unserem Workshop kreieren können. Viel Spaß beim Mitsingen!",
+			workshops: {
+				sectionTag: "Unsere Workshops",
+				title: "Wähle deinen Workshop",
+				headers: {
+					leitung: "Leitung",
+					topic: "Workshop-Thema",
+					learn: "Das lernst du hier",
+				},
+				rows: {
+					"1": {
+						leaders: "Simon und Krissi",
+						topic: "Sing 'n Dance with Dua Lipa",
+						learn:
+							"Du lernst einen bekannten Song von Dua Lipa und eine nice Choreo gleich mit.",
+					},
+					"2": {
+						leaders: "Christoph und Martin",
+						topic: "Catch the Sound of Impro",
+						learn:
+							"Wie man spontane, musikalische Ideen improvisiert und diese mit Aufnahmetechnik festhält.",
+					},
+					"3": {
+						leaders: "Sümeye und Thea",
+						topic: "Ukulele meets voice",
+						learn: "Wie man Gesang und Ukulele-Spiel miteinander verbindet.",
+					},
+					"4": {
+						leaders: "Liane und Niklas",
+						topic: "Drums & Voice – all in your body",
+						learn:
+							"Wie man Rhythmusgefühl und Body Percussion mit der eigenen Stimme kombiniert.",
+					},
+				},
+			},
 		},
 	},
 	media: {
