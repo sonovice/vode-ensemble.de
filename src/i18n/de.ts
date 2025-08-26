@@ -91,7 +91,7 @@ const de: BaseDictionary = {
 			addressAlt: "oder",
 			transportTitle: "Anreise",
 			transportText:
-				"Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Dazu gibt es zwei Linien, die euch aus der Region zu uns nach Herzfeld fahren. Die genauen Abfahrtszeiten findest du demnächst hier auf der Seite.",
+				"Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Hier findest du die genauen Abfahrtszeiten für die beiden Linien, die euch aus der Region zu uns nach Herzfeld fahren.",
 			registerButton: "Jetzt kostenlos anmelden!",
 			registerSubtext: "Einzeln oder als ganzes Ensemble",
 			whatToExpectTitle: "Was erwartet dich bei unserem Projekt?",
@@ -177,6 +177,32 @@ const de: BaseDictionary = {
 						topic: "Drums & Voice – all in your body",
 						learn:
 							"Wie man Rhythmusgefühl und Body Percussion mit der eigenen Stimme kombiniert.",
+					},
+				},
+			},
+			bus: {
+				line1: {
+					title: "Linie 1: Delbrück – Lippstadt – Wadersloh",
+					sat: {
+						stop1: "09:30 Uhr Delbrück, Hst. Lange Str.",
+						stop2: "10:00 Uhr Lippstadt, Busbahnhof",
+						stop3: "10:25 Uhr Wadersloh, Kirche",
+					},
+					sun: {
+						stop1: "14:00 Uhr Delbrück, Hst. Lange Str.",
+						stop2: "14:30 Uhr Lippstadt, Busbahnhof",
+						stop3: "14:55 Uhr Wadersloh, Kirche",
+					},
+				},
+				line2: {
+					title: "Linie 2: Körbecke – Soest",
+					sat: {
+						stop1: "09:45 Uhr Körbecke, Haus des Gastes",
+						stop2: "10:05 Uhr Soest, Stadthalle",
+					},
+					sun: {
+						stop1: "14:15 Uhr Körbecke, Haus des Gastes",
+						stop2: "14:35 Uhr Soest, Stadthalle",
 					},
 				},
 			},

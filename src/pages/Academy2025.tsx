@@ -109,29 +109,54 @@ const Academy2025: Component = () => {
                                     {/* Anreise Info Card */}
                                     <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20 p-6">
                                         <h3 class="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-wider mb-3">{t('academy.academy2025.transportTitle', {}, 'Anreise')}</h3>
-                                        <p class="text-base leading-relaxed text-[var(--color-light-text)]/80">
-                                            {t('academy.academy2025.transportText', {}, 'Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Dazu gibt es zwei Linien, die euch aus der Region zu uns nach Herzfeld fahren. Die genauen Abfahrtszeiten findest du demnächst hier auf der Seite.')}
+                                        <p class="text-base leading-relaxed text-[var(--color-light-text)]/80 mb-6">
+                                            {t('academy.academy2025.transportText', {}, 'Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Hier findest du die genauen Abfahrtszeiten für die beiden Linien, die euch aus der Region zu uns nach Herzfeld fahren.')}
                                         </p>
+                                        <div class="grid md:grid-cols-2 gap-x-6 gap-y-8">
+                                            {/* Line 1 */}
+                                            <div>
+                                                <h4 class="font-bold text-lg text-[var(--color-accent)] mb-3">{t('academy.academy2025.bus.line1.title', {}, 'Linie 1: Delbrück – Lippstadt – Wadersloh')}</h4>
+                                                <div class="space-y-4">
+                                                    <div>
+                                                        <p class="font-semibold text-[var(--color-light-text)]/90">{t('academy.academy2025.saturdayTitle', {}, 'SAMSTAG')}, 30.08.2025</p>
+                                                        <ul class="list-none text-[var(--color-light-text)]/80 mt-1 space-y-1 pl-2">
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line1.sat.stop1', {}, '09:30 Uhr Delbrück, Hst. Lange Str.')}</li>
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line1.sat.stop2', {}, '10:00 Uhr Lippstadt, Busbahnhof')}</li>
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line1.sat.stop3', {}, '10:25 Uhr Wadersloh, Kirche')}</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <p class="font-semibold text-[var(--color-light-text)]/90">{t('academy.academy2025.sundayTitle', {}, 'SONNTAG')}, 31.08.2025</p>
+                                                        <ul class="list-none text-[var(--color-light-text)]/80 mt-1 space-y-1 pl-2">
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line1.sun.stop1', {}, '14:00 Uhr Delbrück, Hst. Lange Str.')}</li>
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line1.sun.stop2', {}, '14:30 Uhr Lippstadt, Busbahnhof')}</li>
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line1.sun.stop3', {}, '14:55 Uhr Wadersloh, Kirche')}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/* Line 2 */}
+                                            <div>
+                                                <h4 class="font-bold text-lg text-[var(--color-accent)] mb-3">{t('academy.academy2025.bus.line2.title', {}, 'Linie 2: Körbecke – Soest')}</h4>
+                                                <div class="space-y-4">
+                                                    <div>
+                                                        <p class="font-semibold text-[var(--color-light-text)]/90">{t('academy.academy2025.saturdayTitle', {}, 'SAMSTAG')}, 30.08.2025</p>
+                                                        <ul class="list-none text-[var(--color-light-text)]/80 mt-1 space-y-1 pl-2">
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line2.sat.stop1', {}, '09:45 Uhr Körbecke, Haus des Gastes')}</li>
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line2.sat.stop2', {}, '10:05 Uhr Soest, Stadthalle')}</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <p class="font-semibold text-[var(--color-light-text)]/90">{t('academy.academy2025.sundayTitle', {}, 'SONNTAG')}, 31.08.2025</p>
+                                                        <ul class="list-none text-[var(--color-light-text)]/80 mt-1 space-y-1 pl-2">
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line2.sun.stop1', {}, '14:15 Uhr Körbecke, Haus des Gastes')}</li>
+                                                            <li><span class="text-[var(--color-accent)] mr-2">›</span>{t('academy.academy2025.bus.line2.sun.stop2', {}, '14:35 Uhr Soest, Stadthalle')}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-
-                                {/* Call-to-Action */}
-                                <div class="text-center">
-                                    <a
-                                        href="https://forms.office.com/e/4r01h2VjYq"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-accent)] text-white font-bold text-lg rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                                    >
-                                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <title>Anmeldung Icon</title>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                        </svg>
-                                        {t('academy.academy2025.registerButton', {}, 'Jetzt anmelden!')}
-                                    </a>
-                                    <p class="text-sm text-[var(--color-light-text)]/60 mt-3">
-                                        {t('academy.academy2025.registerSubtext', {}, 'Einzeln oder als ganzes Ensemble')}
-                                    </p>
                                 </div>
                             </div>
                             <div class="w-full lg:w-1/3 text-center">
@@ -150,6 +175,25 @@ const Academy2025: Component = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        {/* Centered Call-to-Action */}
+                        <div class="text-center mt-12">
+                            <a
+                                href="https://forms.office.com/e/4r01h2VjYq"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-accent)] text-white font-bold text-lg rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                            >
+                                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <title>Anmeldung Icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                                {t('academy.academy2025.registerButton', {}, 'Jetzt kostenlos anmelden!')}
+                            </a>
+                            <p class="text-sm text-[var(--color-light-text)]/60 mt-3">
+                                {t('academy.academy2025.registerSubtext', {}, 'Einzeln oder als ganzes Ensemble')}
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -89,7 +89,7 @@ const en: BaseDictionary = {
 			addressAlt: "or",
 			transportTitle: "Getting There",
 			transportText:
-				"We provide eco-friendly transportation via shuttle buses! Two routes will bring you from the region to Herzfeld. Exact departure times will be posted on this page soon.",
+				"We provide eco-friendly transportation via shuttle buses! Here you can find the exact departure times for the two routes that will bring you from the region to Herzfeld.",
 			registerButton: "Sign up now for free!",
 			registerSubtext: "Join as an individual or complete ensemble",
 			whatToExpectTitle: "What can you expect?",
@@ -175,6 +175,32 @@ const en: BaseDictionary = {
 						topic: "Drums & Voice – all in your body",
 						learn:
 							"How to combine a sense of rhythm and body percussion with your own voice.",
+					},
+				},
+			},
+			bus: {
+				line1: {
+					title: "Line 1: Delbrück – Lippstadt – Wadersloh",
+					sat: {
+						stop1: "09:30 Delbrück, Lange Str. stop",
+						stop2: "10:00 Lippstadt, Bus Station",
+						stop3: "10:25 Wadersloh, Church",
+					},
+					sun: {
+						stop1: "14:00 Delbrück, Lange Str. stop",
+						stop2: "14:30 Lippstadt, Bus Station",
+						stop3: "14:55 Wadersloh, Church",
+					},
+				},
+				line2: {
+					title: "Line 2: Körbecke – Soest",
+					sat: {
+						stop1: "09:45 Körbecke, Haus des Gastes",
+						stop2: "10:05 Soest, Stadthalle",
+					},
+					sun: {
+						stop1: "14:15 Körbecke, Haus des Gastes",
+						stop2: "14:35 Soest, Stadthalle",
 					},
 				},
 			},
