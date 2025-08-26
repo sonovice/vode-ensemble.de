@@ -536,7 +536,7 @@ const Academy2025: Component = () => {
 
                             {/* --- Lion (Saint Mesa) - Vocal Lines --- */}
                             <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
-                                <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.lionLinesTitle', {}, 'Lion (Saint Mesa) – Vocal Lines')}</h3>
+                                <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.lionLinesTitle', {}, 'Quodlibet Lion - Tutorial')}</h3>
                                 <div class="aspect-w-16 aspect-h-9 mb-6">
                                     <iframe
                                         class="w-full h-full rounded-lg aspect-video"
@@ -547,10 +547,25 @@ const Academy2025: Component = () => {
                                         allowfullscreen
                                     />
                                 </div>
-                                <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80">
+                                <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
                                     {t('academy.academy2025.lionLinesText', {}, 'Heute nimmt euch Feli mit, um mit ihr zwei kleine Lines aus verschiedenen Songs zu lernen. Am Ende soll alles zu dem Song „Lion“ von Saint Mesa passen, sodass wir damit gemeinsam eine ganz neue Live-Version bei unserem Workshop kreieren können. Viel Spaß beim Mitsingen!')}
                                 </p>
+                                <div class="text-center">
+                                    <a
+                                        href="/material/Quodlibet Lion - vode academy 2025.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-bold text-md rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                    >
+                                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <title>Download Icon</title>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                        </svg>
+                                        {t('academy.academy2025.downloadButton', {}, 'Noten herunterladen')}
+                                    </a>
+                                </div>
                             </div>
+
                             {/* --- The Voice Inside --- */}
                             <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
                                 <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.voiceInsideTitle', {}, 'The Voice Inside - Tutorial')}</h3>
