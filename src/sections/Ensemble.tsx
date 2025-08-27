@@ -71,11 +71,9 @@ const getVoicePartTKey = (voicePartKey: string): string => {
 const Ensemble: Component = () => {
     const { t } = useI18n();
     const [selectedVoicePart, setSelectedVoicePart] = createSignal<string | null>(voicePartOrder[0] || null);
-    const [isDropdownOpen, setIsDropdownOpen] = createSignal(false);
 
     const selectVoicePart = (part: string) => {
         setSelectedVoicePart(part);
-        setIsDropdownOpen(false);
     }
 
     return (

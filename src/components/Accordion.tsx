@@ -1,4 +1,4 @@
-import { type Component, createSignal, JSX } from "solid-js";
+import { type Component, createSignal, type JSX } from "solid-js";
 
 type AccordionProps = {
     title: JSX.Element | string;
