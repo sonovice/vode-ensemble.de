@@ -81,7 +81,7 @@ const de: BaseDictionary = {
 			heroTitle: "vode academy 2025:",
 			heroSubtitle: "Chor macht Schule",
 			heroDescription:
-				"Schön, dass du den Weg zu uns gefunden hast! Hier findest du alle wichtigen Infos zum Projekt.",
+				"Du singst gerne und hast Lust, ein Wochenende lang mit professionellen Coaches an neuen Songs zu arbeiten, deine Stimme zu entdecken und am Ende alles bei einem Konzert auf die Bühne zu bringen? Dann bist du bei der vode academy 2025 genau richtig! Vom 30. bis 31. August 2025 in St. Ida in Herzfeld erwartet dich ein Wochenende voller Musik, Gemeinschaft und unvergesslicher Live-Momente.",
 			timeLabel: "Zeitraum",
 			timeValue: "30. & 31. August",
 			locationLabel: "Ort & Adresse",
@@ -94,31 +94,33 @@ const de: BaseDictionary = {
 				"Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Hier findest du die genauen Abfahrtszeiten für die beiden Linien, die euch aus der Region zu uns nach Herzfeld fahren.",
 			registerButton: "Jetzt kostenlos anmelden!",
 			registerSubtext: "Einzeln oder als ganzes Ensemble",
-			whatToExpectTitle: "Was erwartet dich bei unserem Projekt?",
-			whatToExpectSectionTag: "Unser Angebot",
-			teamworkTitle: "Teamgefühl",
-			teamworkText:
-				"Du probst gemeinsam mit anderen Jugendlichen aus der Region Lippe-Möhnesee und lernst neue Leute kennen – ganz ohne Leistungsdruck!",
-			coachingTitle: "Profi-Coaching",
-			coachingText:
-				"Katharina Gärtner und ihre Coaches von <strong>vode</strong> zeigen dir in lockeren Workshops, wie du deine Stimme richtig einsetzt und souverän auf der Bühne stehst.",
-			workshopConcertTitle: "Workshop-Konzert",
-			workshopConcertText:
-				"Am Ende des ersten Tages präsentierst du live im Workshop-Chor ein Werkstatt-Konzert. Gute Vibes und Fun garantiert!",
-			proConcertTitle: "Profi-Konzert",
-			proConcertText:
-				"Am zweiten Tag erlebst du <strong>vode</strong> hautnah, wenn sie die Basilika mit ihrem A-cappella-Mix aus Pop und Jazz in neue Klänge eintauchen.",
-			whyJoinTitle: "Warum solltest du dabei sein?",
-			whyJoinSectionTag: "Deine Vorteile",
-			funTitle: "Spaß am Singen",
-			funText:
-				'Gemeinsam Lieder lernen, die perfekt zu dir und deinen aktuellen "Vocal Skills" passen.',
-			newSongsTitle: "Neue Songs",
-			newSongsText:
-				"Viele Songs kannst du dir selbst erarbeiten und später auch mit deinem Chor an deiner Schule singen – so kannst du aus den Projekttagen noch lange etwas mitnehmen.",
-			experienceTitle: "Unvergessliche Erfahrung",
-			experienceText:
-				"Neue Freunde, magische Konzertstimmung und jede Menge Applaus!",
+
+			organizational: {
+				sectionTag: "Organisatorisches",
+				title: "Alle Details zum Wochenende",
+			},
+
+			experience: {
+				sectionTag: "Dein Academy-Erlebnis",
+				title: "Was dich bei uns erwartet",
+				point1: {
+					title: "Profi-Coaching",
+					text: "Lerne von erfahrenen Coaches, wie du deine Stimme richtig einsetzt und souverän auf der Bühne stehst.",
+				},
+				point2: {
+					title: "Live-Erlebnis",
+					text: "Präsentiere die Ergebnisse aus den Workshops bei einem Werkstatt-Konzert und erlebe <strong>vode</strong> hautnah bei ihrem A-cappella-Konzert am zweiten Tag.",
+				},
+				point3: {
+					title: "Songs & Spaß",
+					text: "Lerne gemeinsam neue Lieder, die zu dir passen und die du mit nach Hause nehmen kannst – Spaß garantiert.",
+				},
+				point4: {
+					title: "Team & Community",
+					text: "Knüpfe neue Freundschaften, erlebe magische Konzertstimmung und werde Teil einer unvergesslichen Gemeinschaft.",
+				},
+			},
+
 			scheduleTitle: "Wie ist der Ablauf an den beiden Tagen?",
 			scheduleSectionTag: "Zeitplan",
 			saturdayTitle: "SAMSTAG",
@@ -181,6 +183,7 @@ const de: BaseDictionary = {
 				},
 			},
 			bus: {
+				accordionTitle: "Busfahrpläne anzeigen",
 				line1: {
 					title: "Linie 1: Delbrück – Lippstadt – Wadersloh",
 					sat: {

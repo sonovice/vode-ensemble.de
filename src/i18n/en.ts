@@ -79,7 +79,7 @@ const en: BaseDictionary = {
 			heroTitle: "vode academy 2025:",
 			heroSubtitle: '"Chor macht Schule"',
 			heroDescription:
-				"Welcome! Here you'll find all the essential information about our project.",
+				"Do you love to sing and want to spend a weekend working on new songs with professional coaches, discovering your voice, and bringing it all to the stage in a final concert? Then the vode academy 2025 is perfect for you! From August 30th to 31st, 2025, in St. Ida in Herzfeld, a weekend full of music, community, and unforgettable live moments awaits you.",
 			timeLabel: "When",
 			timeValue: "August 30th & 31st",
 			locationLabel: "Where",
@@ -92,31 +92,33 @@ const en: BaseDictionary = {
 				"We provide eco-friendly transportation via shuttle buses! Here you can find the exact departure times for the two routes that will bring you from the region to Herzfeld.",
 			registerButton: "Sign up now for free!",
 			registerSubtext: "Join as an individual or complete ensemble",
-			whatToExpectTitle: "What can you expect?",
-			whatToExpectSectionTag: "What We Offer",
-			teamworkTitle: "Team Building",
-			teamworkText:
-				"Rehearse alongside other young people from the Lippe-Möhnesee region and make new friends – no pressure, just fun!",
-			coachingTitle: "Expert Coaching",
-			coachingText:
-				"Katharina Gärtner and her <strong>vode</strong> coaches will guide you through relaxed workshops, teaching you proper vocal technique and confident stage presence.",
-			workshopConcertTitle: "Workshop Performance",
-			workshopConcertText:
-				"Cap off day one with a live workshop choir performance. Great vibes and guaranteed fun!",
-			proConcertTitle: "Professional Concert",
-			proConcertText:
-				"On day two, experience <strong>vode</strong> live as they fill the basilica with their stunning a cappella blend of pop and jazz.",
-			whyJoinTitle: "Why join us?",
-			whyJoinSectionTag: "Your Benefits",
-			funTitle: "Pure Joy",
-			funText:
-				"Learn songs perfectly tailored to you and your current vocal abilities.",
-			newSongsTitle: "Take Songs Home",
-			newSongsText:
-				"Many songs are yours to keep and perform with your school choir – extending the workshop experience long after it ends.",
-			experienceTitle: "Unforgettable Memories",
-			experienceText:
-				"New friendships, magical concert moments, and thunderous applause!",
+
+			organizational: {
+				sectionTag: "Organizational",
+				title: "All Details for the Weekend",
+			},
+
+			experience: {
+				sectionTag: "Your Academy Experience",
+				title: "What Awaits You",
+				point1: {
+					title: "Expert Coaching",
+					text: "Learn from experienced coaches how to use your voice correctly and stand confidently on stage.",
+				},
+				point2: {
+					title: "Live Experience",
+					text: "Present the results from the workshops in a showcase concert and experience <strong>vode</strong> up close at their a cappella concert on the second day.",
+				},
+				point3: {
+					title: "Songs & Fun",
+					text: "Learn new songs together that are perfect for you and that you can take home – fun guaranteed.",
+				},
+				point4: {
+					title: "Team & Community",
+					text: "Make new friends, experience a magical concert atmosphere, and become part of an unforgettable community.",
+				},
+			},
+
 			scheduleTitle: "What's the daily schedule?",
 			scheduleSectionTag: "Schedule",
 			saturdayTitle: "SATURDAY",
@@ -179,6 +181,7 @@ const en: BaseDictionary = {
 				},
 			},
 			bus: {
+				accordionTitle: "Show Bus Schedules",
 				line1: {
 					title: "Line 1: Delbrück – Lippstadt – Wadersloh",
 					sat: {

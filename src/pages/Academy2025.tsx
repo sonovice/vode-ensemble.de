@@ -1,5 +1,6 @@
 import { type Component, Show, For, createMemo } from "solid-js";
 import { useI18n } from "../i18n";
+import Accordion from "../components/Accordion";
 
 const Academy2025: Component = () => {
     const { t, locale } = useI18n();
@@ -68,50 +69,146 @@ const Academy2025: Component = () => {
             {/* --- Hero Section --- */}
             <section class="py-16 md:py-24 bg-[var(--color-dark-alt)] text-[var(--color-light-text)]">
                 <div class="container mx-auto px-4">
-                    <div class="text-center max-w-6xl mx-auto">
-                        <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-6">
-                            {t('academy.academy2025.heroTitle', {}, 'vode academy 2025:')}<span class="text-[var(--color-accent)]"><br />{t('academy.academy2025.heroSubtitle', {}, 'Chor macht Schule')}</span>
-                        </h1>
-                        <p class="text-lg md:text-xl leading-relaxed text-[var(--color-light-text)]/80 mb-8">
-                            {t('academy.academy2025.heroDescription', {}, 'Schön, dass du den Weg zu uns gefunden hast! Hier findest du alle wichtigen Infos zum Projekt.')}
-                        </p>
-                        <div class="flex flex-col lg:flex-row gap-12 items-start max-w-6xl mx-auto">
-                            <div class="w-full lg:w-2/3 text-left">
-                                <div class="space-y-6 mb-8">
-                                    {/* Projekt Details Card */}
-                                    <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20 p-6">
-                                        <div class="grid md:grid-cols-2 gap-6">
-                                            <div>
-                                                <h3 class="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-wider mb-2">{t('academy.academy2025.timeLabel', {}, 'Zeitraum')}</h3>
-                                                <p class="text-xl font-bold text-[var(--color-light-text)]">{t('academy.academy2025.timeValue', {}, '30. & 31. August')}</p>
-                                            </div>
-                                            <div>
-                                                <h3 class="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-wider mb-2">{t('academy.academy2025.locationLabel', {}, 'Ort & Adresse')}</h3>
-                                                <p class="text-xl font-bold text-[var(--color-light-text)]">{t('academy.academy2025.locationValue', {}, 'St. Ida in Herzfeld')}</p>
-                                                <p class="text-sm text-[var(--color-light-text)]/70 mt-1">{t('academy.academy2025.locationDetail', {}, 'Treffpunkt Haus Idenrast')}</p>
-                                                <div class="space-y-1 mt-3">
-                                                    <p class="text-sm text-[var(--color-light-text)]">
-                                                        <a href="https://maps.app.goo.gl/L9tdFC1moUnQHzDf9" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline font-medium">
-                                                            {t('academy.academy2025.addressValue', {}, 'Lippstädter Str. 10, 59510 Herzfeld')}
-                                                        </a>
-                                                    </p>
-                                                    <p class="text-xs text-[var(--color-light-text)]/70">
-                                                        {t('academy.academy2025.addressAlt', {}, 'oder')}{" "}
-                                                        <a href="https://what3words.com/langer.eintreten.vorab" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">
-                                                            {"///langer.eintreten.vorab"}
-                                                        </a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="grid lg:grid-cols-3 gap-12 items-center">
+                        {/* Text Column (Left) */}
+                        <div class="text-center lg:text-left lg:col-span-2">
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+                                {t('academy.academy2025.heroTitle', {}, 'vode academy 2025:')}<span class="text-[var(--color-accent)]"><br />{t('academy.academy2025.heroSubtitle', {}, 'Chor macht Schule')}</span>
+                            </h1>
+                            <p class="text-lg md:text-xl leading-relaxed text-[var(--color-light-text)]/80 mb-8">
+                                {t('academy.academy2025.heroDescription', {}, 'Du singst gerne und hast Lust, ein Wochenende lang mit professionellen Coaches an neuen Songs zu arbeiten, deine Stimme zu entdecken und am Ende alles bei einem Konzert auf die Bühne zu bringen? Dann bist du bei der vode academy 2025 genau richtig! Vom 30. bis 31. August 2025 in St. Ida in Herzfeld erwartet dich ein Wochenende voller Musik, Gemeinschaft und unvergesslicher Live-Momente.')}
+                            </p>
 
-                                    {/* Anreise Info Card */}
-                                    <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20 p-6">
-                                        <h3 class="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-wider mb-3">{t('academy.academy2025.transportTitle', {}, 'Anreise')}</h3>
-                                        <p class="text-base leading-relaxed text-[var(--color-light-text)]/80 mb-6">
-                                            {t('academy.academy2025.transportText', {}, 'Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Hier findest du die genauen Abfahrtszeiten für die beiden Linien, die euch aus der Region zu uns nach Herzfeld fahren.')}
+                            {/* Call-to-Action */}
+                            <div>
+                                <a
+                                    href="https://forms.office.com/e/4r01h2VjYq"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-accent)] text-white font-bold text-lg rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                >
+                                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <title>Anmeldung Icon</title>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    {t('academy.academy2025.registerButton', {}, 'Jetzt kostenlos anmelden!')}
+                                </a>
+                                <p class="text-sm text-[var(--color-light-text)]/60 mt-3">
+                                    {t('academy.academy2025.registerSubtext', {}, 'Einzeln oder als ganzes Ensemble')}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Video Column (Right) */}
+                        <div class="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 lg:justify-self-end">
+                            <div class="aspect-[9/16] bg-[var(--color-surface-alt)] rounded-lg shadow-lg">
+                                <iframe
+                                    class="w-full h-full rounded-lg"
+                                    src="https://www.youtube.com/embed/m5BTiZ8ACjo"
+                                    title="Chor macht Schule - Teaser"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- Merged Experience Section --- */}
+            <section class="py-16 md:py-24 bg-[var(--color-dark)] text-[var(--color-light-text)]">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="text-center mb-12">
+                            <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
+                                {t('academy.academy2025.experience.sectionTag', {}, 'Dein Academy-Erlebnis')}
+                            </p>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{t('academy.academy2025.experience.title', {}, 'Was dich bei uns erwartet')}</h2>
+                        </div>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {/* Card 1: Profi-Coaching */}
+                            <div class="p-8 rounded-2xl">
+                                <div class="w-12 h-12 bg-[var(--color-accent)] rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><title>Mikrofon Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                                </div>
+                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-3">{t('academy.academy2025.experience.point1.title', {}, 'Profi-Coaching')}</h3>
+                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80" innerHTML={t('academy.academy2025.experience.point1.text', {}, 'Lerne von erfahrenen Coaches, wie du deine Stimme richtig einsetzt und souverän auf der Bühne stehst.') || ''}></p>
+                            </div>
+                            {/* Card 2: Live-Erlebnis */}
+                            <div class="p-8 rounded-2xl">
+                                <div class="w-12 h-12 bg-[var(--color-accent)] rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><title>Musik Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>
+                                </div>
+                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-3">{t('academy.academy2025.experience.point2.title', {}, 'Live-Erlebnis')}</h3>
+                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80" innerHTML={t('academy.academy2025.experience.point2.text', {}, 'Präsentiere die Ergebnisse aus den Workshops bei einem Werkstatt-Konzert und erlebe <strong>vode</strong> hautnah bei ihrem A-cappella-Konzert am zweiten Tag.') || ''}></p>
+                            </div>
+                            {/* Card 3: Songs & Spaß */}
+                            <div class="p-8 rounded-2xl">
+                                <div class="w-12 h-12 bg-[var(--color-accent)] rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><title>Herz Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                                </div>
+                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-3">{t('academy.academy2025.experience.point3.title', {}, 'Songs & Spaß')}</h3>
+                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80" innerHTML={t('academy.academy2025.experience.point3.text', {}, 'Lerne gemeinsam neue Lieder, die zu dir passen und die du mit nach Hause nehmen kannst – Spaß garantiert.') || ''}></p>
+                            </div>
+                            {/* Card 4: Team & Community */}
+                            <div class="p-8 rounded-2xl">
+                                <div class="w-12 h-12 bg-[var(--color-accent)] rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><title>Team Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                </div>
+                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-3">{t('academy.academy2025.experience.point4.title', {}, 'Team & Community')}</h3>
+                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80" innerHTML={t('academy.academy2025.experience.point4.text', {}, 'Knüpfe neue Freundschaften, erlebe magische Konzertstimmung und werde Teil einer unvergesslichen Gemeinschaft.') || ''}></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- Organizational Section --- */}
+            <section class="py-16 md:py-24 bg-[var(--color-dark-alt)] text-[var(--color-light-text)]">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="text-center mb-12">
+                            <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
+                                {t('academy.academy2025.organizational.sectionTag', {}, 'Alle Details')}
+                            </p>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{t('academy.academy2025.organizational.title', {}, 'Organisatorisches')}</h2>
+                        </div>
+
+                        <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg ring-1 ring-[var(--color-light-text)]/20 p-6 space-y-6 mb-12">
+                            {/* Projekt Details */}
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h3 class="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-wider mb-2">{t('academy.academy2025.timeLabel', {}, 'Zeitraum')}</h3>
+                                    <p class="text-xl font-bold text-[var(--color-light-text)]">{t('academy.academy2025.timeValue', {}, '30. & 31. August')}</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-wider mb-2">{t('academy.academy2025.locationLabel', {}, 'Ort & Adresse')}</h3>
+                                    <p class="text-xl font-bold text-[var(--color-light-text)]">{t('academy.academy2025.locationValue', {}, 'St. Ida in Herzfeld')}</p>
+                                    <p class="text-sm text-[var(--color-light-text)]/70 mt-1">{t('academy.academy2025.locationDetail', {}, 'Treffpunkt Haus Idenrast')}</p>
+                                    <div class="space-y-1 mt-3">
+                                        <p class="text-sm text-[var(--color-light-text)]">
+                                            <a href="https://maps.app.goo.gl/L9tdFC1moUnQHzDf9" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline font-medium">
+                                                {t('academy.academy2025.addressValue', {}, 'Lippstädter Str. 10, 59510 Herzfeld')}
+                                            </a>
                                         </p>
+                                        <p class="text-xs text-[var(--color-light-text)]/70">
+                                            {t('academy.academy2025.addressAlt', {}, 'oder')}{" "}
+                                            <a href="https://what3words.com/langer.eintreten.vorab" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">
+                                                {"///langer.eintreten.vorab"}
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Anreise Info */}
+                            <div>
+                                <h3 class="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-wider mb-3">{t('academy.academy2025.transportTitle', {}, 'Anreise')}</h3>
+                                <p class="text-base leading-relaxed text-[var(--color-light-text)]/80 mb-6">
+                                    {t('academy.academy2025.transportText', {}, 'Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Hier findest du die genauen Abfahrtszeiten für die beiden Linien, die euch aus der Region zu uns nach Herzfeld fahren.')}
+                                </p>
+                                <Accordion title={t('academy.academy2025.bus.accordionTitle', {}, 'Busfahrpläne anzeigen')}>
+                                    <div class="p-4 md:p-6">
                                         <div class="grid md:grid-cols-2 gap-x-6 gap-y-8">
                                             {/* Line 1 */}
                                             <div>
@@ -157,280 +254,112 @@ const Academy2025: Component = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Accordion>
                             </div>
-                            <div class="w-full lg:w-1/3 text-center">
-                                <div class="max-w-md mx-auto">
-                                    <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
-                                        <div class="aspect-[9/16]">
-                                            <iframe
-                                                class="w-full h-full rounded-t-lg"
-                                                src="https://www.youtube.com/embed/m5BTiZ8ACjo"
-                                                title="Chor macht Schule - Teaser"
-                                                frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowfullscreen
-                                            />
+                        </div>
+
+                        <div class="grid lg:grid-cols-2 gap-8 items-start">
+                            {/* Saturday */}
+                            <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg ring-1 ring-[var(--color-light-text)]/20 p-6">
+                                <h3 class="text-2xl font-bold mb-6 text-center">{t('academy.academy2025.saturdayTitle', {}, 'SAMSTAG')}</h3>
+                                <div class="space-y-0">
+                                    {/* Start time */}
+                                    <div class="flex">
+                                        <div class="w-12 text-sm text-[var(--color-light-text)]/70 pr-3 text-right font-medium py-0">
+                                            {scheduleSaturday()[0].startTime}
                                         </div>
+                                        <div class="flex-1" />
                                     </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        {/* Centered Call-to-Action */}
-                        <div class="text-center mt-12">
-                            <a
-                                href="https://forms.office.com/e/4r01h2VjYq"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-accent)] text-white font-bold text-lg rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                            >
-                                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <title>Anmeldung Icon</title>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                                {t('academy.academy2025.registerButton', {}, 'Jetzt kostenlos anmelden!')}
-                            </a>
-                            <p class="text-sm text-[var(--color-light-text)]/60 mt-3">
-                                {t('academy.academy2025.registerSubtext', {}, 'Einzeln oder als ganzes Ensemble')}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- What to Expect Section --- */}
-            <section class="py-16 md:py-24 bg-[var(--color-dark)] text-[var(--color-light-text)]">
-                <div class="container mx-auto px-4">
-                    <div class="max-w-6xl mx-auto">
-                        <div class="text-center mb-12">
-                            <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
-                                {t('academy.academy2025.whatToExpectSectionTag', {}, 'Unser Angebot')}
-                            </p>
-                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{t('academy.academy2025.whatToExpectTitle', {}, 'Was erwartet dich bei unserem Projekt?')}</h2>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="bg-[var(--color-dark)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="w-12 h-12 bg-[var(--color-accent)] rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <title>Team Icon</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                                    </svg>
-                                </div>
-                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-3">{t('academy.academy2025.teamworkTitle', {}, 'Teamgefühl')}</h3>
-                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80"
-                                    innerHTML={t('academy.academy2025.teamworkText', {}, 'Du probst gemeinsam mit anderen Jugendlichen aus der Region Lippe-Möhnesee und lernst neue Leute kennen – ganz ohne Leistungsdruck!') || ''}>
-                                </p>
-                            </div>
-                            <div class="bg-[var(--color-dark)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="w-12 h-12 bg-[var(--color-accent)] rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <title>Mikrofon Icon</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                                    </svg>
-                                </div>
-                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-3">{t('academy.academy2025.coachingTitle', {}, 'Profi-Coaching')}</h3>
-                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80"
-                                    innerHTML={t('academy.academy2025.coachingText', {}, 'Katharina Gärtner und ihre Coaches von <strong>vode</strong> zeigen dir in lockeren Workshops, wie du deine Stimme richtig einsetzt und souverän auf der Bühne stehst.') || ''}>
-                                </p>
-                            </div>
-                            <div class="bg-[var(--color-dark)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="w-12 h-12 bg-[var(--color-accent)] rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <title>Musik Icon</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                                    </svg>
-                                </div>
-                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-3">{t('academy.academy2025.workshopConcertTitle', {}, 'Workshop-Konzert')}</h3>
-                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80"
-                                    innerHTML={t('academy.academy2025.workshopConcertText', {}, 'Am Ende des ersten Tages präsentierst du live im Workshop-Chor ein Werkstatt-Konzert. Gute Vibes und Fun garantiert!') || ''}>
-                                </p>
-                            </div>
-                            <div class="bg-[var(--color-dark)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="w-12 h-12 bg-[var(--color-accent)] rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <title>Video Icon</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-3">{t('academy.academy2025.proConcertTitle', {}, 'Profi-Konzert')}</h3>
-                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80"
-                                    innerHTML={t('academy.academy2025.proConcertText', {}, 'Am zweiten Tag erlebst du <strong>vode</strong> hautnah, wenn sie die Basilika mit ihrem A-cappella-Mix aus Pop und Jazz in neue Klänge eintauchen.') || ''}>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Why Join Section --- */}
-            <section class="py-16 md:py-24 bg-[var(--color-dark-alt)] text-[var(--color-light-text)]">
-                <div class="container mx-auto px-4">
-                    <div class="max-w-6xl mx-auto">
-                        <div class="text-center mb-12">
-                            <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
-                                {t('academy.academy2025.whyJoinSectionTag', {}, 'Deine Vorteile')}
-                            </p>
-                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{t('academy.academy2025.whyJoinTitle', {}, 'Warum solltest du dabei sein?')}</h2>
-                        </div>
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-[var(--color-accent)] rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <title>Herz Icon</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                    </svg>
-                                </div>
-                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-4">{t('academy.academy2025.funTitle', {}, 'Spaß am Singen')}</h3>
-                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80"
-                                    innerHTML={t('academy.academy2025.funText', {}, 'Gemeinsam Lieder lernen, die perfekt zu dir und deinen aktuellen "Vocal Skills" passen.') || ''}>
-                                </p>
-                            </div>
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-[var(--color-accent)] rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <title>Noten Icon</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                                    </svg>
-                                </div>
-                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-4">{t('academy.academy2025.newSongsTitle', {}, 'Neue Songs')}</h3>
-                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80"
-                                    innerHTML={t('academy.academy2025.newSongsText', {}, 'Viele Songs kannst du dir selbst erarbeiten und später auch mit deinem Chor an deiner Schule singen – so kannst du aus den Projekttagen noch lange etwas mitnehmen.') || ''}>
-                                </p>
-                            </div>
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-[var(--color-accent)] rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <title>Stern Icon</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                    </svg>
-                                </div>
-                                <h3 class="font-bold text-xl text-[var(--color-accent)] mb-4">{t('academy.academy2025.experienceTitle', {}, 'Unvergessliche Erfahrung')}</h3>
-                                <p class="text-lg leading-relaxed text-[var(--color-light-text)]/80"
-                                    innerHTML={t('academy.academy2025.experienceText', {}, 'Neue Freunde, magische Konzertstimmung und jede Menge Applaus!') || ''}>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Schedule Section --- */}
-            <section class="py-16 md:py-24 bg-[var(--color-dark)] text-[var(--color-light-text)]">
-                <div class="container mx-auto px-4">
-                    <div class="max-w-6xl mx-auto">
-                        <div class="text-center mb-12">
-                            <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
-                                {t('academy.academy2025.scheduleSectionTag', {}, 'Zeitplan')}
-                            </p>
-                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{t('academy.academy2025.scheduleTitle', {}, 'Wie ist der Ablauf an den beiden Tagen?')}</h2>
-                        </div>
-                        <div class="grid lg:grid-cols-2 gap-12">
-                            {/* Saturday Calendar */}
-                            <div>
-                                <h3 class="text-2xl font-bold mb-6 text-center text-[var(--color-accent)]">{t('academy.academy2025.saturdayTitle', {}, 'SAMSTAG')}</h3>
-                                <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-4">
-                                    <div class="space-y-0">
-                                        {/* Start time */}
-                                        <div class="flex">
-                                            <div class="w-12 text-sm text-[var(--color-light-text)]/70 pr-3 text-right font-medium py-0">
-                                                {scheduleSaturday()[0].startTime}
-                                            </div>
-                                            <div class="flex-1" />
-                                        </div>
-
-                                        <For each={scheduleSaturday()}>{(item, index) =>
-                                            <>
-                                                <Show when={!item.isPause}
-                                                    fallback={
-                                                        <div class="flex" style={{ height: `${Math.max(item.duration * 0.8, 20)}px` }}>
-                                                            <div class="w-12" />
-                                                            <div class="flex-1 mx-2 flex items-center" style={{ height: `${Math.max(item.duration * 0.8, 20)}px` }}>
-                                                                <div class="w-full h-full border-2 border-dashed border-[var(--color-light-text)]/20 rounded flex items-center justify-center">
-                                                                    <span class="text-sm text-[var(--color-light-text)]/40 italic">{item.event}</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    }
-                                                >
-                                                    <div class="flex" style={{ height: `${Math.max(item.duration * 0.8, 24)}px` }}>
+                                    <For each={scheduleSaturday()}>{(item, index) =>
+                                        <>
+                                            <Show when={!item.isPause}
+                                                fallback={
+                                                    <div class="flex" style={{ height: `${Math.max(item.duration * 0.8, 20)}px` }}>
                                                         <div class="w-12" />
-                                                        <div class="flex-1 mx-2 flex items-center" style={{ height: `${Math.max(item.duration * 0.8, 24)}px` }}>
-                                                            <div class="w-full h-full bg-[var(--color-accent)]/90 rounded flex items-center px-3">
-                                                                <div class="text-white">
-                                                                    <div class="text-md leading-tight">{item.event}</div>
-                                                                </div>
+                                                        <div class="flex-1 mx-2 flex items-center" style={{ height: `${Math.max(item.duration * 0.8, 20)}px` }}>
+                                                            <div class="w-full h-full border-2 border-dashed border-[var(--color-light-text)]/20 rounded flex items-center justify-center">
+                                                                <span class="text-sm text-[var(--color-light-text)]/40 italic">{item.event}</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </Show>
-
-                                                {/* End time for this event (except for last item) */}
-                                                <Show when={index() < scheduleSaturday().length - 1}>
-                                                    <div class="flex">
-                                                        <div class="w-12 text-sm text-[var(--color-light-text)]/70 pr-3 text-right font-medium py-0">
-                                                            {item.endTime}
+                                                }
+                                            >
+                                                <div class="flex" style={{ height: `${Math.max(item.duration * 0.8, 24)}px` }}>
+                                                    <div class="w-12" />
+                                                    <div class="flex-1 mx-2 flex items-center" style={{ height: `${Math.max(item.duration * 0.8, 24)}px` }}>
+                                                        <div class="w-full h-full bg-[var(--color-accent)]/90 rounded flex items-center px-3">
+                                                            <div class="text-white">
+                                                                <div class="text-md leading-tight">{item.event}</div>
+                                                            </div>
                                                         </div>
-                                                        <div class="flex-1" />
                                                     </div>
-                                                </Show>
-                                            </>
-                                        }</For>
-                                    </div>
+                                                </div>
+                                            </Show>
+
+                                            {/* End time for this event (except for last item) */}
+                                            <Show when={index() < scheduleSaturday().length - 1}>
+                                                <div class="flex">
+                                                    <div class="w-12 text-sm text-[var(--color-light-text)]/70 pr-3 text-right font-medium py-0">
+                                                        {item.endTime}
+                                                    </div>
+                                                    <div class="flex-1" />
+                                                </div>
+                                            </Show>
+                                        </>
+                                    }</For>
                                 </div>
                             </div>
 
-                            {/* Sunday Calendar */}
-                            <div>
-                                <h3 class="text-2xl font-bold mb-6 text-center text-[var(--color-accent)]">{t('academy.academy2025.sundayTitle', {}, 'SONNTAG')}</h3>
-                                <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-4">
-                                    <div class="space-y-0">
-                                        {/* Start time */}
-                                        <div class="flex">
-                                            <div class="w-12 text-sm text-[var(--color-light-text)]/70 pr-3 text-right font-medium py-0">
-                                                {scheduleSunday()[0].startTime}
-                                            </div>
-                                            <div class="flex-1" />
+                            {/* Sunday */}
+                            <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg ring-1 ring-[var(--color-light-text)]/20 p-6">
+                                <h3 class="text-2xl font-bold mb-6 text-center">{t('academy.academy2025.sundayTitle', {}, 'SONNTAG')}</h3>
+                                <div class="space-y-0">
+                                    {/* Start time */}
+                                    <div class="flex">
+                                        <div class="w-12 text-sm text-[var(--color-light-text)]/70 pr-3 text-right font-medium py-0">
+                                            {scheduleSunday()[0].startTime}
                                         </div>
-
-                                        <For each={scheduleSunday()}>{(item, index) =>
-                                            <>
-                                                <Show when={!item.isPause}
-                                                    fallback={
-                                                        <div class="flex" style={{ height: `${Math.max(item.duration * 0.8, 20)}px` }}>
-                                                            <div class="w-12" />
-                                                            <div class="flex-1 mx-2 flex items-center" style={{ height: `${Math.max(item.duration * 0.8, 20)}px` }}>
-                                                                <div class="w-full h-full border-2 border-dashed border-[var(--color-light-text)]/20 rounded flex items-center justify-center">
-                                                                    <span class="text-sm text-[var(--color-light-text)]/40 italic">{item.event}</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    }
-                                                >
-                                                    <div class="flex" style={{ height: `${Math.max(item.duration * 0.8, 24)}px` }}>
-                                                        <div class="w-12" />
-                                                        <div class="flex-1 mx-2 flex items-center" style={{ height: `${Math.max(item.duration * 0.8, 24)}px` }}>
-                                                            <div class="w-full h-full bg-[var(--color-accent)]/90 rounded flex items-center px-3">
-                                                                <div class="text-white">
-                                                                    <div class="text-md leading-tight">{item.event}</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </Show>
-
-                                                {/* End time for this event (except for last item) */}
-                                                <Show when={index() < scheduleSunday().length - 1}>
-                                                    <div class="flex">
-                                                        <div class="w-12 text-sm text-[var(--color-light-text)]/70 pr-3 text-right font-medium py-0">
-                                                            {item.endTime}
-                                                        </div>
-                                                        <div class="flex-1" />
-                                                    </div>
-                                                </Show>
-                                            </>
-                                        }</For>
+                                        <div class="flex-1" />
                                     </div>
+
+                                    <For each={scheduleSunday()}>{(item, index) =>
+                                        <>
+                                            <Show when={!item.isPause}
+                                                fallback={
+                                                    <div class="flex" style={{ height: `${Math.max(item.duration * 0.8, 20)}px` }}>
+                                                        <div class="w-12" />
+                                                        <div class="flex-1 mx-2 flex items-center" style={{ height: `${Math.max(item.duration * 0.8, 20)}px` }}>
+                                                            <div class="w-full h-full border-2 border-dashed border-[var(--color-light-text)]/20 rounded flex items-center justify-center">
+                                                                <span class="text-sm text-[var(--color-light-text)]/40 italic">{item.event}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            >
+                                                <div class="flex" style={{ height: `${Math.max(item.duration * 0.8, 24)}px` }}>
+                                                    <div class="w-12" />
+                                                    <div class="flex-1 mx-2 flex items-center" style={{ height: `${Math.max(item.duration * 0.8, 24)}px` }}>
+                                                        <div class="w-full h-full bg-[var(--color-accent)]/90 rounded flex items-center px-3">
+                                                            <div class="text-white">
+                                                                <div class="text-md leading-tight">{item.event}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Show>
+
+                                            {/* End time for this event (except for last item) */}
+                                            <Show when={index() < scheduleSunday().length - 1}>
+                                                <div class="flex">
+                                                    <div class="w-12 text-sm text-[var(--color-light-text)]/70 pr-3 text-right font-medium py-0">
+                                                        {item.endTime}
+                                                    </div>
+                                                    <div class="flex-1" />
+                                                </div>
+                                            </Show>
+                                        </>
+                                    }</For>
                                 </div>
                             </div>
                         </div>
@@ -439,7 +368,7 @@ const Academy2025: Component = () => {
             </section>
 
             {/* --- Workshops Section --- */}
-            <section class="py-16 md:py-24 bg-[var(--color-dark-alt)] text-[var(--color-light-text)]">
+            <section class="py-16 md:py-24 bg-[var(--color-dark)] text-[var(--color-light-text)]">
                 <div class="container mx-auto px-4">
                     <div class="max-w-6xl mx-auto">
                         <div class="text-center mb-12">
@@ -533,7 +462,7 @@ const Academy2025: Component = () => {
             </section>
 
             {/* --- News and Sheets Section --- */}
-            <section class="py-16 md:py-24 bg-[var(--color-dark)] text-[var(--color-light-text)]">
+            <section class="py-16 md:py-24 bg-[var(--color-dark-alt)] text-[var(--color-light-text)]">
                 <div class="container mx-auto px-4">
                     <div class="max-w-4xl mx-auto">
                         <div class="text-center mb-12">
@@ -545,102 +474,105 @@ const Academy2025: Component = () => {
                                 {t('academy.academy2025.newsIntro', {}, 'Hier laden wir nach und nach neues Material für euch hoch. Schaut also immer mal wieder vorbei!')}
                             </p>
                         </div>
-                        <div class="space-y-12">
+                        <div class="space-y-8">
                             {/* --- Cloudy Day --- */}
-                            <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
-                                <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.cloudyDayTitle', {}, 'Cloudy Day - Tutorial')}</h3>
-                                <div class="aspect-w-16 aspect-h-9 mb-6">
-                                    <iframe
-                                        class="w-full h-full rounded-lg aspect-video"
-                                        src="https://www.youtube.com/embed/uq88tT1HozU"
-                                        title="Cloudy Day - Tutorial"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen
-                                    />
+                            <Accordion title={t('academy.academy2025.cloudyDayTitle', {}, 'Cloudy Day - Tutorial')}>
+                                <div class="bg-[var(--color-surface-alt)] p-6 md:p-8">
+                                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                                        <iframe
+                                            class="w-full h-full rounded-lg aspect-video"
+                                            src="https://www.youtube.com/embed/uq88tT1HozU"
+                                            title="Cloudy Day - Tutorial"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen
+                                        />
+                                    </div>
+                                    <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
+                                        {t('academy.academy2025.cloudyDayText', {}, 'Neu am Start: Unser Tutorial zu "Cloudy Day"! Der Song ist ein Kanon – ideal zum gemeinsamen Singen und zum Warmwerden. Die Noten gibt’s hier als Download. Viel Spaß beim Ausprobieren!')}
+                                    </p>
+                                    <div class="text-center">
+                                        <a
+                                            href="/material/Cloudy Day - vode academy 2025.pdf"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-bold text-md rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                        >
+                                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <title>Download Icon</title>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                            </svg>
+                                            {t('academy.academy2025.downloadButton', {}, 'Noten herunterladen')}
+                                        </a>
+                                    </div>
                                 </div>
-                                <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
-                                    {t('academy.academy2025.cloudyDayText', {}, 'Neu am Start: Unser Tutorial zu "Cloudy Day"! Der Song ist ein Kanon – ideal zum gemeinsamen Singen und zum Warmwerden. Die Noten gibt’s hier als Download. Viel Spaß beim Ausprobieren!')}
-                                </p>
-                                <div class="text-center">
-                                    <a
-                                        href="/material/Cloudy Day - vode academy 2025.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-bold text-md rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                                    >
-                                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <title>Download Icon</title>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                        </svg>
-                                        {t('academy.academy2025.downloadButton', {}, 'Noten herunterladen')}
-                                    </a>
-                                </div>
-                            </div>
+                            </Accordion>
 
                             {/* --- Lion (Saint Mesa) - Vocal Lines --- */}
-                            <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
-                                <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.lionLinesTitle', {}, 'Quodlibet Lion - Tutorial')}</h3>
-                                <div class="aspect-w-16 aspect-h-9 mb-6">
-                                    <iframe
-                                        class="w-full h-full rounded-lg aspect-video"
-                                        src="https://www.youtube.com/embed/wvnHlf83Oz8"
-                                        title="Lion (Saint Mesa) – Vocal Lines"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen
-                                    />
+                            <Accordion title={t('academy.academy2025.lionLinesTitle', {}, 'Quodlibet Lion - Tutorial')}>
+                                <div class="bg-[var(--color-surface-alt)] p-6 md:p-8">
+                                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                                        <iframe
+                                            class="w-full h-full rounded-lg aspect-video"
+                                            src="https://www.youtube.com/embed/wvnHlf83Oz8"
+                                            title="Lion (Saint Mesa) – Vocal Lines"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen
+                                        />
+                                    </div>
+                                    <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
+                                        {t('academy.academy2025.lionLinesText', {}, 'Heute nimmt euch Feli mit, um mit ihr zwei kleine Lines aus verschiedenen Songs zu lernen. Am Ende soll alles zu dem Song „Lion“ von Saint Mesa passen, sodass wir damit gemeinsam eine ganz neue Live-Version bei unserem Workshop kreieren können. Viel Spaß beim Mitsingen!')}
+                                    </p>
+                                    <div class="text-center">
+                                        <a
+                                            href="/material/Quodlibet Lion - vode academy 2025.pdf"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-bold text-md rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                        >
+                                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <title>Download Icon</title>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                            </svg>
+                                            {t('academy.academy2025.downloadButton', {}, 'Noten herunterladen')}
+                                        </a>
+                                    </div>
                                 </div>
-                                <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
-                                    {t('academy.academy2025.lionLinesText', {}, 'Heute nimmt euch Feli mit, um mit ihr zwei kleine Lines aus verschiedenen Songs zu lernen. Am Ende soll alles zu dem Song „Lion“ von Saint Mesa passen, sodass wir damit gemeinsam eine ganz neue Live-Version bei unserem Workshop kreieren können. Viel Spaß beim Mitsingen!')}
-                                </p>
-                                <div class="text-center">
-                                    <a
-                                        href="/material/Quodlibet Lion - vode academy 2025.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-bold text-md rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                                    >
-                                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <title>Download Icon</title>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                        </svg>
-                                        {t('academy.academy2025.downloadButton', {}, 'Noten herunterladen')}
-                                    </a>
-                                </div>
-                            </div>
+                            </Accordion>
 
                             {/* --- The Voice Inside --- */}
-                            <div class="bg-[var(--color-surface-alt)] rounded-2xl shadow-xl overflow-hidden p-6 md:p-8">
-                                <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent)]">{t('academy.academy2025.voiceInsideTitle', {}, 'The Voice Inside - Tutorial')}</h3>
-                                <div class="aspect-w-16 aspect-h-9 mb-6">
-                                    <iframe
-                                        class="w-full h-full rounded-lg aspect-video"
-                                        src="https://www.youtube.com/embed/P-acKt7PhW8"
-                                        title="The Voice Inside - Tutorial"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen
-                                    />
+                            <Accordion title={t('academy.academy2025.voiceInsideTitle', {}, 'The Voice Inside - Tutorial')}>
+                                <div class="bg-[var(--color-surface-alt)] p-6 md:p-8">
+                                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                                        <iframe
+                                            class="w-full h-full rounded-lg aspect-video"
+                                            src="https://www.youtube.com/embed/P-acKt7PhW8"
+                                            title="The Voice Inside - Tutorial"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen
+                                        />
+                                    </div>
+                                    <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
+                                        {t('academy.academy2025.newsText', {}, 'Hey, habt ihr schon das "The Voice Inside" Tutorial gecheckt? Die Noten dazu findet ihr jetzt hier bei uns als Download! Perfekt, um schon mal reinzukommen und euch auf den Workshop vorzubereiten. Viel Spaß beim Üben!')}
+                                    </p>
+                                    <div class="text-center">
+                                        <a
+                                            href="/material/The Voice Inside - vode academy 2025.pdf"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-bold text-md rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                        >
+                                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <title>Download Icon</title>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                            </svg>
+                                            {t('academy.academy2025.downloadButton', {}, 'Noten herunterladen')}
+                                        </a>
+                                    </div>
                                 </div>
-                                <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
-                                    {t('academy.academy2025.newsText', {}, 'Hey, habt ihr schon das "The Voice Inside" Tutorial gecheckt? Die Noten dazu findet ihr jetzt hier bei uns als Download! Perfekt, um schon mal reinzukommen und euch auf den Workshop vorzubereiten. Viel Spaß beim Üben!')}
-                                </p>
-                                <div class="text-center">
-                                    <a
-                                        href="/material/The Voice Inside - vode academy 2025.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-bold text-md rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                                    >
-                                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <title>Download Icon</title>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                        </svg>
-                                        {t('academy.academy2025.downloadButton', {}, 'Noten herunterladen')}
-                                    </a>
-                                </div>
-                            </div>
+                            </Accordion>
 
                             {/* More items can be added here in the future */}
                         </div>
