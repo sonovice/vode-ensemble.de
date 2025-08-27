@@ -17,7 +17,7 @@ const members: Record<string, Singer[]> = {
         { name: "Feli Ammer", image: "/images/portraits/f_grunden_1.jpg", website: "https://instagram.com/feliammer", description: "Sängerin, Musikpädagogin" },
         { name: "Tabea Sawatzky", image: "/images/portraits/t_sawatzky_1.jpg" },
         { name: "Liane Prager", image: "/images/portraits/l_prager_1.jpg" },
-        { name: "Kristina Hügel", image: "/images/portraits/k_huegel_1.jpg" },
+        { name: "Kristina Hügel", image: "/images/portraits/k_huegel_2.jpg" },
     ],
     "Mezzosopran": [
         { name: "Kristin Herten", image: "/images/portraits/k_herten_1.jpg" },
@@ -34,7 +34,7 @@ const members: Record<string, Singer[]> = {
         { name: "Katharina Gärtner", image: "/images/portraits/k_gaertner_1.jpg", description: "Dirigentin" },
     ],
     "Tenor": [
-        { name: "Niklas Genschel", image: "/images/members/placeholder.jpg" },
+        { name: "Niklas Genschel", image: "/images/portraits/n_genschel_1.jpg" },
         { name: "Philipp Kaiser", image: "/images/portraits/ph_kaiser_1.jpg", description: "Musiklehrer, Trompeter, Dirigent" },
         { name: "Sebastian Meyer", image: "/images/portraits/s_meyer_1.jpg" },
         { name: "Simon Herten", image: "/images/portraits/s_herten_1.jpg", description: "Sänger, Musikpädagoge, Dirigent" },
