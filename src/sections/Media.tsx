@@ -5,6 +5,16 @@ const Media: Component = () => {
     const { t } = useI18n();
     const videos = [
         {
+            src: "https://www.youtube.com/embed/--0YucWnasc",
+            title: "Runaway (OneRepublic Cover)",
+            description: [
+                "Arrangement: Stefan Flügel",
+                "Musikalische Leitung: Simon Herten",
+                "Solist*innen: Kristina Hügel, Jette Sauerwald, Tobias Hägele, Sebastian Meyer",
+                "Produktion: Julius Gass"
+            ]
+        },
+        {
             src: "https://www.youtube.com/embed/GxzoyGThUiQ",
             title: "Back in the High Life Again (Steve Winwood Cover)",
             description: [
