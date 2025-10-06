@@ -51,7 +51,7 @@ const de: BaseDictionary = {
 		sectionTag: "Konzerte",
 		title: "Anstehende Events",
 		noUpcomingFallback:
-			"Zurzeit sind keine weiteren Konzerte geplant. Schauen Sie bald wieder vorbei!",
+			"Zurzeit sind keine weiteren Konzerte geplant. Schaue bald wieder vorbei!",
 		pastTitle: "Vergangene Konzerte",
 		noPastForYearFallback: "Keine Konzerte für dieses Jahr im Archiv.",
 		timeSuffix: "Uhr",

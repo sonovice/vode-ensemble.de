@@ -219,9 +219,6 @@ const Konzerte: Component = () => {
                     <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-2 text-[var(--color-light-text)]">
                         {t('concerts.title', {}, 'Anstehende Events')}
                     </h1>
-                    {/* <p class="text-[var(--color-light-text)]/70 mb-6">
-                        Hier finden Sie eine Übersicht unserer nächsten Auftritte. Weiter unten können Sie im Archiv vergangener Konzerte stöbern.
-                    </p> */}
                 </div>
                 <div class="flex flex-col md:flex-row items-start gap-10 lg:gap-16">
                     <div class="w-full">
