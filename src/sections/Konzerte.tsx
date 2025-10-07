@@ -40,6 +40,20 @@ const concerts: Record<string, ConcertEntry[]> = {
             address: "Aula der Elly-Heuss-Schule Wiesbaden | Platz der Deutschen Einheit 2 | 65185 Wiesbaden",
             title: "Doppelkonzert mit perlemor",
             description: <><a href="https://eventfrog.de/de/p/konzert/a-cappella-vocal/vocal-elements-zwei-ensembles-ein-leuchten-7351880902861939160.html" target="_blank" rel="noopener noreferrer"><button type="button" class="bg-[var(--color-accent)] cursor-pointer text-white font-bold px-4 py-2 rounded-md">Tickets</button></a></>
+        },
+        {
+            datetime: new Date("2025-12-20 20:00"),
+            location: "Bielefeld",
+            address: "Altstädter Nikolaikirche",
+            title: "Musikalischer Adventskalender",
+            description: <></>
+        },
+        {
+            datetime: new Date("2025-12-21 15:00"),
+            location: "Detmold",
+            address: "Martin-Luther-Kirche",
+            title: "Weihnachtskonzert",
+            description: <></>
         }
     ],
     "2024": [
