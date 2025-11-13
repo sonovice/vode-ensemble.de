@@ -78,25 +78,6 @@ const Academy2025: Component = () => {
                             <p class="text-lg md:text-xl leading-relaxed text-[var(--color-light-text)]/80 mb-8">
                                 {t('academy.academy2025.heroDescription', {}, 'Du singst gerne und hast Lust, ein Wochenende lang mit professionellen Coaches an neuen Songs zu arbeiten, deine Stimme zu entdecken und am Ende alles bei einem Konzert auf die Bühne zu bringen? Dann bist du bei der vode academy 2025 genau richtig! Vom 30. bis 31. August 2025 in St. Ida in Herzfeld erwartet dich ein Wochenende voller Musik, Gemeinschaft und unvergesslicher Live-Momente.')}
                             </p>
-
-                            {/* Call-to-Action */}
-                            <div>
-                                <a
-                                    href="https://forms.office.com/e/4r01h2VjYq"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-accent)] text-white font-bold text-lg rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                                >
-                                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <title>Anmeldung Icon</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                    </svg>
-                                    {t('academy.academy2025.registerButton', {}, 'Jetzt kostenlos anmelden!')}
-                                </a>
-                                <p class="text-sm text-[var(--color-light-text)]/60 mt-3">
-                                    {t('academy.academy2025.registerSubtext', {}, 'Einzeln oder als ganzes Ensemble')}
-                                </p>
-                            </div>
                         </div>
 
                         {/* Video Column (Right) */}

@@ -93,8 +93,6 @@ const en: BaseDictionary = {
 			transportTitle: "Getting There",
 			transportText:
 				"We provide eco-friendly transportation via shuttle buses! Here you can find the exact departure times for the two routes that will bring you from the region to Herzfeld.",
-			registerButton: "Sign up now for free!",
-			registerSubtext: "Join as an individual or complete ensemble",
 
 			organizational: {
 				sectionTag: "Organizational",

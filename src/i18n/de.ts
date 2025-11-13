@@ -94,8 +94,6 @@ const de: BaseDictionary = {
 			transportTitle: "Anreise",
 			transportText:
 				"Die Anreise erfolgt umweltfreundlich über Shuttlebusse! Hier findest du die genauen Abfahrtszeiten für die beiden Linien, die euch aus der Region zu uns nach Herzfeld fahren.",
-			registerButton: "Jetzt kostenlos anmelden!",
-			registerSubtext: "Einzeln oder als ganzes Ensemble",
 
 			organizational: {
 				sectionTag: "Organisatorisches",
