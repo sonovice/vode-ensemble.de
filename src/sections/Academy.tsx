@@ -61,7 +61,13 @@ const Academy: Component = () => {
                                 class="w-full h-auto rounded-md mb-4"
                             />
                             <h2 class="text-xl font-bold text-[var(--color-light-text)] mb-2">{t('academy.audioTitle', {}, 'Sendungsmitschnitt')}</h2>
-                            <p class="text-sm text-[var(--color-light-text)]/70 mb-4">{t('academy.audioSubtitle', {}, 'Podcast-Untertitel')}</p>
+                            <p class="text-sm text-[var(--color-light-text)]/70 mb-4">
+                                {t('academy.audioSubtitlePreLink', {}, 'From the podcast ')}
+                                <a href="https://www.deutschlandfunkkultur.de/chor-der-woche-100.html" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">
+                                    {t('academy.audioSubtitleLinkText', {}, '"Chor der Woche"')}
+                                </a>
+                                {t('academy.audioSubtitlePostLink', {}, ' by Nicolas Hansen')}
+                            </p>
                             <audio controls class="w-full">
                                 <source src="/audio/dlf-kultur_2025-11-11.mp3" type="audio/mpeg" />
                                 <track kind="captions" />
