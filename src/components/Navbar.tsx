@@ -12,14 +12,6 @@ import { useI18n } from "../i18n";
 import type { Locale } from "../i18n/config";
 import { LocalesLabels } from "../i18n/config";
 
-const baseNavLinks = [
-	{ id: "ensemble", label: "Ensemble" },
-	{ id: "konzerte", label: "Konzerte" },
-	{ id: "academy", label: "Academy" },
-	{ id: "media", label: "Medien" },
-	{ id: "kontakt", label: "Kontakt" },
-];
-
 const Header: Component = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -169,8 +161,8 @@ const Header: Component = () => {
 	return (
 		<div class="w-full sticky top-0 z-50 bg-[var(--color-dark)] text-[var(--color-light-text)] shadow-md">
 			<div class="container mx-auto flex items-center justify-between h-16 px-4 md:px-8">
-				<a href="/" onClick={handleLogoClick} class="text-3xl font-bold tracking-tight hover:text-[var(--color-accent)] transition-colors">
-					vode
+				<a href="/" onClick={handleLogoClick} class="flex items-center">
+					<img src="/images/logo.svg" alt="vode logo" style={{ height: "30px" }} />
 				</a>
 
 				<nav class="hidden lg:flex flex-grow justify-center items-center">
