@@ -44,15 +44,38 @@ const concerts: Record<string, ConcertEntry[]> = {
         {
             datetime: new Date("2025-12-20 20:00"),
             location: "Bielefeld",
-            address: "Altstädter Nikolaikirche",
+            address: "Altstädter Nikolaikirche | Altstädter Kirchplatz 1 | 33602 Bielefeld",
             title: "Musikalischer Adventskalender",
             description: <></>
         },
         {
             datetime: new Date("2025-12-21 15:00"),
             location: "Detmold",
-            address: "Martin-Luther-Kirche",
+            address: "Martin-Luther-Kirche | Schülerstraße 14 | 32756 Detmold",
             title: "Weihnachtskonzert",
+            description: <></>
+        }
+    ],
+    "2026": [
+        {
+            datetime: new Date("2026-05-30 20:00"),
+            location: "Wilhelmshaven",
+            address: "Pumpwerk | Banter Deich 1a | 26382 Wilhelmshaven",
+            title: "Doppelkonzert mit Cantamare",
+            description: <></>
+        },
+        {
+            datetime: new Date("2026-01-25 18:00"),
+            location: "Köln",
+            address: "Konzertsaal der HfMT | Unter Krahnenbäumen 87 | 50668 Köln",
+            title: "voc.cologne 2026",
+            description: <></>
+        },
+        {
+            datetime: new Date("2026-01-31 19:00"),
+            location: "Marienmünster",
+            address: "Marienmünster – Konzertsaal | Abtei 3 | 37696 Marienmünster",
+            title: "Concert in the Dark",
             description: <></>
         }
     ],
