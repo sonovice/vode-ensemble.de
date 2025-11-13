@@ -63,9 +63,11 @@ const de: BaseDictionary = {
 			"Musik entsteht bei uns im Miteinander. Damit unsere Konzerte zu etwas Besonderem werden, bringen wir in unseren Proben ein, was jede:r von uns am besten kann: Einige Mitglieder von vode arbeiten als Vocal Coaches und unterstützen bei der stimmlichen Umsetzung musikalischer Ideen. Andere unterrichten an Schulen und entwickeln innovative Probenformate für Gruppen. Wieder andere sind als Tonmeister:innen tätig und haben ein feines Gespür für Klang und Details.",
 		paragraph2:
 			"Diese vielfältigen Erfahrungen und Stärken fließen in unsere gemeinsame Probenarbeit ein – und davon profitieren wir alle. Dieses Wissen geben wir aber nicht nur intern weiter: Wir teilen es auch mit anderen Chören. Dafür haben wir verschiedene Workshop- und Coachingformate entwickelt.",
-		paragraph3:
-			"Unser diesjähriges Education-Projekt richtet sich an Jugendchöre.",
 		learnMore: "Mehr erfahren",
+		audioTitle: "Sendungsmitschnitt von Deutschlandfunk Kultur",
+		audioSubtitle: "Aus dem Podcast \"Chor der Woche\" von Nicolas Hansen",
+		audioCoverAlt: "Cover für den Podcast 'Chor der Woche'",
+		audioFallback: "Dein Browser unterstützt das Audio-Element nicht.",
 		formatsTitle: "Unsere Formate",
 		expertTitle: "vode:expert",
 		expertDescription:

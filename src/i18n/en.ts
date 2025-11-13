@@ -62,8 +62,11 @@ const en: BaseDictionary = {
 			"For us, music is created in a spirit of collaboration. To make our concerts special, we bring to our rehearsals what each of us does best: Some members of vode work as vocal coaches, helping to realize musical ideas vocally. Others teach at schools and develop innovative rehearsal formats for groups. Still others work as sound engineers and have a fine sense for sound and details.",
 		paragraph2:
 			"These diverse experiences and strengths flow into our joint rehearsal work – and we all benefit from it. We don't just pass this knowledge on internally: We also share it with other choirs, having developed various workshop and coaching formats for this purpose.",
-		paragraph3: "Our education project this year is aimed at youth choirs.",
 		learnMore: "Learn more",
+		audioTitle: "Broadcast recording from Deutschlandfunk Kultur",
+		audioSubtitle: 'From the podcast "Chor der Woche" by Nicolas Hansen',
+		audioCoverAlt: "Cover for the podcast 'Choir of the Week'",
+		audioFallback: "Your browser does not support the audio element.",
 		formatsTitle: "Our Formats",
 		expertTitle: "vode:expert", // Title can remain, description needs translation
 		expertDescription:

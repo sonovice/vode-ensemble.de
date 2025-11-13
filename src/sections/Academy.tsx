@@ -12,6 +12,12 @@ const Academy: Component = () => {
     // Data for past projects (can be expanded or moved to a separate data file later)
     const pastProjects = [
         {
+            year: "2025",
+            title: "vode academy 2025",
+            description: "Intensiv-Workshop für Chorsänger:innen und Chorleiter:innen.",
+            link: "/academy-2025"
+        },
+        {
             year: "2023",
             title: "Projekt mit Studierenden",
             description: "Konzerte: Musikstudierende der Uni Vechta treten bei außergewöhnlichen Kooperationsprojekten auf",
@@ -29,7 +35,7 @@ const Academy: Component = () => {
                 {/* Top part: Two-column for intro - RESTRUCTURED */}
                 <div class="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 mb-16 md:mb-24">
                     {/* Text Column (Left) */}
-                    <div class="w-full lg:w-7/12 text-left lg:mt-12">
+                    <div class="w-full lg:w-8/12 text-left">
                         <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
                             {t('academy.sectionTag', {}, 'Education')}
                         </p>
@@ -43,27 +49,26 @@ const Academy: Component = () => {
                             <p class="md:text-lg leading-relaxed text-[var(--color-light-text)]/80 mt-4"
                                 innerHTML={t('academy.paragraph2', {}, 'Paragraph 2') || ''}>
                             </p>
-                            <p class="md:text-lg leading-relaxed text-[var(--color-light-text)]/80 mt-4"
-                                innerHTML={t('academy.paragraph3', {}, 'Paragraph 3') || ''}>
-                            </p>
-                            <div class="mt-8">
-                                <a href="/academy-2025"
-                                    class="inline-block bg-[var(--color-accent)] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-80 transition-all duration-300">
-                                    {t('academy.learnMore', {}, 'Mehr erfahren')}
-                                </a>
-                            </div>
+
                         </div>
                     </div>
-
-                    {/* Image Column (Right) */}
-                    <a href="/academy-2025"
-                        class="w-full lg:w-5/12">
-                        <img
-                            src="/images/academy_2025.jpg"
-                            alt="Academy Workshop Impression"
-                            class="max-h-[500px] lg:max-h-full lg:w-full object-contain lg:h-full mx-auto rounded-lg"
-                        />
-                    </a>
+                    {/* Audio Player Column (Right) */}
+                    <div class="w-full lg:w-4/12">
+                        <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg p-6">
+                            <img
+                                src="/audio/dlf-kultur_2025-11-11.png"
+                                alt={t('academy.audioCoverAlt', {}, "Cover für den Podcast 'Chor der Woche'")}
+                                class="w-full h-auto rounded-md mb-4"
+                            />
+                            <h2 class="text-xl font-bold text-[var(--color-light-text)] mb-2">{t('academy.audioTitle', {}, 'Sendungsmitschnitt')}</h2>
+                            <p class="text-sm text-[var(--color-light-text)]/70 mb-4">{t('academy.audioSubtitle', {}, 'Podcast-Untertitel')}</p>
+                            <audio controls class="w-full">
+                                <source src="/audio/dlf-kultur_2025-11-11.mp3" type="audio/mpeg" />
+                                <track kind="captions" />
+                                {t('academy.audioFallback', {}, 'Dein Browser unterstützt das Audio-Element nicht.')}
+                            </audio>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Bottom part: Past Projects - full or inset width */}
