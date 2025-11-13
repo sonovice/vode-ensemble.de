@@ -68,7 +68,7 @@ const concerts: Record<string, ConcertEntry[]> = {
             datetime: new Date("2026-01-25 18:00"),
             location: "Köln",
             address: "Konzertsaal der HfMT | Unter Krahnenbäumen 87 | 50668 Köln",
-            title: "voc.cologne 2026",
+            title: "Auftritt im Rahmen der voc.cologne 2026",
             description: <></>
         },
         {
