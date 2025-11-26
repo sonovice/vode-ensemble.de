@@ -243,6 +243,17 @@ const de: BaseDictionary = {
 		paragraph3:
 			'Für Buchungsanfragen oder sonstige Anliegen erreichst du Maria Waloschek und Feli Ammer über <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
 	},
+	adventskalender: {
+		sectionTag: "Adventskalender",
+		coverAlt: "Cover von Human Heart von vode",
+		songTitle: "Human Heart",
+		artist: "vode",
+		audioFallback: "Dein Browser unterstützt das Audio-Element nicht.",
+		greeting: 'Herzliche Adventsgrüße von <span class="italic">vode</span>!',
+		message: "Wir hoffen, dieser Song bringt dir ein wenig Wärme und Freude in dieser besonderen Zeit.",
+		backLink: "Zurück zu vode-ensemble.de",
+		backIconTitle: "Zurück-Pfeil",
+	},
 	support: {
 		imageAlt: "Unterstützung Impression",
 		sectionTag: "Support",
