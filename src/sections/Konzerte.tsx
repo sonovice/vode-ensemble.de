@@ -46,7 +46,7 @@ const concerts: Record<string, ConcertEntry[]> = {
             location: "Bielefeld",
             address: "Altstädter Nikolaikirche | Altstädter Kirchplatz 1 | 33602 Bielefeld",
             title: "Musikalischer Adventskalender",
-            description: <></>
+            description: <><span class="text-xs italic">Wir danken der <a href="https://www.bielefelder-buergerstiftung.de/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">Bielefelder Bürgerstiftung</a> für die finanzielle Unterstützung des Konzerts.</span></>
         },
         {
             datetime: new Date("2025-12-21 15:00"),
