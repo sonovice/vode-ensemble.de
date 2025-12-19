@@ -62,7 +62,7 @@ const concerts: Record<string, ConcertEntry[]> = {
             location: "Wilhelmshaven",
             address: "Pumpwerk | Banter Deich 1a | 26382 Wilhelmshaven",
             title: "Doppelkonzert mit Cantamare",
-            description: <></>
+            description: <><a href="https://www.reservix.de/tickets-cantamare-vode-doppelchor-konzert-in-wilhelmshaven-pumpwerk-am-30-5-2026/e2499739" target="_blank" rel="noopener noreferrer"><button type="button" class="bg-[var(--color-accent)] cursor-pointer text-white font-bold px-4 py-2 rounded-md">Tickets</button></a></>
         },
         {
             datetime: new Date("2026-01-25 18:00"),
