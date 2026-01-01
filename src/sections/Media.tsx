@@ -5,6 +5,17 @@ const Media: Component = () => {
     const { t } = useI18n();
     const videos = [
         {
+            src: "https://www.youtube.com/embed/UWVHe51-kG8",
+            title: "Bli-Blip (vode & New York Voices)",
+            description: [
+                "Original Arrangement: Darmon Meader & Michael Abene",
+                "A cappella Arrangement: Manuel Grunden",
+                "Produktion/Mix/Video Edit: Manuel Grunden",
+                "Aufnahme/Master: Julius Gass",
+                "Video Konzept & Produktion: Lars Meyer & Manuel Grunden"
+            ]
+        },
+        {
             src: "https://www.youtube.com/embed/--0YucWnasc",
             title: "Runaway (OneRepublic Cover)",
             description: [

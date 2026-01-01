@@ -17,6 +17,15 @@ const de: BaseDictionary = {
 		mainTitle: "Vocal Jazz",
 		subTitle: "& Pop",
 	},
+	feature: {
+		sectionTag: "Neu",
+		title: "vode × New York Voices",
+		songTitle: "Bli-Blip",
+		intro: 'Über ein Jahr in der Entwicklung – endlich können wir unsere geheime Kollaboration mit den legendären <a href="https://newyorkvoices.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">New York Voices</a> präsentieren!',
+		story1: 'Alles begann beim Black Forest Voices Festival im Juni 2024, wo Kim Nazarian von den <a href="https://newyorkvoices.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">New York Voices</a> unser Ensemble coachte. Aus dieser Begegnung entstand die Idee zu dieser besonderen Zusammenarbeit.',
+		story2: "Das Arrangement stammt ursprünglich von Darmon Meader (New York Voices) und Michael Abene. Unser Bassist Manuel Grunden hat es in eine reine A-cappella-Version verwandelt – und dabei gleich auch Produktion, Mix und Videoschnitt übernommen.",
+		story3: 'Im November 2024 nahmen wir unseren Part bei Fattoria Musica mit <a href="https://juliusgass.de/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">Julius Gass</a> auf. Ein Jahr nach dem ersten Treffen entstand dann das Musikvideo im wunderschönen Cafe Cup in Detmold.',
+	},
 	ensemble: {
 		sectionTag: "Über uns",
 		title: "Das Ensemble",
