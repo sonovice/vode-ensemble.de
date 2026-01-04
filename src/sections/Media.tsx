@@ -12,7 +12,7 @@ const Media: Component = () => {
                 "A cappella Arrangement: Manuel Grunden",
                 "Produktion/Mix/Video Edit: Manuel Grunden",
                 "Aufnahme/Master: Julius Gass",
-                "Video Konzept & Produktion: Lars Meyer & Manuel Grunden"
+                "Video Konzept & Produktion: Lars Henrik & Manuel Grunden"
             ]
         },
         {

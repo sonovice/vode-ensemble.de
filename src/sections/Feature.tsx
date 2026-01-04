@@ -7,7 +7,7 @@ const Feature: Component = () => {
     return (
         <section
             id="feature"
-            class="bg-[var(--color-dark)] text-[var(--color-light-text)] py-16 md:py-24 relative overflow-hidden"
+            class="bg-[var(--color-dark-alt)] text-[var(--color-light-text)] py-16 md:py-24 relative overflow-hidden"
         >
             {/* Subtle background accent */}
             <div class="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/5 via-transparent to-transparent pointer-events-none" />
