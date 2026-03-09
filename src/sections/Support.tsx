@@ -1,5 +1,6 @@
 import type { Component } from "solid-js";
 import { useI18n } from "../i18n";
+import ImageLightbox from "../components/ImageLightbox";
 
 const Support: Component = () => {
     const { t } = useI18n();
@@ -14,11 +15,13 @@ const Support: Component = () => {
                 <div class="flex flex-col md:flex-row items-start gap-8 md:gap-12 lg:gap-16 mb-12 md:mb-16">
                     {/* Column 1.2: Image */}
                     <div class="w-full md:w-5/12">
-                        <img
-                            src="/images/ensemble_01b.jpg" // Placeholder image for support
-                            alt={t('support.imageAlt', {}, 'Unterstützung Impression')}
-                            class="rounded-lg shadow-xl w-full h-auto object-cover aspect-video"
-                        />
+                        <ImageLightbox src="/images/ensemble_01b.jpg" alt={t('support.imageAlt', {}, 'Unterstützung Impression')}>
+                            <img
+                                src="/images/ensemble_01b.jpg"
+                                alt={t('support.imageAlt', {}, 'Unterstützung Impression')}
+                                class="rounded-lg shadow-xl w-full h-auto object-cover aspect-video"
+                            />
+                        </ImageLightbox>
                     </div>
                     {/* Column 1.1: Intro Text */}
                     <div class="w-full md:w-7/12 text-left">

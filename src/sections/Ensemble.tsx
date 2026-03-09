@@ -1,5 +1,6 @@
 import { type Component, createSignal, For, Show } from "solid-js"
 import { useI18n } from "../i18n"
+import ImageLightbox from "../components/ImageLightbox"
 
 // Member data and types
 interface Singer {
@@ -85,11 +86,13 @@ const Ensemble: Component = () => {
                 {/* "Eine Familie" Section */}
                 <div class="flex flex-col items-start lg:flex-row gap-8 lg:gap-16 mb-16 lg:mb-24">
                     <div class="w-full lg:w-6/12">
-                        <img
-                            src="/images/ensemble/ensemble_portrait_01.jpg"
-                            alt="Ensemble Gruppe"
-                            class="w-full object-cover lg:object-contain aspect-square object-bottom lg:aspect-auto lg:h-full lg:object-center rounded-lg"
-                        />
+                        <ImageLightbox src="/images/ensemble/ensemble_portrait_01.jpg" alt="Ensemble Gruppe">
+                            <img
+                                src="/images/ensemble/ensemble_portrait_01.jpg"
+                                alt="Ensemble Gruppe"
+                                class="w-full object-cover lg:object-contain aspect-square object-bottom lg:aspect-auto lg:h-full lg:object-center rounded-lg"
+                            />
+                        </ImageLightbox>
                     </div>
                     <div class="w-full lg:w-6/12 text-left xl:px-4 lg:mt-12">
                         <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
