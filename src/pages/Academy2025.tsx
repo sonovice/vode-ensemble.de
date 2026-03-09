@@ -85,7 +85,7 @@ const Academy2025: Component = () => {
                             <div class="aspect-[9/16] bg-[var(--color-surface-alt)] rounded-lg shadow-lg">
                                 <iframe
                                     class="w-full h-full rounded-lg"
-                                    src="https://www.youtube.com/embed/m5BTiZ8ACjo"
+                                    src="https://www.youtube.com/embed/m5BTiZ8ACjo?enablejsapi=1"
                                     title="Chor macht Schule - Teaser"
                                     frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -462,7 +462,7 @@ const Academy2025: Component = () => {
                                     <div class="aspect-w-16 aspect-h-9 mb-6">
                                         <iframe
                                             class="w-full h-full rounded-lg aspect-video"
-                                            src="https://www.youtube.com/embed/uq88tT1HozU"
+                                            src="https://www.youtube.com/embed/uq88tT1HozU?enablejsapi=1"
                                             title="Cloudy Day - Tutorial"
                                             frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -495,7 +495,7 @@ const Academy2025: Component = () => {
                                     <div class="aspect-w-16 aspect-h-9 mb-6">
                                         <iframe
                                             class="w-full h-full rounded-lg aspect-video"
-                                            src="https://www.youtube.com/embed/wvnHlf83Oz8"
+                                            src="https://www.youtube.com/embed/wvnHlf83Oz8?enablejsapi=1"
                                             title="Lion (Saint Mesa) – Vocal Lines"
                                             frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -528,7 +528,7 @@ const Academy2025: Component = () => {
                                     <div class="aspect-w-16 aspect-h-9 mb-6">
                                         <iframe
                                             class="w-full h-full rounded-lg aspect-video"
-                                            src="https://www.youtube.com/embed/P-acKt7PhW8"
+                                            src="https://www.youtube.com/embed/P-acKt7PhW8?enablejsapi=1"
                                             title="The Voice Inside - Tutorial"
                                             frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

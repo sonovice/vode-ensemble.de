@@ -27,7 +27,7 @@ const Feature: Component = () => {
                         <div class="aspect-video rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                             <iframe
                                 class="w-full h-full"
-                                src="https://www.youtube.com/embed/UWVHe51-kG8"
+                                src="https://www.youtube.com/embed/UWVHe51-kG8?enablejsapi=1"
                                 title="Bli-Blip | vode & New York Voices"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin"

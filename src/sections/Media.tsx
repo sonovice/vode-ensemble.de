@@ -48,7 +48,7 @@ const Media: Component = () => {
 
     const videos = createMemo(() => [
         {
-            src: "https://www.youtube.com/embed/UWVHe51-kG8",
+            src: "https://www.youtube.com/embed/UWVHe51-kG8?enablejsapi=1",
             title: "Bli-Blip (vode & New York Voices)",
             description: [
                 "Original Arrangement: Darmon Meader & Michael Abene",
@@ -60,7 +60,7 @@ const Media: Component = () => {
             ]
         },
         {
-            src: "https://www.youtube.com/embed/GxzoyGThUiQ",
+            src: "https://www.youtube.com/embed/GxzoyGThUiQ?enablejsapi=1",
             title: "Back in the High Life Again (Steve Winwood Cover)",
             description: [
                 "Arrangement: Julia Dollison & Kerry Marsh",
@@ -71,7 +71,7 @@ const Media: Component = () => {
             ]
         },
         {
-            src: "https://www.youtube.com/embed/qs1Xteyb9j4",
+            src: "https://www.youtube.com/embed/qs1Xteyb9j4?enablejsapi=1",
             title: "In My Life (The Beatles Cover)",
             description: [
                 "Arrangement: Darmon Meader",
