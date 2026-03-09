@@ -18,6 +18,18 @@ const Media: Component = () => {
             src: "/audio/vode-human_heart.mp3",
         },
         {
+            cover: "/images/media/runaway_cover.jpg",
+            coverAlt: "Cover of Runaway by vode",
+            title: "Runaway",
+            credits: [
+                `Original: OneRepublic`,
+                `Arrangement: Stefan Flügel`,
+                `${t('media.credits.musicalDirection', {}, 'Musikalische Leitung')}: Simon Herten`,
+                `${t('media.credits.recordingEditMixMaster', {}, 'Aufnahme/Edit/Mix/Master')}: Julius Gass`,
+            ],
+            src: "/audio/vode-runaway.mp3",
+        },
+        {
             cover: "/images/media/i_was_brought_cover.jpeg",
             coverAlt: "Cover of I Was Brought to My Senses by vode",
             title: "I Was Brought to My Senses",
@@ -30,18 +42,6 @@ const Media: Component = () => {
                 `Edit/Mix: Martin Pilger`,
             ],
             src: "/audio/vode-i_was_brought.mp3",
-        },
-        {
-            cover: "/images/media/runaway_cover.jpg",
-            coverAlt: "Cover of Runaway by vode",
-            title: "Runaway",
-            credits: [
-                `Original: OneRepublic`,
-                `Arrangement: Stefan Flügel`,
-                `${t('media.credits.musicalDirection', {}, 'Musikalische Leitung')}: Simon Herten`,
-                `${t('media.credits.recordingEditMixMaster', {}, 'Aufnahme/Edit/Mix/Master')}: Julius Gass`,
-            ],
-            src: "/audio/vode-runaway.mp3",
         },
     ]);
 
