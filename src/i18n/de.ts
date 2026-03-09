@@ -237,6 +237,7 @@ const de: BaseDictionary = {
 			musicalDirection: "Musikalische Leitung",
 			recording: "Aufnahme",
 			recordingMaster: "Aufnahme/Master",
+			recordingEditMixMaster: "Aufnahme/Edit/Mix/Master",
 			recordingMix: "Aufnahme/Mix",
 			soloVocalsRecording: "Aufnahme Solo Vocals",
 			productionMixVideoEdit: "Produktion/Mix/Video Edit",

@@ -236,6 +236,7 @@ const en: BaseDictionary = {
 			musicalDirection: "Musical Direction",
 			recording: "Recording",
 			recordingMaster: "Recording/Master",
+			recordingEditMixMaster: "Recording/Edit/Mix/Master",
 			recordingMix: "Recording/Mix",
 			soloVocalsRecording: "Solo Vocals Recording",
 			productionMixVideoEdit: "Production/Mix/Video Edit",
