@@ -23,6 +23,7 @@ const Media: Component = () => {
             title: "I Was Brought to My Senses",
             credits: [
                 `Original: Sting`,
+                `Arrangement: Manuel Grunden`,
                 `${t('media.credits.musicalDirection', {}, 'Musikalische Leitung')}: Katharina Gärtner`,
                 `${t('media.credits.soloVocalsRecording', {}, 'Aufnahme Solo Vocals')}: Lars Henrik`,
                 `${t('media.credits.recordingMaster', {}, 'Aufnahme/Master')}: Julius Gass`,
