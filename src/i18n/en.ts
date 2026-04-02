@@ -290,8 +290,9 @@ const en: BaseDictionary = {
 			'For more information, write to us at <a href="mailto:mail@vode–ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode–ensemble.de</a>.',
 		donationsTitle: "Donations",
 		donationsParagraph1:
-			"If you would like to support us with a one-time donation, we gratefully accept donations via bank transfer or PayPal.",
-		paypalButtonText: "Donate via PayPal",
+			"If you would like to support us with a one-time donation, we gratefully accept donations via bank transfer.",
+		// PayPal account temporarily blocked / PayPal-Konto vorübergehend gesperrt
+		// paypalButtonText: "Donate via PayPal",
 		donationsReferenceLabel: "Reference:",
 		donationsReferenceValue: "Donation",
 		sponsorsTitle: "Sponsors",

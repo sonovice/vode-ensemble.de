@@ -67,6 +67,7 @@ const Support: Component = () => {
                                 <p>Sparkasse Paderborn-Detmold-Höxter</p>
                                 <p>{t('support.donationsReferenceLabel', {}, 'Stichwort:')} "{t('support.donationsReferenceValue', {}, 'Spende')}"</p>
                             </div>
+                            {/* PayPal button temporarily disabled / PayPal-Button vorübergehend deaktiviert
                             <div class="mt-6">
                                 <a
                                     href="https://www.paypal.com/donate/?hosted_button_id=PHTXFZ5HHU89J"
@@ -81,6 +82,7 @@ const Support: Component = () => {
                                     {t('support.paypalButtonText', {}, 'Über PayPal spenden')}
                                 </a>
                             </div>
+                            */}
                         </div>
 
                         {/* Card 3: Sponsoren */}
