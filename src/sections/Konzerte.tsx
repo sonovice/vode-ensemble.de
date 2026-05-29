@@ -169,6 +169,19 @@ const concerts: Record<string, ConcertEntry[]> = {
         </>
       ),
     },
+    {
+      datetime: new Date("2026-07-11 18:30"),
+      location: "Köln",
+      address: "Aula der TH Köln | Ubierring 48 | 50678 Köln",
+      title: "Shifting Tides",
+      description: (
+        <>
+          Doppelkonzert mit dem Chor der TH Köln.
+          <br />
+          Eintritt frei, um Spenden wird gebeten.
+        </>
+      ),
+    },
   ],
   "2024": [
     {
