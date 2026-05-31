@@ -145,6 +145,20 @@ const concerts: Record<string, ConcertEntry[]> = {
       description: <></>,
     },
     {
+      datetime: new Date("2026-05-03 19:00"),
+      location: "Hannover",
+      address: "HCC Kuppelsaal | Theodor-Heuss-Platz 1-3 | 30175 Hannover",
+      title: "Abschlusskonzert der 24. Internationalen A-cappella-Woche Hannover",
+      description: (
+        <>
+          Gastauftritt mit den New York Voices im Rahmen unseres gemeinsamen
+          Projekts <em>Bli-Blip</em>. Beim Festivalfinale standen außerdem
+          calens vocalensemble, Maybebop und Of Cabbages And Kings auf der
+          Bühne.
+        </>
+      ),
+    },
+    {
       datetime: new Date("2026-07-10 20:00"),
       location: "Wuppertal",
       address:
