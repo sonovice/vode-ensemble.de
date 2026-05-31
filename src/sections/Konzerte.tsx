@@ -561,10 +561,14 @@ const Konzerte: Component = () => {
                               {concert.location}
                             </span>
                           </div>
-                          {/* <Show when={concert.address}>
-                                                        <p class="text-sm text-[var(--color-light-text)]/70 mb-2">{concert.address}</p>
-                                                    </Show> */}
-                          {/* <div class="text-sm text-[var(--color-light-text)]/80 prose prose-xs prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline">{concert.description}</div> */}
+                          <Show when={concert.address}>
+                            <p class="text-sm text-[var(--color-light-text)]/70 mb-2">
+                              {concert.address}
+                            </p>
+                          </Show>
+                          <div class="text-sm text-[var(--color-light-text)]/80 prose prose-xs prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline">
+                            {concert.description}
+                          </div>
                         </div>
                       </div>
                     )}
