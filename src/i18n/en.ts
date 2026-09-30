@@ -387,7 +387,7 @@ const en: BaseDictionary = {
 			},
 			lovelyDay: {
 				voicing: "Two parts · chords",
-				text: "A short two-part song about a sunny day.",
+				text: "A warm-up for practising swing feel and phrasing.",
 			},
 			onYourWay: {
 				voicing: "Unison · ukulele chords",

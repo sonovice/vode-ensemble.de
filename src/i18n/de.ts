@@ -388,7 +388,7 @@ const de: BaseDictionary = {
 			},
 			lovelyDay: {
 				voicing: "Zweistimmig · Akkorde",
-				text: "Ein kurzer zweistimmiger Song über einen sonnigen Tag.",
+				text: "Ein Warm-up, um Swing-Feeling und -Phrasierung zu trainieren.",
 			},
 			onYourWay: {
 				voicing: "Einstimmig · Ukulele-Akkorde",
