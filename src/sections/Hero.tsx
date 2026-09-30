@@ -1,14 +1,21 @@
 import { type Component, createSignal, onMount, createEffect, on } from "solid-js";
 import { useI18n } from "../i18n";
 
-const imagePaths = [
-    "/images/ensemble/action_06.jpg",
-    "/images/ensemble/action_04.jpg",
-    "/images/ensemble/action_02.jpg",
-    "/images/ensemble/action_05.jpg",
-    "/images/ensemble/action_01.jpg",
-    "/images/ensemble/action_03.jpg",
+// `position` is the CSS background-position. On portrait phones only about a
+// third of each photo's width is visible, so it keeps the faces in that slice.
+const heroImages = [
+    { src: "/images/ensemble/action_06.jpg", position: "42% 50%" },
+    { src: "/images/ensemble/action_04.jpg", position: "18% 30%" },
+    { src: "/images/ensemble/action_02.jpg", position: "58% 30%" },
+    { src: "/images/ensemble/action_05.jpg", position: "50% 50%" },
+    { src: "/images/ensemble/action_01.jpg", position: "47% 30%" },
+    { src: "/images/ensemble/action_03.jpg", position: "52% 30%" },
 ];
+
+const background = (index: number) => ({
+    "background-image": `url('${heroImages[index].src}')`,
+    "background-position": heroImages[index].position,
+});
 
 const Hero: Component = () => {
     const [currentIndex, setCurrentIndex] = createSignal(0);
@@ -16,12 +23,12 @@ const Hero: Component = () => {
 
     // Initial state: Layer 1 shows the first image, Layer 2 is hidden (can preload next)
     const [bgLayer1Style, setBgLayer1Style] = createSignal({
-        "background-image": `url('${imagePaths[0]}')`,
+        ...background(0),
         "opacity": 1,
         "z-index": 1
     });
     const [bgLayer2Style, setBgLayer2Style] = createSignal({
-        "background-image": `url('${imagePaths[1 % imagePaths.length]}')`, // Preload the 'next' image
+        ...background(1 % heroImages.length), // Preload the 'next' image
         "opacity": 0,
         "z-index": 0
     });
@@ -30,19 +37,18 @@ const Hero: Component = () => {
 
     onMount(() => {
         const intervalId = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % imagePaths.length);
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
         }, 8000);
         return () => clearInterval(intervalId);
     });
 
     // Effect runs when currentIndex changes, but NOT for the initial value.
     createEffect(on(currentIndex, (newIdx) => {
-        const imageToDisplay = imagePaths[newIdx];
 
         if (isLayer1Active) {
             // Layer 1 was active, so Layer 2 will become active
             setBgLayer2Style({
-                "background-image": `url('${imageToDisplay}')`,
+                ...background(newIdx),
                 "opacity": 1,
                 "z-index": 1
             });
@@ -55,7 +61,7 @@ const Hero: Component = () => {
         } else {
             // Layer 2 was active, so Layer 1 will become active
             setBgLayer1Style({
-                "background-image": `url('${imageToDisplay}')`,
+                ...background(newIdx),
                 "opacity": 1,
                 "z-index": 1
             });
