@@ -86,9 +86,9 @@ const Ensemble: Component = () => {
                 {/* "Eine Familie" Section */}
                 <div class="flex flex-col items-start lg:flex-row gap-8 lg:gap-16 mb-16 lg:mb-24">
                     <div class="w-full lg:w-6/12">
-                        <ImageLightbox src="/images/ensemble/ensemble_portrait_01_large.jpg" alt="Ensemble Gruppe">
+                        <ImageLightbox src="/images/ensemble/ensemble-2026_large.jpg" alt="Ensemble Gruppe">
                             <img
-                                src="/images/ensemble/ensemble_portrait_01.jpg"
+                                src="/images/ensemble/ensemble-2026.jpg"
                                 width="1200"
                                 height="1395"
                                 alt="Ensemble Gruppe"
