@@ -138,3 +138,6 @@ dist
 
 raw/
 .DS_Store
+# Local tool state
+.impeccable/
+.playwright-cli/

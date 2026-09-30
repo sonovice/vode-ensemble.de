@@ -1,90 +1,22 @@
-import { type Component, For } from "solid-js";
+import { type Component } from "solid-js";
 import { useI18n } from "../i18n";
+import AcademyFilm from "../components/AcademyFilm";
+import "../styles/academy.css";
 
 const Academy: Component = () => {
     const { t } = useI18n();
-
-    // Data for past projects (can be expanded or moved to a separate data file later)
-    const pastProjects = [
-        {
-            year: "2025",
-            title: "vode academy 2025",
-            description: "Intensiv-Workshop für Chorsänger:innen und Chorleiter:innen.",
-            link: "/academy-2025"
-        },
-        {
-            year: "2023",
-            title: "Projekt mit Studierenden",
-            description: "Konzerte: Musikstudierende der Uni Vechta treten bei außergewöhnlichen Kooperationsprojekten auf",
-            link: "https://www.mynewsdesk.com/de/universitaet-vechta/pressreleases/konzerte-musikstudierende-der-uni-vechta-treten-bei-aussergewoehnlichen-kooperationsprojekten-auf-3239461"
-        }
-        // Add more projects here if needed
-    ];
-
     return (
-        <section
-            id="academy"
-            class="py-16 md:py-24 bg-[var(--color-dark)] text-[var(--color-light-text)]"
-        >
-            <div class="container mx-auto px-4">
-                {/* Top part: Intro with link to subpage */}
-                <div class="mb-16 md:mb-24">
-                    <div class="max-w-4xl text-left">
-                        <p class="font-semibold uppercase tracking-wider text-[var(--color-accent)] mb-2">
-                            {t('academy.sectionTag', {}, 'Education')}
-                        </p>
-                        <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-[var(--color-light-text)]">
-                            {t('academy.title', {}, 'vode academy')}
-                        </h1>
-                        <div class="max-w-none">
-                            <p class="md:text-lg leading-relaxed text-[var(--color-light-text)]/80"
-                                innerHTML={t('academy.paragraph1', {}, 'Paragraph 1') || ''}>
-                            </p>
-                            <p class="md:text-lg leading-relaxed text-[var(--color-light-text)]/80 mt-4"
-                                innerHTML={t('academy.paragraph2', {}, 'Paragraph 2') || ''}>
-                            </p>
-                        </div>
-                        <a
-                            href="/academy"
-                            class="inline-block mt-8 bg-[var(--color-accent)] text-white font-semibold px-6 py-3 rounded-lg hover:filter hover:brightness-110 transition-all duration-300 text-lg"
-                        >
-                            {t('academy.learnMore', {}, 'Mehr erfahren')}
-                        </a>
+        <section id="academy" class="academy-surface academy-section">
+            <div class="container mx-auto px-4 academy-intro-grid">
+                <div>
+                    <h2 class="academy-display">{t('academy.title')}</h2>
+                    <p class="academy-lead">{t('academyPage.homeIntro')}</p>
+                    <div class="academy-actions">
+                        <a href="/academy" class="academy-button">{t('academy.learnMore')}</a>
+                        <a href="/academy/material" class="academy-button academy-button-secondary">{t('academyPage.toMaterial')}</a>
                     </div>
                 </div>
-
-                {/* Bottom part: Past Projects */}
-                <div class="mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-[var(--color-light-text)]">{t('academy.pastProjectsTitle', {}, 'Vergangene Projekte')}</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <For each={pastProjects}>
-                            {(project) => (
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="block bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20 no-underline group h-full"
-                                >
-                                    <div class="p-5 flex flex-col h-full">
-                                        <div class="flex items-start mb-3">
-                                            <div class="flex flex-col items-center text-center mr-4 shrink-0">
-                                                <div class="text-xs uppercase text-[var(--color-accent)] font-medium tracking-wider">{t('academy.pastProjectYearLabel', {}, 'JAHR')}</div>
-                                                <div class="font-bold text-xl text-[var(--color-light-text)]">{project.year}</div>
-                                            </div>
-                                            <h3 class="text-lg font-semibold text-[var(--color-light-text)] group-hover:text-[var(--color-accent)] transition-colors duration-300 leading-tight">
-                                                {project.title}
-                                            </h3>
-                                        </div>
-                                        <p class="text-sm text-gray-400 flex-grow">{project.description}</p>
-                                        <div class="mt-auto pt-3 text-right">
-                                            <span class="text-xs text-[var(--color-accent)] group-hover:underline">{t('academy.pastProjectLearnMore', {}, 'Mehr erfahren →')}</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            )}
-                        </For>
-                    </div>
-                </div>
+                <AcademyFilm kind="teaser" sizes="(min-width: 768px) 45vw, 100vw" caption />
             </div>
         </section>
     );
