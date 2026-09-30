@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- YouTube thumbnail, 1280×720. Filled in and rendered by render.sh; placeholders are {{…}}. -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    @font-face { font-family: "Nanospaceland"; src: url({{ROOT}}/public/fonts/NaNSpaceland-VF.woff2) format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Space Grotesk"; src: url({{ROOT}}/node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff2) format("woff2"); font-weight: 700; }
+    * { margin: 0; box-sizing: border-box; }
+    body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+    .thumb { position: relative; width: 1280px; height: 720px; overflow: hidden; }
+    .photo { position: absolute; inset: 0; background: url({{IMAGE}}) {{POSITION}} / cover no-repeat; filter: brightness({{BRIGHTNESS}}) saturate(1.1); }
+    /* Darken bottom and left so the copy stays readable; the bottom-right corner stays free for YouTube's duration badge. */
+    .thumb::after { content: ""; position: absolute; inset: 0; background:
+        linear-gradient(to top, rgb(17 17 17 / .92) 0%, rgb(17 17 17 / .6) 32%, rgb(17 17 17 / 0) 62%),
+        linear-gradient(to right, rgb(17 17 17 / .55) 0%, rgb(17 17 17 / 0) 55%); }
+    .brand, .copy { position: absolute; z-index: 1; left: 56px; }
+    .brand { top: 44px; display: flex; align-items: center; gap: 16px; font: 700 26px "Space Grotesk"; letter-spacing: .14em; text-transform: uppercase; color: #F5F5F5; }
+    .brand img { height: 46px; }
+    .brand span { padding-left: 16px; border-left: 3px solid #AE895D; }
+    .copy { bottom: 52px; max-width: 900px; }
+    .kicker { display: inline-block; margin-bottom: 18px; padding: 8px 20px; border-radius: 999px; background: #AE895D; color: #111; font: 700 34px "Space Grotesk"; }
+    h1 { font: 700 118px/.95 "Nanospaceland"; color: #F5F5F5; letter-spacing: -.01em; text-shadow: 0 4px 30px rgb(0 0 0 / .45); }
+</style>
+</head>
+<body>
+    <div class="thumb">
+        <div class="photo"></div>
+        <div class="brand"><img src="{{ROOT}}/public/images/logo.svg" alt=""><span>{{BRAND}}</span></div>
+        <div class="copy"><div class="kicker">{{KICKER}}</div><h1>{{TITLE}}</h1></div>
+    </div>
+</body>
+</html>
