@@ -336,12 +336,67 @@ const en: BaseDictionary = {
 		homeIntro: "Through vode academy, choirs and schools invite our ensemble into their rehearsals. We develop workshops and choral projects together. Scores and tutorials from past projects are available here to use again.",
 		toMaterial: "Go to materials",
 		backToAcademy: "About vode academy",
-		materialNote: "Songs from our workshops to practise and share. Each piece comes with a tutorial and a PDF score.",
-		pieceLink: "Link to this piece",
-		pdf: "Score (PDF)",
-		cloudy: "A tutorial and score for “Cloudy Day” to sing along and practise.",
-		lion: "The individual vocal lines and score for the quodlibet on “Lion” by Saint Mesa.",
-		voice: "Share and sing “The Voice Inside” with its tutorial and score.",
+	},
+	academyMaterial: {
+		intro: "Songs from our workshops to practise and share. The pool grows with every project, and we draw on it in different workshops.",
+		license: "You are expressly allowed to copy and perform the vode academy songs.",
+		contents: "Contents",
+		pieceCount: "pieces",
+		pieceCountOne: "piece",
+		tutorialCount: "tutorials",
+		voicing: "Voicing",
+		score: "Score",
+		page: "page",
+		pages: "pages",
+		showTutorial: "Watch tutorial",
+		hideTutorial: "Close tutorial",
+		shareLink: "Share link",
+		linkCopied: "Link copied",
+		usedIn: "Used in",
+		versions: {
+			aCappella: "A cappella",
+			saPiano: "SA and piano",
+		},
+		categories: {
+			rounds: {
+				title: "Rounds & quodlibets",
+				text: "Built from separate parts: quick to learn and great for large groups.",
+			},
+			songs: {
+				title: "Songs",
+				text: "Short songs with melody and chords.",
+			},
+			arrangements: {
+				title: "Choral arrangements",
+				text: "Fully worked-out arrangements in several parts.",
+			},
+		},
+		pieces: {
+			cloudyDay: {
+				voicing: "Round in five parts · piano · body percussion",
+				text: "A rain-themed round for singing together and warming up, with ideas for body sounds and improvisation.",
+			},
+			voiceInside: {
+				voicing: "Two rounds with four entries each · chords",
+				text: "Rounds A and B can be sung separately or alternately and offer a basis for free arrangement and improvisation.",
+			},
+			lion: {
+				voicing: "Quodlibet in three lines",
+				text: "Three lines from different songs that fit together with “Lion” by Saint Mesa. The tutorial teaches them one by one.",
+			},
+			lovelyDay: {
+				voicing: "Two parts · chords",
+				text: "A short two-part song about a sunny day.",
+			},
+			onYourWay: {
+				voicing: "Unison · ukulele chords",
+				text: "A song from the ukulele workshop: melody and chords for singing and accompanying.",
+			},
+			wheneverISing: {
+				voicing: "Soprano, mezzo, alto, tenor/bass a cappella · soprano, alto and piano",
+				text: "A choral arrangement in two versions: a cappella for mixed choir, or for two upper voices with piano.",
+			},
+		},
 	},
 	// Other sections will be added here
 };

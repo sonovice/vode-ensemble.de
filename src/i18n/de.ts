@@ -337,12 +337,67 @@ const de: BaseDictionary = {
 		homeIntro: "Mit der vode academy holen Chöre und Schulen unser Ensemble in ihre Proben. Wir entwickeln gemeinsam Workshops und Chorprojekte. Noten und Tutorials aus bisherigen Projekten stehen hier zum Weiterverwenden bereit.",
 		toMaterial: "Direkt zum Material",
 		backToAcademy: "Über die vode academy",
-		materialNote: "Die Stücke aus unseren Workshops zum Nachsingen und Weitergeben. Zu jedem Stück gibt es ein Tutorial und die Noten als PDF.",
-		pieceLink: "Link zu diesem Stück",
-		pdf: "Noten (PDF)",
-		cloudy: "Ein Tutorial und die Noten zu „Cloudy Day“ zum Mitsingen und Üben.",
-		lion: "Die einzelnen Vocal Lines und die Noten zum Quodlibet auf „Lion“ von Saint Mesa.",
-		voice: "Mit Tutorial und Noten „The Voice Inside“ weitergeben und gemeinsam singen.",
+	},
+	academyMaterial: {
+		intro: "Stücke aus unseren Workshops zum Nachsingen und Weitergeben. Der Pool wächst mit jedem Projekt, und wir greifen in verschiedenen Workshops darauf zurück.",
+		license: "Das Kopieren und Aufführen der vode academy Songs ist ausdrücklich erlaubt.",
+		contents: "Inhalt",
+		pieceCount: "Stücke",
+		pieceCountOne: "Stück",
+		tutorialCount: "Tutorials",
+		voicing: "Besetzung",
+		score: "Noten",
+		page: "Seite",
+		pages: "Seiten",
+		showTutorial: "Tutorial ansehen",
+		hideTutorial: "Tutorial schließen",
+		shareLink: "Link teilen",
+		linkCopied: "Link kopiert",
+		usedIn: "Eingesetzt bei",
+		versions: {
+			aCappella: "A cappella",
+			saPiano: "SA und Klavier",
+		},
+		categories: {
+			rounds: {
+				title: "Kanons & Quodlibets",
+				text: "Aus einzelnen Teilen zusammengesetzt: schnell gelernt und gut für große Gruppen.",
+			},
+			songs: {
+				title: "Songs",
+				text: "Kurze Songs mit Melodie und Akkorden.",
+			},
+			arrangements: {
+				title: "Chorsätze",
+				text: "Ausgearbeitete mehrstimmige Sätze.",
+			},
+		},
+		pieces: {
+			cloudyDay: {
+				voicing: "Kanon in fünf Teilen · Klavier · Bodypercussion",
+				text: "Ein Regen-Kanon zum gemeinsamen Singen und Warmwerden, mit Ideen für Body-Sounds und Improvisation.",
+			},
+			voiceInside: {
+				voicing: "Zwei Kanons mit je vier Einsätzen · Akkorde",
+				text: "Die Kanons A und B lassen sich einzeln oder im Wechsel singen und bieten eine Grundlage zum freien Ausgestalten und Improvisieren.",
+			},
+			lion: {
+				voicing: "Quodlibet in drei Linien",
+				text: "Drei Lines aus verschiedenen Songs, die zusammen zu „Lion“ von Saint Mesa passen. Im Tutorial lernt ihr sie einzeln.",
+			},
+			lovelyDay: {
+				voicing: "Zweistimmig · Akkorde",
+				text: "Ein kurzer zweistimmiger Song über einen sonnigen Tag.",
+			},
+			onYourWay: {
+				voicing: "Einstimmig · Ukulele-Akkorde",
+				text: "Ein Song aus dem Ukulele-Workshop: Melodie und Akkorde zum Singen und Begleiten.",
+			},
+			wheneverISing: {
+				voicing: "Sopran, Mezzo, Alt, Tenor/Bass a cappella · Sopran, Alt und Klavier",
+				text: "Ein Chorsatz in zwei Fassungen: a cappella für gemischten Chor oder für zwei Oberstimmen mit Klavier.",
+			},
+		},
 	},
 	// Other sections will be added here
 };
