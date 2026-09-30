@@ -32,11 +32,9 @@ const de: BaseDictionary = {
 		paragraph1:
 			'<span class="italic">vode</span> steht für musikalische Leidenschaft, die weit über Noten und Harmonien hinausgeht. Ob im vollen Ensemble oder in kleineren Besetzungen: Jeder Auftritt zeigt die Vielfalt unseres ganz eigenen vode-Klanges und lässt unser Publikum den Gesang hautnah erleben - berührend, kraftvoll, direkt.',
 		paragraph2:
-			"Als Vokalensemble haben wir uns 2021 gegründet, unsere gemeinsame Geschichte wurzelt aber schon in unserer Studienzeit an der Hochschule für Musik Detmold, wo wir von Anne Kohler maßgeblich geprägt wurden. Seitdem sind wir musikalisch und freundschaftlich miteinander verbunden.",
+			"Als Vokalensemble haben wir uns 2021 gegründet und sind seitdem musikalisch und freundschaftlich miteinander verbunden.",
 		paragraph3:
 			"Wir sind ein Kollektiv von rund 20 Musiker:innen, die unsere verschiedenen kreativen Ideen und Potenziale in das Ensemble einbringen. Zusammengewoben zu einem musikalischen Gesamtbild werden diese Ideen von Katharina Gärtner und Simon Herten. Seit 2022 haben wir mehrere Konzertprogramme auf die Bühnen gebracht (u. a. in der Elbphilharmonie in Hamburg und der Rudolf-Oetker-Halle in Bielefeld) und an Festivals teilgenommen (z. B. dem Black Forest Voices Festival in Freiburg und TotalChoral in Berlin).",
-		paragraph4:
-			"Wir freuen uns darüber, dass wir in der Saison 2024/25 vom Kultursekretariat NRW Gütersloh gefördert wurden.",
 		membersTitle: "Mitglieder",
 		selectVoiceGroupPrompt: "Bitte eine Stimmgruppe auswählen.",
 		voiceSoprano: "Sopran",
@@ -59,8 +57,9 @@ const de: BaseDictionary = {
 	concerts: {
 		sectionTag: "Konzerte",
 		title: "Anstehende Events",
-		noUpcomingFallback:
-			"Zurzeit sind keine weiteren Konzerte geplant. Schaue bald wieder vorbei!",
+		noUpcomingFallback: "Konzerte und Projekte sind in Planung.",
+		noUpcomingRequest: "Du möchtest vode live erleben oder für ein Konzert anfragen?",
+		noUpcomingRequestLink: "Schreib uns",
 		pastTitle: "Vergangene Konzerte",
 		noPastForYearFallback: "Keine Konzerte für dieses Jahr im Archiv.",
 		timeSuffix: "Uhr",
@@ -286,6 +285,9 @@ const de: BaseDictionary = {
 			"Um die Wertschätzung sichtbar zu machen, möchten wir auch etwas zurückgeben und uns öffentlich für das kulturelle Engagement bedanken. Dafür werden Sponsor:innen auf Konzertplakaten, Flyern oder Programmheften genannt, indem wir Logos oder Namen platzieren. Darüber hinaus bewerben wir unsere Sponsor:innen auch über unsere digitalen Kanäle.",
 		closingParagraph:
 			"Danke, dass durch eure finanziellen Beiträge Kultur ermöglicht wird und wir so gemeinsam musikalische Begegnungen schaffen können!",
+	},
+	lightbox: {
+		close: "Bild schließen",
 	},
 	academyPage: {
 		title: "vode academy",

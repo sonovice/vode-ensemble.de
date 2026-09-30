@@ -86,9 +86,11 @@ const Ensemble: Component = () => {
                 {/* "Eine Familie" Section */}
                 <div class="flex flex-col items-start lg:flex-row gap-8 lg:gap-16 mb-16 lg:mb-24">
                     <div class="w-full lg:w-6/12">
-                        <ImageLightbox src="/images/ensemble/ensemble_portrait_01.jpg" alt="Ensemble Gruppe">
+                        <ImageLightbox src="/images/ensemble/ensemble_portrait_01_large.jpg" alt="Ensemble Gruppe">
                             <img
                                 src="/images/ensemble/ensemble_portrait_01.jpg"
+                                width="1200"
+                                height="1395"
                                 alt="Ensemble Gruppe"
                                 class="w-full object-cover lg:object-contain aspect-square object-bottom lg:aspect-auto lg:h-full lg:object-center rounded-lg"
                             />
@@ -111,12 +113,6 @@ const Ensemble: Component = () => {
                         <p class="md:text-lg leading-relaxed mt-4 text-[var(--color-light-text)]/80"
                             innerHTML={t('ensemble.paragraph3', {}, 'Paragraph 3 missing') || ''}>
                         </p>
-                        <p class="leading-relaxed mt-4 text-gray-400"
-                            innerHTML={t('ensemble.paragraph4', {}, 'Paragraph 4 missing') || ''}>
-                        </p>
-                        {/* <p class="md:text-lg leading-relaxed mt-4">
-                            Wir freuen uns darüber, dass wir in der Saison 2024/25 vom Kultursekretariat NRW Gütersloh gefördert werden und bedanken uns für die Unterstützung.
-                        </p> */}
                     </div>
                 </div>
 

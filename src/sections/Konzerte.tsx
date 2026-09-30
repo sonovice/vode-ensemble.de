@@ -430,9 +430,17 @@ const Konzerte: Component = () => {
             <Show
               when={allUpcomingConcertsGlobal().length > 0}
               fallback={
-                <p class="text-center md:text-left text-lg text-[var(--color-light-text)]/60 italic mb-12">
-                  {t("concerts.noUpcomingFallback", {}, "Fallback text")}
-                </p>
+                <div class="text-center md:text-left text-lg mb-12">
+                  <p class="text-[var(--color-light-text)]">
+                    {t("concerts.noUpcomingFallback", {}, "Fallback text")}
+                  </p>
+                  <p class="mt-2 text-[var(--color-light-text)]/70">
+                    {t("concerts.noUpcomingRequest")}{" "}
+                    <a href="#kontakt" class="underline underline-offset-4 hover:text-[var(--color-light)]">
+                      {t("concerts.noUpcomingRequestLink")}
+                    </a>
+                  </p>
+                </div>
               }
             >
               <div class="space-y-6 mb-12">

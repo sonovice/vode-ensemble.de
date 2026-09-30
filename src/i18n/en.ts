@@ -31,11 +31,9 @@ const en: BaseDictionary = {
 		paragraph1:
 			'<span class="italic">vode</span> stands for a musical passion that goes far beyond notes and harmonies. Whether as a full ensemble or in smaller groups: every performance showcases the diversity of our very own vode sound, allowing our audience to experience singing up close - touching, powerful, direct.',
 		paragraph2:
-			"We founded as a vocal ensemble in 2021, but our shared history is rooted in our time studying at the Detmold University of Music, where we were significantly influenced by Anne Kohler. We have been connected musically and as friends ever since.",
+			"We founded as a vocal ensemble in 2021 and have been connected musically and as friends ever since.",
 		paragraph3:
 			"We are a collective of around 20 musicians who contribute our diverse creative ideas and potentials to the ensemble. These ideas are woven together into a cohesive musical picture by Katharina Gärtner and Simon Herten. Since 2022, we have brought several concert programs to stages (including the Elbphilharmonie in Hamburg and the Rudolf-Oetker-Halle in Bielefeld) and participated in festivals (such as the Black Forest Voices Festival in Freiburg and TotalChoral in Berlin).",
-		paragraph4:
-			"We are pleased to be funded by the Kultursekretariat NRW Gütersloh for the 2024/25 season.",
 		membersTitle: "Members",
 		selectVoiceGroupPrompt: "Please select a voice group.",
 		voiceSoprano: "Soprano",
@@ -58,8 +56,9 @@ const en: BaseDictionary = {
 	concerts: {
 		sectionTag: "Concerts",
 		title: "Upcoming Events",
-		noUpcomingFallback:
-			"No further concerts are currently planned. Please check back soon!",
+		noUpcomingFallback: "Concerts and projects are in the works.",
+		noUpcomingRequest: "Would you like to hear vode live or book us for a concert?",
+		noUpcomingRequestLink: "Get in touch",
 		pastTitle: "Past Concerts",
 		noPastForYearFallback: "No concerts archived for this year.",
 		timeSuffix: "", // Rely on toLocaleTimeString for AM/PM etc.
@@ -285,6 +284,9 @@ const en: BaseDictionary = {
 			"To show our appreciation, we also want to give something back and publicly thank sponsors for their cultural commitment. Sponsors are acknowledged on concert posters, flyers, or program booklets by featuring their logos or names. Additionally, we promote our sponsors through our digital channels.",
 		closingParagraph:
 			"Thank you! Your financial contributions make culture possible and allow us to create musical encounters together!",
+	},
+	lightbox: {
+		close: "Close image",
 	},
 	academyPage: {
 		title: "vode academy",
