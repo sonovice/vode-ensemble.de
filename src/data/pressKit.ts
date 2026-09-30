@@ -3,6 +3,9 @@
 // changing anything here. Texts are adapted from raw/pr; as on the website,
 // they no longer place the ensemble in Detmold.
 
+// Explicit extension: tools/presskit/export.mjs loads this file with plain Node.
+import { documentary } from "./films.ts";
+
 export type PressLocale = "de" | "en";
 
 // `row` groups the press page gallery: the full-ensemble shots first and large,
@@ -24,7 +27,7 @@ export const pressLogos = [
 export const pressVideos = [
     { id: "UWVHe51-kG8", title: "Bli-Blip | vode & New York Voices" },
     { id: "GxzoyGThUiQ", title: "vode – Back in the High Life Again" },
-    { id: "aCKdSreAPIU", title: "Chor macht Schule – der Film (vode academy)", releaseAt: new Date("2026-10-03T00:00:00+02:00") },
+    { id: documentary.youtubeId, title: "Chor macht Schule – der Film (vode academy)", releaseAt: documentary.releaseAt },
 ];
 
 export const pressContact = {
