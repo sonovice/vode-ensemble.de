@@ -201,12 +201,14 @@ const Media: Component = () => {
             {t("media.pressKitTitle", {}, "Presse-Kit & Rider")}
           </h2>
           <p class="text-lg md:text-xl text-gray-300">
-            {t(
-              "media.pressKitParagraph",
-              {},
-              "Das Presse-Kit sowie unser Technical Rider werden gerade überarbeitet und in Kürze hier zur Verfügung gestellt.",
-            )}
+            {t("media.pressKitParagraph")}
           </p>
+          <a
+            href="/presse"
+            class="inline-flex items-center mt-6 min-h-12 px-6 py-3 rounded-lg bg-[var(--color-accent)] text-[var(--color-dark)] font-bold hover:bg-[var(--color-light)] transition-colors"
+          >
+            {t("media.pressKitLink")}
+          </a>
         </div>
       </div>
     </section>

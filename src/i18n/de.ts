@@ -229,9 +229,10 @@ const de: BaseDictionary = {
 			sound: "Ton",
 		},
 		videosTitle: "Videos",
-		pressKitTitle: "Presse-Kit & Rider",
+		pressKitTitle: "Pressekit",
 		pressKitParagraph:
-			"Das Presse-Kit sowie unser Technical Rider werden gerade überarbeitet und in Kürze hier zur Verfügung gestellt.",
+			"Texte in drei Längen, druckfähige Fotos, Logos und das Pressekit als PDF – gesammelt auf unserer Presseseite.",
+		pressKitLink: "Zum Pressekit",
 		instagramTitle: "Instagram Logo",
 		facebookTitle: "Facebook Logo",
 	},

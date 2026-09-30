@@ -7,6 +7,7 @@ import Academy2025 from './pages/Academy2025';
 import AcademyPage from './pages/AcademyPage';
 import AcademyMaterial from './pages/AcademyMaterial';
 import Adventskalender from './pages/Adventskalender';
+import PressPage from './pages/PressPage';
 import { I18nProvider } from './i18n';
 
 const App: Component = () => {
@@ -19,6 +20,7 @@ const App: Component = () => {
         <Route path="/academy" component={() => <Layout><AcademyPage /></Layout>} />
         <Route path="/academy-2025" component={() => <Layout><Academy2025 /></Layout>} />
         <Route path="/adventskalender" component={() => <Layout><Adventskalender /></Layout>} />
+        <Route path="/presse" component={() => <Layout><PressPage /></Layout>} />
         <Route path="*" component={() => <Layout><Main /></Layout>} />
       </Router>
     </I18nProvider>

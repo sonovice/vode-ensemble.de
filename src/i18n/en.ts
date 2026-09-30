@@ -228,9 +228,10 @@ const en: BaseDictionary = {
 			sound: "Sound",
 		},
 		videosTitle: "Videos",
-		pressKitTitle: "Press Kit & Rider",
+		pressKitTitle: "Press kit",
 		pressKitParagraph:
-			"The press kit and our technical rider are currently being revised and will be available here shortly.",
+			"Texts in three lengths, print-quality photos, logos and the press kit as a PDF – all on our press page.",
+		pressKitLink: "Go to the press kit",
 		instagramTitle: "Instagram Logo",
 		facebookTitle: "Facebook Logo",
 	},
