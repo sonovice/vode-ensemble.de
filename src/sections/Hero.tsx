@@ -1,8 +1,8 @@
-import { type Component, createSignal, onMount, createEffect, on } from "solid-js";
+import { type Component, For, createSignal, onCleanup, onMount } from "solid-js";
 import { useI18n } from "../i18n";
 
-// `position` is the CSS background-position. On portrait phones only about a
-// third of each photo's width is visible, so it keeps the faces in that slice.
+// `position` is the CSS object-position. On portrait phones only about a third
+// of each photo's width is visible, so it keeps the faces in that slice.
 const heroImages = [
     { src: "/images/ensemble/action_06.jpg", position: "42% 50%" },
     { src: "/images/ensemble/action_04.jpg", position: "18% 30%" },
@@ -12,89 +12,45 @@ const heroImages = [
     { src: "/images/ensemble/action_03.jpg", position: "52% 30%" },
 ];
 
-const background = (index: number) => ({
-    "background-image": `url('${heroImages[index].src}')`,
-    "background-position": heroImages[index].position,
-});
+const slideDuration = 8000;
 
 const Hero: Component = () => {
-    const [currentIndex, setCurrentIndex] = createSignal(0);
     const { t } = useI18n();
-
-    // Initial state: Layer 1 shows the first image, Layer 2 is hidden (can preload next)
-    const [bgLayer1Style, setBgLayer1Style] = createSignal({
-        ...background(0),
-        "opacity": 1,
-        "z-index": 1
-    });
-    const [bgLayer2Style, setBgLayer2Style] = createSignal({
-        ...background(1 % heroImages.length), // Preload the 'next' image
-        "opacity": 0,
-        "z-index": 0
-    });
-
-    let isLayer1Active = true; // Layer 1 starts as active
+    const [current, setCurrent] = createSignal(0);
+    // An image gets its src once it is shown or next in line, so the page does
+    // not download all six up front and each one is ready before it fades in.
+    const [requested, setRequested] = createSignal(1);
+    const next = (index: number) => (index + 1) % heroImages.length;
 
     onMount(() => {
-        const intervalId = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-        }, 8000);
-        return () => clearInterval(intervalId);
+        const timer = setInterval(() => {
+            const shown = next(current());
+            setCurrent(shown);
+            setRequested(r => Math.max(r, Math.min(shown + 1, heroImages.length - 1)));
+        }, slideDuration);
+        onCleanup(() => clearInterval(timer));
     });
-
-    // Effect runs when currentIndex changes, but NOT for the initial value.
-    createEffect(on(currentIndex, (newIdx) => {
-
-        if (isLayer1Active) {
-            // Layer 1 was active, so Layer 2 will become active
-            setBgLayer2Style({
-                ...background(newIdx),
-                "opacity": 1,
-                "z-index": 1
-            });
-            setBgLayer1Style(prev => ({ // Fade out Layer 1
-                ...prev,
-                "opacity": 0,
-                "z-index": 0
-            }));
-            isLayer1Active = false;
-        } else {
-            // Layer 2 was active, so Layer 1 will become active
-            setBgLayer1Style({
-                ...background(newIdx),
-                "opacity": 1,
-                "z-index": 1
-            });
-            setBgLayer2Style(prev => ({ // Fade out Layer 2
-                ...prev,
-                "opacity": 0,
-                "z-index": 0
-            }));
-            isLayer1Active = true;
-        }
-    }, { defer: true }));
 
     return (
         <div
             id="home"
             class="relative flex items-center justify-center min-h-[calc(100vh-4rem)] w-full text-white overflow-hidden"
         >
-            {/* Background Image Layer 1 */}
-            <div
-                class="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
-                style={bgLayer1Style()}
-            />
-            {/* Background Image Layer 2 */}
-            <div
-                class="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
-                style={bgLayer2Style()}
-            />
+            <For each={heroImages}>{(image, index) => (
+                <img
+                    src={index() <= requested() ? image.src : undefined}
+                    alt=""
+                    decoding="async"
+                    fetchpriority={index() === 0 ? "high" : "auto"}
+                    class="absolute inset-0 h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out"
+                    style={{ "object-position": image.position, opacity: index() === current() ? 1 : 0 }}
+                />
+            )}</For>
 
             {/* Overlay for better text readability */}
-            <div class="absolute inset-0 bg-black opacity-30 z-[2]" />
+            <div class="absolute inset-0 bg-black opacity-30" />
 
-            {/* Text Content */}
-            <div class="relative z-[3] text-center p-4">
+            <div class="relative text-center p-4">
                 <h1 class="font-bold leading-tight tracking-tight">
                     <span class="block text-6xl md:text-8xl lg:text-9xl">{t('hero.mainTitle', {}, 'Vocal Jazz')}</span>
                     <span class="block text-6xl md:text-8xl lg:text-9xl mt-1 md:mt-2">{t('hero.subTitle', {}, '& Pop')}</span>
