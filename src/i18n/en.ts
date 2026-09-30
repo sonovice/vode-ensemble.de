@@ -310,6 +310,7 @@ const en: BaseDictionary = {
 		filmContext: "Herzfeld, August 2025 · approx. 8 minutes",
 		filmText: "For a weekend, young people from school choirs in the region rehearsed with vode, and on the second day they sang with us in concert. Our singers sat among the participants. The film shows how they explored the music and got to know each other – and how connections between the school choirs grew from it.",
 		filmSoon: "The film will be released on YouTube soon.",
+		filmReleaseOn: "The film will be released on",
 		teaser: "A glimpse of “Chor macht Schule”",
 		teaserPosterAlt: "Participants warming up with movement",
 		play: "Play video",

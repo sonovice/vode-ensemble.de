@@ -311,6 +311,7 @@ const de: BaseDictionary = {
 		filmContext: "Herzfeld, August 2025 · ca. 8 Minuten",
 		filmText: "Ein Wochenende lang probten Jugendliche aus Schulchören der Region mit vode, am zweiten Tag sangen sie gemeinsam mit uns im Konzert. Unsere Sänger:innen saßen zwischen den Teilnehmenden. Der Film zeigt, wie sie gemeinsam Musik und einander kennengelernt haben – und wie daraus Kontakte zwischen den Schulchören entstanden sind.",
 		filmSoon: "Der Film erscheint in Kürze auf YouTube.",
+		filmReleaseOn: "Der Film erscheint am",
 		teaser: "Einblicke in „Chor macht Schule“",
 		teaserPosterAlt: "Teilnehmende singen sich mit Bewegung ein",
 		play: "Video abspielen",
