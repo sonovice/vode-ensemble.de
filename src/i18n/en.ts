@@ -29,11 +29,11 @@ const en: BaseDictionary = {
 		sectionTag: "About us",
 		title: "The Ensemble",
 		paragraph1:
-			'<span class="italic">vode</span> stands for a musical passion that goes far beyond notes and harmonies. Whether as a full ensemble or in smaller groups: every performance showcases the diversity of our very own vode sound, allowing our audience to experience singing up close - touching, powerful, direct.',
+			"<span class=\"italic\">vode</span> stands for musical passion, distinctive collaborations and immersive concert experiences. Since 2021, the approximately 20 musicians have shared a passion for singing together. Whether performing as a full ensemble or in smaller formations, the singers combine their individual voices into a rich and distinctive ensemble sound. Moving between jazz, pop and contemporary vocal music, vode creates programmes that build musical bridges and make space itself part of the artistic experience.",
 		paragraph2:
-			"We founded as a vocal ensemble in 2021 and have been connected musically and as friends ever since.",
+			"vode is equally at home on major concert stages and in unconventional concert formats. The ensemble has performed at venues including the Elbphilharmonie Hamburg, the Rudolf-Oetker-Halle in Bielefeld and the Kuppelsaal in Hanover, where vode appeared alongside the New York Voices. Festival appearances have taken the ensemble to Berlin, Freiburg and Cologne.",
 		paragraph3:
-			"We are a collective of around 20 musicians who contribute our diverse creative ideas and potentials to the ensemble. These ideas are woven together into a cohesive musical picture by Katharina Gärtner and Simon Herten. Since 2022, we have brought several concert programs to stages (including the Elbphilharmonie in Hamburg and the Rudolf-Oetker-Halle in Bielefeld) and participated in festivals (such as the Black Forest Voices Festival in Freiburg and TotalChoral in Berlin).",
+			"With formats such as “Concert in the Dark”, vode explores new ways of experiencing concerts, making sound, space and perception integral parts of the musical experience. vode seeks out those moments when the human voice becomes more than music – when sound, space and community come together to create something that exists only in the moment.",
 		membersTitle: "Members",
 		selectVoiceGroupPrompt: "Please select a voice group.",
 		voiceSoprano: "Soprano",

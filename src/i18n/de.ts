@@ -30,11 +30,11 @@ const de: BaseDictionary = {
 		sectionTag: "Über uns",
 		title: "Das Ensemble",
 		paragraph1:
-			'<span class="italic">vode</span> steht für musikalische Leidenschaft, die weit über Noten und Harmonien hinausgeht. Ob im vollen Ensemble oder in kleineren Besetzungen: Jeder Auftritt zeigt die Vielfalt unseres ganz eigenen vode-Klanges und lässt unser Publikum den Gesang hautnah erleben - berührend, kraftvoll, direkt.',
+			"<span class=\"italic\">vode</span> steht für musikalische Leidenschaft, besondere Kollaborationen und immersive Konzerterlebnisse. Seit 2021 teilen die rund 20 Musiker:innen ihre Begeisterung für das gemeinsame Singen. Ob im vollen Ensemble oder in kleineren Besetzungen: Die Sänger:innen verbinden ihre individuellen Stimmen zu einem vielschichtigen und unverwechselbaren Ensembleklang. Zwischen Jazz, Pop und zeitgenössischer Vokalmusik entstehen Programme, die musikalische Brücken bauen und den Raum selbst zum Teil der künstlerischen Erfahrung machen.",
 		paragraph2:
-			"Als Vokalensemble haben wir uns 2021 gegründet und sind seitdem musikalisch und freundschaftlich miteinander verbunden.",
+			"vode ist auf großen Konzertbühnen ebenso zu Hause wie in außergewöhnlichen Konzertformaten. Auftritte führten das Ensemble unter anderem in die Elbphilharmonie Hamburg, die Rudolf-Oetker-Halle in Bielefeld und den Kuppelsaal Hannover, wo vode gemeinsam mit den New York Voices auftrat. Festivalstationen führten das Ensemble nach Berlin, Freiburg und Köln.",
 		paragraph3:
-			"Wir sind ein Kollektiv von rund 20 Musiker:innen, die unsere verschiedenen kreativen Ideen und Potenziale in das Ensemble einbringen. Zusammengewoben zu einem musikalischen Gesamtbild werden diese Ideen von Katharina Gärtner und Simon Herten. Seit 2022 haben wir mehrere Konzertprogramme auf die Bühnen gebracht (u. a. in der Elbphilharmonie in Hamburg und der Rudolf-Oetker-Halle in Bielefeld) und an Festivals teilgenommen (z. B. dem Black Forest Voices Festival in Freiburg und TotalChoral in Berlin).",
+			"Mit Formaten wie dem „Concert in the Dark“ sucht vode nach neuen Formen des Konzerterlebens und macht Klang, Raum und Wahrnehmung zum Teil der musikalischen Erfahrung. vode sucht nach solchen Momenten, in denen die menschliche Stimme mehr wird als Musik – und aus Klang, Raum und Gemeinschaft etwas entsteht, das nur im Augenblick existiert.",
 		membersTitle: "Mitglieder",
 		selectVoiceGroupPrompt: "Bitte eine Stimmgruppe auswählen.",
 		voiceSoprano: "Sopran",
