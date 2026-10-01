@@ -39,8 +39,11 @@
 })
 #let fade(from, to, angle: 90deg) = gradient.linear(from, to, angle: angle)
 #let credit(body, fill: light) = text(size: 6pt, fill: fill.transparentize(20%), body)
-#let photo-credit(file, fill: light) = credit(fill: fill)[#k.photoCredit: #info(file).credit]
-#let moos(fill: light) = credit(fill: fill)[#k.photoCredit: Dominik Moos]
+// Photos by the default photographer stay uncredited; the last page names them once.
+#let default-photographer = "Dominik Moos"
+#let photo-credit(file, fill: light) = if info(file).credit != default-photographer {
+  credit(fill: fill)[#k.photoCredit: #info(file).credit]
+}
 
 // ── Type ────────────────────────────────────────────────────────────────────
 #set document(title: "vode – " + k.title + " " + str(data.year), author: "vode e.V.")
@@ -131,7 +134,6 @@
       set par(leading: 0.8em)
       body(k.short)
     }))
-    place(bottom + right, dx: -m, dy: -20mm, moos())
   },
 )
 
@@ -139,7 +141,6 @@
 #sheet({
   // Candid close-up bleeding off the right edge.
   place(top + right, cover(pdf-image("lachen"), 70mm, 170mm, 3 / 2, x: 0.3))
-  place(top + right, dx: -3mm, dy: 164mm, moos())
   area({
     block(width: 100mm, {
       text-label(2, "standard")
@@ -162,7 +163,6 @@
 // ── 4 Long text ─────────────────────────────────────────────────────────────
 #sheet(footer-left: 58mm + 12mm, {
   place(top + left, cover(pdf-image("profil"), 58mm, H, 3 / 2, x: 0.45))
-  place(top + left, dx: 3mm, dy: 4mm, moos())
   pad(left: 58mm + 12mm, right: m, top: m, bottom: 26mm, {
     text-label(3, "long")
     v(4mm)
@@ -178,7 +178,6 @@
 #sheet(tone: "dark", {
   place(top, cover(pdf-image("halle-dunkel"), W, 150mm, 3 / 2, x: 0.62, y: 0.4))
   place(top, dy: 70mm, rect(width: 100%, height: 80mm, fill: fade(ink.transparentize(100%), ink)))
-  place(top + right, dx: -3mm, dy: 60mm, moos())
   area(top: 128mm, {
     headline(k.highlightsTitle, size: 34pt, fill: light)
     v(8mm)
@@ -259,7 +258,6 @@
 // Files live on the website; the PDF points there instead of showing them.
 #sheet(footer-tone: "dark", {
   place(top, cover(pdf-image("halle-weiss"), W, 112mm, 3 / 2, y: 0.55))
-  place(top + right, dx: -3mm, dy: 4mm, moos(fill: ink))
   let press-url = "https://www." + data.contact.website.trim("www.") + "/presse"
   area(top: 112mm + 11mm, bottom: 106mm, grid(columns: (1.35fr, 1fr), column-gutter: 12mm, {
     kicker(k.downloadsTitle)
@@ -293,6 +291,8 @@
       text(size: 8.5pt, fill: light.transparentize(15%), k.technical)
       v(6mm)
       text(size: 7.5pt, fill: light.transparentize(40%))[vode e.V. · Bielefeld]
+      v(2mm)
+      text(size: 7.5pt, fill: light.transparentize(40%))[#k.defaultPhotoCredit: #default-photographer]
     })
   })))
 })
