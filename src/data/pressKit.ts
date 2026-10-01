@@ -31,7 +31,7 @@ export const pressVideos = [
 ];
 
 export const pressContact = {
-    name: "Maria Waloschek",
+    name: "Maria Anna Waloschek",
     email: "mail@vode-ensemble.de",
     website: "www.vode-ensemble.de",
     instagram: "@vode.ensemble",
@@ -99,8 +99,8 @@ const de = {
     ],
     leadershipTitle: "Leitung",
     leadership: [
-        { name: "Katharina Gärtner", role: "Dirigentin, Pianistin, Musikpädagogin", text: "Katharina Gärtner verantwortet die künstlerische Säule im Musikpädagogikstudium an der Universität Vechta, lehrt im klassischen und schulpraktischen Klavierspiel und leitet den Unichor. Ausgebildet wurde sie im Rahmen ihres Schulmusikstudiums an der HfM Detmold von Anne Kohler, Fritz ter Wey und Joachim Harder. Weitere wichtige Impulse im Leiten von Vokalensembles bekam sie u. a. durch Kurse bei den New York Voices, Jesper Holm und Kerry Marsh. Seit vielen Jahren leitet sie Vokalensembles mit unterschiedlichen Schwerpunkten, unterrichtete an verschiedenen Hochschulen in Ensembleleitung und gibt regelmäßig Fortbildungen und Workshops in Pop- und Jazz-Chorleitung." },
         { name: "Simon Herten", role: "Sänger, Vocalcoach, Chorleiter", text: "Simon Herten studierte Gesang/Gesangspädagogik an der HfM Detmold u. a. bei Markus Köhler, Lars Woldt und Ulrike Wahren und erhielt Unterricht in Chorleitung bei Anne Kohler. Als Sänger ist er solo und in verschiedenen Ensembles und Bands in den Bereichen Rock, Pop und Klassik als Solist und Chorist deutschlandweit aktiv. Seine weiteren Tätigkeiten erstrecken sich vom Einzelunterricht im Fach Gesang über die musikalische Arbeit an Schulen und Universitäten bis zur Leitung verschiedener Pop- und Jazz-Chöre." },
+        { name: "Katharina Gärtner", role: "Dirigentin, Pianistin, Musikpädagogin", text: "Katharina Gärtner verantwortet die künstlerische Säule im Musikpädagogikstudium an der Universität Vechta, lehrt im klassischen und schulpraktischen Klavierspiel und leitet den Unichor. Ausgebildet wurde sie im Rahmen ihres Schulmusikstudiums an der HfM Detmold von Anne Kohler, Fritz ter Wey und Joachim Harder. Weitere wichtige Impulse im Leiten von Vokalensembles bekam sie u. a. durch Kurse bei den New York Voices, Jesper Holm und Kerry Marsh. Seit vielen Jahren leitet sie Vokalensembles mit unterschiedlichen Schwerpunkten, unterrichtete an verschiedenen Hochschulen in Ensembleleitung und gibt regelmäßig Fortbildungen und Workshops in Pop- und Jazz-Chorleitung." },
     ],
     programmesTitle: "Programme",
     programmesIntro: "Aktuelle und bisherige Konzertprogramme. Ausführliche Programmtexte senden wir auf Anfrage.",
@@ -133,7 +133,7 @@ const de = {
     technicalTitle: "Technik",
     technical: "Ein aktueller Technical Rider ist in Arbeit. Technische Angaben stimmen wir gern für jede Veranstaltung ab.",
     contactTitle: "Kontakt & Booking",
-    contactText: "Für Buchungsanfragen, Interviews und weiteres Material erreicht ihr Maria Waloschek unter",
+    contactText: "Für Buchungsanfragen, Interviews und weiteres Material erreicht ihr Maria Anna Waloschek unter",
     printFooter: "Pressekit",
 };
 
@@ -196,8 +196,8 @@ const en: PressKitText = {
     ],
     leadershipTitle: "Directors",
     leadership: [
-        { name: "Katharina Gärtner", role: "Conductor, pianist, music educator", text: "Katharina Gärtner leads the artistic strand of the music education programme at the University of Vechta, where she teaches classical and applied piano and directs the university choir. She trained with Anne Kohler, Fritz ter Wey and Joachim Harder as part of her school music studies at the Detmold University of Music. Courses with the New York Voices, Jesper Holm and Kerry Marsh, among others, gave her further important impulses for directing vocal ensembles. She has led vocal ensembles with different focuses for many years, has taught ensemble direction at several universities and regularly gives training courses and workshops in pop and jazz choir direction." },
         { name: "Simon Herten", role: "Singer, vocal coach, choir director", text: "Simon Herten studied voice and vocal pedagogy at the Detmold University of Music with teachers including Markus Köhler, Lars Woldt and Ulrike Wahren, and took choral conducting lessons with Anne Kohler. As a singer he performs throughout Germany as a soloist and ensemble member in rock, pop and classical music, both solo and with various ensembles and bands. His other work ranges from individual voice lessons and musical work at schools and universities to directing several pop and jazz choirs." },
+        { name: "Katharina Gärtner", role: "Conductor, pianist, music educator", text: "Katharina Gärtner leads the artistic strand of the music education programme at the University of Vechta, where she teaches classical and applied piano and directs the university choir. She trained with Anne Kohler, Fritz ter Wey and Joachim Harder as part of her school music studies at the Detmold University of Music. Courses with the New York Voices, Jesper Holm and Kerry Marsh, among others, gave her further important impulses for directing vocal ensembles. She has led vocal ensembles with different focuses for many years, has taught ensemble direction at several universities and regularly gives training courses and workshops in pop and jazz choir direction." },
     ],
     programmesTitle: "Programmes",
     programmesIntro: "Current and past concert programmes. Detailed programme notes are available on request.",
@@ -230,7 +230,7 @@ const en: PressKitText = {
     technicalTitle: "Technical",
     technical: "An updated technical rider is in preparation. We are happy to agree technical details for each event.",
     contactTitle: "Contact & booking",
-    contactText: "For booking enquiries, interviews and further material, contact Maria Waloschek at",
+    contactText: "For booking enquiries, interviews and further material, contact Maria Anna Waloschek at",
     printFooter: "Press kit",
 };
 
