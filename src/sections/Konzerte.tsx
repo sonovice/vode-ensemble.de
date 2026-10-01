@@ -93,8 +93,8 @@ const concerts: Record<string, ConcertEntry[]> = {
       datetime: new Date("2027-02-20 19:00"),
       location: "Bielefeld",
       address: "Johanniskirche | Johanniskirchplatz 1 | 33615 Bielefeld",
-      title: "Tripelkonzert mit türkischer und anatolischer Musik",
-      description: <></>,
+      title: "Mosaik – Mozaik – Mozayîk",
+      description: <>Tripelkonzert mit türkischer und anatolischer Musik.</>,
     },
   ],
   "2026": [
