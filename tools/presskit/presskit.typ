@@ -46,7 +46,7 @@
 }
 
 // ── Type ────────────────────────────────────────────────────────────────────
-#set document(title: "vode – " + k.title + " " + str(data.year), author: "vode e.V.")
+#set document(title: "vode – " + k.title + " " + data.season, author: "vode e.V.")
 #set text(font: "Space Grotesk", size: 9.5pt, fill: ink, lang: lang, hyphenate: true,
   // Strongly avoid single words on a last line and lone lines at column breaks.
   costs: (runt: 400%, widow: 300%, orphan: 300%, hyphenation: 150%))
@@ -74,7 +74,7 @@
     v(-1mm)
     grid(columns: (auto, 1fr, auto), column-gutter: 4mm, align: horizon,
       image(logo(if tone == "dark" { "light" } else { "dark" }), height: 3.6mm),
-      text(size: 7pt, fill: fill.transparentize(35%))[#k.printFooter #data.year],
+      text(size: 7pt, fill: fill.transparentize(35%))[#k.printFooter #data.season],
       text(size: 7pt, weight: 700, fill: fill, str(here().page())))
   }))
 }
@@ -98,7 +98,7 @@
   place(top, rect(width: 100%, height: 130mm, fill: fade(ink.transparentize(8%), ink.transparentize(100%))))
   place(top + left, dx: m, dy: m, image(logo("light"), width: 34mm))
   place(top + left, dx: m, dy: 50mm, block(width: 150mm, {
-    kicker(k.title + " " + str(data.year), size: 9pt)
+    kicker(k.title + " " + data.season, size: 9pt)
     v(5mm)
     // One word per line: "berührend. / kraftvoll. / direkt."
     set par(leading: 0.28em)

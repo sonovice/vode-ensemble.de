@@ -30,6 +30,9 @@ export const pressVideos = [
     { id: documentary.youtubeId, title: "Chor macht Schule – der Film (vode academy)", releaseAt: documentary.releaseAt },
 ];
 
+// Printed next to the title on the cover and in the footer of the PDFs.
+export const pressSeason = "2026/2027";
+
 export const pressContact = {
     name: "Maria Anna Waloschek",
     email: "mail@vode-ensemble.de",

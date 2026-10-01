@@ -3,7 +3,7 @@
 //   node tools/presskit/export.mjs <out-dir>
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { plainText, pressContact, pressKit, pressLogos, pressPhotos, pressVideos } from "../../src/data/pressKit.ts";
+import { plainText, pressContact, pressKit, pressLogos, pressPhotos, pressSeason, pressVideos } from "../../src/data/pressKit.ts";
 
 const out = process.argv[2];
 if (!out) throw new Error("usage: node tools/presskit/export.mjs <out-dir>");
@@ -17,7 +17,7 @@ const texts = Object.fromEntries(Object.entries(pressKit).map(([lang, k]) => [la
 }]));
 
 writeFileSync(join(out, "data.json"), JSON.stringify({
-    year: new Date().getFullYear(),
+    season: pressSeason,
     texts,
     photos: pressPhotos,
     logos: pressLogos,
