@@ -20,8 +20,8 @@
 
 /* Buttons */
 .academy-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
-.academy-button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: .75rem 1.5rem; border: 1px solid var(--color-accent); border-radius: .5rem; background: var(--color-accent); color: var(--color-dark); font-weight: 700; text-align: center; transition: background-color .2s, color .2s; }
-.academy-button:hover { background: var(--color-light); }
+.academy-button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: .75rem 1.5rem; border: 1px solid var(--color-accent); border-radius: .5rem; background: var(--color-accent); color: #fff; font-weight: 700; text-align: center; transition: background-color .2s, color .2s; }
+.academy-button:hover { background: var(--color-accent-hover); }
 .academy-button-secondary { background: rgb(17 17 17 / .35); color: var(--color-light-text); border-color: rgb(245 245 245 / .6); }
 .academy-button-secondary:hover { background: var(--color-surface-alt); }
 
@@ -60,8 +60,8 @@
 .academy-video-frame img { width: 100%; height: 100%; object-fit: cover; }
 .academy-video-button { cursor: pointer; }
 .academy-video-play { position: absolute; inset: 0; display: grid; place-items: center; }
-.academy-video-play svg { width: 4.5rem; height: 4.5rem; padding: 1.25rem; background: var(--color-accent); border-radius: 50%; color: var(--color-dark); transition: background-color .2s; }
-.academy-video-button:hover .academy-video-play svg { background: var(--color-light); }
+.academy-video-play svg { width: 4.5rem; height: 4.5rem; padding: 1.25rem; background: var(--color-accent); border-radius: 50%; color: #fff; transition: background-color .2s; }
+.academy-video-button:hover .academy-video-play svg { background: var(--color-accent-hover); }
 .academy-video-soon { position: absolute; left: 1rem; bottom: 1rem; padding: .375rem .75rem; border-radius: .375rem; background: rgb(17 17 17 / .8); font-size: .875rem; font-weight: 700; }
 .academy-film-feature { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(2rem, 4vw, 4rem); align-items: center; }
 .academy-film-context { color: var(--color-light); font-size: .875rem; margin-bottom: 1rem; }
@@ -132,8 +132,8 @@
 .academy-piece-used a:hover { color: var(--color-light); }
 
 .academy-piece-actions { display: flex; flex-direction: column; gap: .5rem; }
-.academy-score { display: flex; align-items: center; gap: .75rem; min-height: 48px; padding: .5rem .875rem; border-radius: .5rem; background: var(--color-accent); color: var(--color-dark); transition: background-color .2s; }
-.academy-score:hover { background: var(--color-light); }
+.academy-score { display: flex; align-items: center; gap: .75rem; min-height: 48px; padding: .5rem .875rem; border-radius: .5rem; background: var(--color-accent); color: #fff; transition: background-color .2s; }
+.academy-score:hover { background: var(--color-accent-hover); }
 .academy-score-icon { flex-shrink: 0; padding: .1875rem .375rem; border: 1.5px solid currentColor; border-radius: .25rem; font-size: .625rem; font-weight: 700; letter-spacing: .04em; }
 .academy-score strong { display: block; font-weight: 700; line-height: 1.25; }
 .academy-score small { display: block; font-size: .75rem; opacity: .75; }

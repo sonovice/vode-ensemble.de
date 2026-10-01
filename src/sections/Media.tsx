@@ -205,7 +205,7 @@ const Media: Component = () => {
           </p>
           <a
             href="/presse"
-            class="inline-flex items-center mt-6 min-h-12 px-6 py-3 rounded-lg bg-[var(--color-accent)] text-[var(--color-dark)] font-bold hover:bg-[var(--color-light)] transition-colors"
+            class="inline-flex items-center mt-6 min-h-12 px-6 py-3 rounded-lg bg-[var(--color-accent)] text-white font-bold hover:bg-[var(--color-accent-hover)] transition-colors"
           >
             {t("media.pressKitLink")}
           </a>

@@ -57,7 +57,7 @@
 
 // "1 / 3 · Kurztext · 427 Zeichen" – marks the three ensemble text lengths alike.
 #let text-label(n, key, fill: ink) = {
-  box(fill: accent, radius: 1mm, inset: (x: 2mm, y: 1.3mm), text(size: 8pt, weight: 700, fill: ink, str(n) + " / 3"))
+  box(fill: accent, radius: 1mm, inset: (x: 2mm, y: 1.3mm), text(size: 8pt, weight: 700, fill: light, str(n) + " / 3"))
   h(2.5mm)
   text(size: 8.5pt, weight: 700, tracking: 0.12em, fill: fill, upper(k.texts.at(key)))
   h(2mm)
@@ -153,9 +153,9 @@
   place(bottom + left, dy: -26mm, block(width: W, fill: accent, inset: (x: m, y: 7mm),
     grid(columns: (1fr,) * k.facts.len(), column-gutter: 6mm,
       ..k.facts.map(((term, value)) => {
-        text(size: 7pt, weight: 700, tracking: 0.12em, fill: ink.transparentize(30%), upper(term))
+        text(size: 7pt, weight: 700, tracking: 0.12em, fill: light.transparentize(20%), upper(term))
         v(1.5mm)
-        text(size: 8.5pt, weight: 700, hyphenate: false, value)
+        text(size: 8.5pt, weight: 700, fill: light, hyphenate: false, value)
       }))))
 })
 

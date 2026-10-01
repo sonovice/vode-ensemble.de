@@ -11,8 +11,8 @@
 .press-kicker { font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--color-accent); }
 .press-role { margin-block: .25rem .75rem; font-size: .875rem; font-weight: 700; color: var(--color-light); }
 
-.press-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .75rem 1.5rem; border: 1px solid var(--color-accent); border-radius: .5rem; background: var(--color-accent); color: var(--color-dark); font-weight: 700; cursor: pointer; transition: background-color .2s; }
-.press-button:hover { background: var(--color-light); }
+.press-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .75rem 1.5rem; border: 1px solid var(--color-accent); border-radius: .5rem; background: var(--color-accent); color: #fff; font-weight: 700; cursor: pointer; transition: background-color .2s; }
+.press-button:hover { background: var(--color-accent-hover); }
 .press-button-secondary { background: transparent; color: var(--color-light-text); border-color: rgb(245 245 245 / .45); }
 .press-button-secondary:hover { background: var(--color-surface-alt); }
 .press-link { display: inline-block; padding-block: .5rem; font-size: .875rem; text-decoration: underline; text-underline-offset: .2em; color: rgb(245 245 245 / .8); }
@@ -35,8 +35,8 @@
 .press-tabs { display: flex; flex-wrap: wrap; gap: .5rem; }
 .press-tabs button { display: flex; flex-direction: column; align-items: flex-start; padding: .625rem 1.125rem; border: 1px solid rgb(245 245 245 / .25); border-radius: .5rem; font-weight: 700; cursor: pointer; }
 .press-tabs button small { font-size: .75rem; font-weight: 400; color: rgb(245 245 245 / .6); }
-.press-tabs button[aria-selected="true"] { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-dark); }
-.press-tabs button[aria-selected="true"] small { color: rgb(17 17 17 / .7); }
+.press-tabs button[aria-selected="true"] { border-color: var(--color-accent); background: var(--color-accent); color: #fff; }
+.press-tabs button[aria-selected="true"] small { color: rgb(255 255 255 / .8); }
 .press-text { max-width: 72ch; margin-top: 1rem; padding: clamp(1.25rem, 3vw, 2rem); border-radius: .75rem; background: var(--color-dark-alt); line-height: 1.75; color: rgb(245 245 245 / .88); }
 .press-text p + p { margin-top: 1rem; }
 .press-text .press-button { margin-top: 1.5rem; }

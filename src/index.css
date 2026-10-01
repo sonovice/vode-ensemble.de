@@ -17,6 +17,7 @@
     --color-dark: #111111;
     --color-dark-alt: #252525;
     --color-accent: #AE895D;
+    --color-accent-hover: #8F704C; /* darker accent, so white text stays readable */
     --color-light-text: #F5F5F5;
     --color-medium: #AE895D;
     --color-light: #B09B86;
