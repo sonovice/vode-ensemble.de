@@ -9,7 +9,6 @@ const out = process.argv[2];
 if (!out) throw new Error("usage: node tools/presskit/export.mjs <out-dir>");
 mkdirSync(join(out, "texte"), { recursive: true });
 
-const now = Date.now();
 const texts = Object.fromEntries(Object.entries(pressKit).map(([lang, k]) => [lang, {
     ...k,
     shortChars: plainText(k.short).length,
@@ -22,8 +21,8 @@ writeFileSync(join(out, "data.json"), JSON.stringify({
     texts,
     photos: pressPhotos,
     logos: pressLogos,
-    // Unreleased films stay out of the kit until their release date.
-    videos: pressVideos.filter(v => !v.releaseAt || now >= v.releaseAt.getTime()),
+    // The kit lists films before their release; only the website waits for `releaseAt`.
+    videos: pressVideos.map(({ id, title }) => ({ id, title })),
     contact: pressContact,
 }, null, 2));
 

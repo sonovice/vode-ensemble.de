@@ -19,4 +19,4 @@ Requirements: `typst`, `python3` with `fonttools` and `brotli`, Node 23 or newer
 
 - Photos: `public/presse/fotos/<name>.jpg` (long edge 4000 px, 300 dpi) and `<name>_vorschau.jpg` (1200 px). Originals are in `raw/pr/Pressefotos` (not versioned). Add new photos to `pressPhotos` in `pressKit.ts`.
 - Logos: `public/presse/logos/vode-logo-hell|dunkel.svg|png`, derived from `public/images/logo.svg`.
-- A film with `releaseAt` only appears on the page and in the kit once that date has passed, but the PDFs only change when they are rebuilt.
+- A film with `releaseAt` appears on the press page once that date has passed. The PDFs list it right away, so keep the video unlisted on YouTube until then.
