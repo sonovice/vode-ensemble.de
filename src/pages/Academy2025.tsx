@@ -1,5 +1,6 @@
 import { type Component, Show, For, createMemo } from "solid-js";
 import { useI18n } from "../i18n";
+import YouTubeEmbed from "../components/YouTubeEmbed";
 import Accordion from "../components/Accordion";
 
 const Academy2025: Component = () => {
@@ -83,14 +84,7 @@ const Academy2025: Component = () => {
                         {/* Video Column (Right) */}
                         <div class="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 lg:justify-self-end">
                             <div class="aspect-[9/16] bg-[var(--color-surface-alt)] rounded-lg shadow-lg">
-                                <iframe
-                                    class="w-full h-full rounded-lg"
-                                    src="https://www.youtube.com/embed/m5BTiZ8ACjo?enablejsapi=1"
-                                    title="Chor macht Schule - Teaser"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen
-                                />
+                                <YouTubeEmbed id="m5BTiZ8ACjo" title="Chor macht Schule - Teaser" class="aspect-[9/16]" />
                             </div>
                         </div>
                     </div>
@@ -460,14 +454,7 @@ const Academy2025: Component = () => {
                             <Accordion title={t('academy.academy2025.cloudyDayTitle', {}, 'Cloudy Day - Tutorial')}>
                                 <div class="bg-[var(--color-surface-alt)] p-6 md:p-8">
                                     <div class="aspect-w-16 aspect-h-9 mb-6">
-                                        <iframe
-                                            class="w-full h-full rounded-lg aspect-video"
-                                            src="https://www.youtube.com/embed/uq88tT1HozU?enablejsapi=1"
-                                            title="Cloudy Day - Tutorial"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen
-                                        />
+                                        <YouTubeEmbed id="uq88tT1HozU" title="Cloudy Day - Tutorial" />
                                     </div>
                                     <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
                                         {t('academy.academy2025.cloudyDayText', {}, 'Neu am Start: Unser Tutorial zu "Cloudy Day"! Der Song ist ein Kanon – ideal zum gemeinsamen Singen und zum Warmwerden. Die Noten gibt’s hier als Download. Viel Spaß beim Ausprobieren!')}
@@ -493,14 +480,7 @@ const Academy2025: Component = () => {
                             <Accordion title={t('academy.academy2025.lionLinesTitle', {}, 'Quodlibet Lion - Tutorial')}>
                                 <div class="bg-[var(--color-surface-alt)] p-6 md:p-8">
                                     <div class="aspect-w-16 aspect-h-9 mb-6">
-                                        <iframe
-                                            class="w-full h-full rounded-lg aspect-video"
-                                            src="https://www.youtube.com/embed/wvnHlf83Oz8?enablejsapi=1"
-                                            title="Lion (Saint Mesa) – Vocal Lines"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen
-                                        />
+                                        <YouTubeEmbed id="wvnHlf83Oz8" title="Lion (Saint Mesa) – Vocal Lines" />
                                     </div>
                                     <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
                                         {t('academy.academy2025.lionLinesText', {}, 'Heute nimmt euch Feli mit, um mit ihr zwei kleine Lines aus verschiedenen Songs zu lernen. Am Ende soll alles zu dem Song „Lion“ von Saint Mesa passen, sodass wir damit gemeinsam eine ganz neue Live-Version bei unserem Workshop kreieren können. Viel Spaß beim Mitsingen!')}
@@ -526,14 +506,7 @@ const Academy2025: Component = () => {
                             <Accordion title={t('academy.academy2025.voiceInsideTitle', {}, 'The Voice Inside - Tutorial')}>
                                 <div class="bg-[var(--color-surface-alt)] p-6 md:p-8">
                                     <div class="aspect-w-16 aspect-h-9 mb-6">
-                                        <iframe
-                                            class="w-full h-full rounded-lg aspect-video"
-                                            src="https://www.youtube.com/embed/P-acKt7PhW8?enablejsapi=1"
-                                            title="The Voice Inside - Tutorial"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen
-                                        />
+                                        <YouTubeEmbed id="P-acKt7PhW8" title="The Voice Inside - Tutorial" />
                                     </div>
                                     <p class="text-lg leading-relaxed text-center text-[var(--color-light-text)]/80 mb-8">
                                         {t('academy.academy2025.newsText', {}, 'Hey, habt ihr schon das "The Voice Inside" Tutorial gecheckt? Die Noten dazu findet ihr jetzt hier bei uns als Download! Perfekt, um schon mal reinzukommen und euch auf den Workshop vorzubereiten. Viel Spaß beim Üben!')}

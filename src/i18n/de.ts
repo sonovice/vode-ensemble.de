@@ -16,15 +16,8 @@ const de: BaseDictionary = {
 	hero: {
 		mainTitle: "Vocal Jazz",
 		subTitle: "& Pop",
-	},
-	feature: {
-		sectionTag: "Neu",
-		title: "vode × New York Voices",
-		songTitle: "Bli-Blip",
-		intro: 'Über ein Jahr in der Entwicklung – endlich können wir unsere geheime Kollaboration mit den legendären <a href="https://newyorkvoices.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">New York Voices</a> präsentieren!',
-		story1: 'Alles begann beim Black Forest Voices Festival im Juni 2024, wo Kim Nazarian von den <a href="https://newyorkvoices.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">New York Voices</a> unser Ensemble coachte. Aus dieser Begegnung entstand die Idee zu dieser besonderen Zusammenarbeit.',
-		story2: "Das Arrangement stammt ursprünglich von Darmon Meader (New York Voices) und Michael Abene. Unser Bassist Manuel Grunden hat es in eine reine A-cappella-Version verwandelt – und dabei gleich auch Produktion, Mix und Videoschnitt übernommen.",
-		story3: 'Im November 2024 nahmen wir unseren Part bei Fattoria Musica mit <a href="https://juliusgass.de/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">Julius Gass</a> auf. Ein Jahr nach dem ersten Treffen entstand dann das Musikvideo im wunderschönen Cafe Cup in Detmold – mit tatkräftiger Unterstützung von <a href="https://larshenrik.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">Lars Henrik</a>.',
+		concerts: "Konzerte",
+		listen: "Reinhören",
 	},
 	ensemble: {
 		sectionTag: "Über uns",
@@ -45,7 +38,7 @@ const de: BaseDictionary = {
 		voiceBass: "Bass",
 		leadershipTitle: "Leitung",
 		leadershipParagraph:
-			"Solistische, kompositorische oder organisatorische Parts werden von verschiedenen Mitgliedern übernommen. Die künstlerische Gesamtverantwortung für den Probenprozess und die Konzertgestaltung liegen bei Katharina Gärtner und Simon Herten. Die organisatorische Leitung des Ensembles und das Booking übernehmen Feli Ammer und Maria Waloschek.",
+			"Solistische, kompositorische oder organisatorische Parts werden von verschiedenen Mitgliedern übernommen. Die künstlerische Gesamtverantwortung für den Probenprozess und die Konzertgestaltung liegen bei Katharina Gärtner und Simon Herten. Die organisatorische Leitung des Ensembles und das Booking übernehmen Felicitas Ammer und Maria Anna Waloschek.",
 		websiteLinkText: "Website",
 		maybeYouName: "Vielleicht du?",
 		maybeYouDescriptionBass: "Wir suchen Verstärkung im Bass!",
@@ -63,6 +56,7 @@ const de: BaseDictionary = {
 		pastTitle: "Vergangene Konzerte",
 		noPastForYearFallback: "Keine Konzerte für dieses Jahr im Archiv.",
 		timeSuffix: "Uhr",
+		tickets: "Tickets",
 	},
 	academy: {
 		title: "vode academy",
@@ -211,8 +205,6 @@ const de: BaseDictionary = {
 		title: "Einblicke und Pressematerial",
 		paragraph1:
 			"Hier findest du eine Auswahl unserer neuesten Aufnahmen, Videos und unser Presse-Kit.",
-		paragraph2:
-			"Wir arbeiten ständig an neuem Material. Besuch uns bald wieder, um nichts zu verpassen.",
 		instagramAriaLabel: "Vode Ensemble auf Instagram",
 		facebookAriaLabel: "Vode Ensemble auf Facebook",
 		recordingsTitle: "Aufnahmen",
@@ -248,7 +240,7 @@ const de: BaseDictionary = {
 			'Und wenn\'s noch etwas mehr sein darf und du mit exklusiven Einblicken, Backstage-News und der Möglichkeit, uns aktiv zu unterstützen dabei sein möchtest, dann kommst du hier zu unseren <a href="#support" class="text-[var(--color-accent)] hover:underline">Community-Updates</a>.',
 		subtitle2: "Booking & Anfragen",
 		paragraph3:
-			'Für Buchungsanfragen oder sonstige Anliegen erreichst du Maria Waloschek und Feli Ammer über <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
+			'Für Buchungsanfragen oder sonstige Anliegen erreichst du Maria Anna Waloschek und Felicitas Ammer über <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
 	},
 	adventskalender: {
 		sectionTag: "Adventskalender",
@@ -262,33 +254,32 @@ const de: BaseDictionary = {
 		backIconTitle: "Zurück-Pfeil",
 	},
 	support: {
-		imageAlt: "Unterstützung Impression",
-		sectionTag: "Support",
+		sectionTag: "Unterstützen",
 		title: "Unterstütze uns",
-		introParagraph1:
-			"Unsere Projekte tragen sich durch das große Engagement aller Ensemblemitglieder und der finanziellen Hilfe unserer Unterstützer. Jeder Beitrag hilft uns, Probenphasen und Konzerte durchzuführen, neue Kompositionen und Arrangements in Auftrag zu geben, Raummieten zu finanzieren und Aufnahmen und Videos zu realisieren.",
-		introParagraph2:
-			"Als gemeinnütziger Verein sind wir in der Lage, Bescheinigungen über Beiträge und Spenden auszustellen. Schreibt uns bei Bedarf bitte an: mail@vode-ensemble.de",
-		friendsTitle: "Freunde und Förderer",
-		friendsParagraph1:
-			"Werde Teil der vode-community, indem du unsere Arbeit mit einem selbst festgelegten regelmäßigen Beitrag unterstützt. Hierdurch hast du Zugang zu unseren Community-Updates, bist hautnah dabei, wie hinter den Kulissen neue Projekt-Ideen gesponnen werden und bekommst Einblicke in unsere Probenarbeit und natürlich weißt du dadurch als erstes über neue Konzerte Bescheid. Diese Form der Unterstützung ermöglicht uns eine langfristige Planung und ist deshalb sehr wertvoll für uns.",
-		friendsParagraph2:
-			'Für weitere Infos hierzu schreib uns unter <a href="mailto:mail@vode–ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode–ensemble.de</a>.',
-		donationsTitle: "Spenden",
-		donationsParagraph1:
-			"Wenn du uns einmalig unterstützen möchtest, freuen wir uns sehr über eine Spende per Überweisung.",
-		// PayPal-Konto vorübergehend gesperrt / PayPal account temporarily blocked
-		// paypalButtonText: "Über PayPal spenden",
-		donationsReferenceLabel: "Stichwort:",
-		donationsReferenceValue: "Spende",
-		sponsorsTitle: "Sponsoren",
-		sponsorsParagraph1:
-			"Um die Wertschätzung sichtbar zu machen, möchten wir auch etwas zurückgeben und uns öffentlich für das kulturelle Engagement bedanken. Dafür werden Sponsor:innen auf Konzertplakaten, Flyern oder Programmheften genannt, indem wir Logos oder Namen platzieren. Darüber hinaus bewerben wir unsere Sponsor:innen auch über unsere digitalen Kanäle.",
-		closingParagraph:
-			"Danke, dass durch eure finanziellen Beiträge Kultur ermöglicht wird und wir so gemeinsam musikalische Begegnungen schaffen können!",
+		intro: "Hinter jedem Konzert stehen Probenphasen, neue Arrangements, Raummieten, Aufnahmen und Videos. Das tragen wir mit viel eigenem Engagement – möglich wird es durch Menschen, die uns dabei unterstützen.",
+		membersTitle: "Fördermitglied werden",
+		membersText: "Mit einem regelmäßigen Beitrag in selbst gewählter Höhe gibst du uns Planungssicherheit. Dafür bist du mit unseren Community-Updates hautnah dabei: Einblicke in die Proben, neue Projektideen und Konzerttermine vor allen anderen.",
+		membersAction: "Fördermitglied werden",
+		membersSubject: "Fördermitgliedschaft bei vode",
+		donationsTitle: "Einmalig spenden",
+		donationsText: "Jede Überweisung hilft uns weiter, ganz gleich in welcher Höhe.",
+		recipient: "Empfänger",
+		bank: "Bank",
+		reference: "Zweck",
+		referenceValue: "Spende",
+		copyIban: "IBAN kopieren",
+		ibanCopied: "IBAN kopiert",
+		sponsorsTitle: "Sponsor werden",
+		sponsorsText: "Unternehmen und Stiftungen, die uns fördern, nennen wir auf Plakaten, Flyern und in Programmheften und danken ihnen öffentlich auf unseren Kanälen.",
+		sponsorsAction: "Sponsoring anfragen",
+		sponsorsSubject: "Sponsoring für vode",
+		receipt: '<strong class="text-[var(--color-light-text)]">Danke!</strong> Als gemeinnütziger Verein stellen wir dir gern eine Zuwendungsbestätigung aus. Schreib uns dafür an <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
 	},
 	lightbox: {
 		close: "Bild schließen",
+	},
+	video: {
+		play: "Video abspielen",
 	},
 	academyPage: {
 		title: "vode academy",
@@ -315,7 +306,6 @@ const de: BaseDictionary = {
 		filmReleaseOn: "Der Film erscheint am",
 		teaser: "Einblicke in „Chor macht Schule“",
 		teaserPosterAlt: "Teilnehmende singen sich mit Bewegung ein",
-		play: "Video abspielen",
 		offerTitle: "Mit vode zusammenarbeiten",
 		offerIntro: "Für Chorleitungen, Schulen und Veranstalter gibt es verschiedene Möglichkeiten der Zusammenarbeit. Umfang und Besetzung richten sich nach dem Vorhaben.",
 		expertTitle: "Coaching zu einem Thema",

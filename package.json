@@ -1,7 +1,7 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
+  "name": "vode-ensemble.de",
+  "version": "1.0.0",
+  "description": "Website of the vocal ensemble vode",
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "serve": "vite preview"
   },
-  "license": "MIT",
+  "private": true,
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.8",
     "tailwindcss": "^4.1.8",

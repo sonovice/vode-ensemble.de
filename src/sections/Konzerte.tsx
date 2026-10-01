@@ -14,6 +14,8 @@ type ConcertEntry = {
   location: string;
   address: string;
   title: string;
+  // Ticket shop URL; the button is only shown while the concert is upcoming.
+  tickets?: string;
   description: JSX.Element;
 };
 
@@ -25,17 +27,10 @@ const concerts: Record<string, ConcertEntry[]> = {
       location: "Kleve",
       address: "Stadthalle | Lohstätte 7 | 47533 Kleve",
       title: "A cappella Konzert",
+      tickets: "https://www.reservix.de/tickets-true-colours-vode-ensemble-in-kleve-stadthalle-am-10-5-2025/e2268821",
       description: (
         <>
-          Konzerteinführung um 19:00 Uhr.{" "}
-          <a
-            href="https://www.reservix.de/tickets-true-colours-vode-ensemble-in-kleve-stadthalle-am-10-5-2025/e2268821"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-accent)] hover:underline"
-          >
-            Tickets
-          </a>
+          Konzerteinführung um 19:00 Uhr.
         </>
       ),
     },
@@ -59,22 +54,8 @@ const concerts: Record<string, ConcertEntry[]> = {
       address:
         "Aula der Elly-Heuss-Schule Wiesbaden | Platz der Deutschen Einheit 2 | 65185 Wiesbaden",
       title: "Doppelkonzert mit perlemor",
-      description: (
-        <>
-          <a
-            href="https://eventfrog.de/de/p/konzert/a-cappella-vocal/vocal-elements-zwei-ensembles-ein-leuchten-7351880902861939160.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              type="button"
-              class="bg-[var(--color-accent)] cursor-pointer text-white font-bold px-4 py-2 rounded-md"
-            >
-              Tickets
-            </button>
-          </a>
-        </>
-      ),
+      tickets: "https://eventfrog.de/de/p/konzert/a-cappella-vocal/vocal-elements-zwei-ensembles-ein-leuchten-7351880902861939160.html",
+      description: <></>,
     },
     {
       datetime: new Date("2025-12-20 20:00"),
@@ -107,28 +88,23 @@ const concerts: Record<string, ConcertEntry[]> = {
       description: <></>,
     },
   ],
+  "2027": [
+    {
+      datetime: new Date("2027-02-20 19:00"),
+      location: "Bielefeld",
+      address: "Johanniskirche | Johanniskirchplatz 1 | 33615 Bielefeld",
+      title: "Tripelkonzert mit türkischer und anatolischer Musik",
+      description: <></>,
+    },
+  ],
   "2026": [
     {
       datetime: new Date("2026-05-30 20:00"),
       location: "Wilhelmshaven",
       address: "Pumpwerk | Banter Deich 1a | 26382 Wilhelmshaven",
       title: "Doppelkonzert mit CantaMare",
-      description: (
-        <>
-          <a
-            href="https://pumpwerk.reservix.de/p/reservix/event/2499739"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              type="button"
-              class="bg-[var(--color-accent)] cursor-pointer text-white font-bold px-4 py-2 rounded-md"
-            >
-              Tickets
-            </button>
-          </a>
-        </>
-      ),
+      tickets: "https://pumpwerk.reservix.de/p/reservix/event/2499739",
+      description: <></>,
     },
     {
       datetime: new Date("2026-01-25 18:00"),
@@ -164,22 +140,10 @@ const concerts: Record<string, ConcertEntry[]> = {
       address:
         "Kulturzentrum Immanuel – Immanuelskirche | Sternstraße 73 | 42275 Wuppertal",
       title: "Shifting Tides",
+      tickets: "https://www.wuppertal-live.de/634383",
       description: (
         <>
           Doppelkonzert mit dem Jungen Popchor Wuppertal.
-          <br />
-          <a
-            href="https://www.wuppertal-live.de/634383"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              type="button"
-              class="mt-2 bg-[var(--color-accent)] cursor-pointer text-white font-bold px-4 py-2 rounded-md"
-            >
-              Tickets
-            </button>
-          </a>
         </>
       ),
     },
@@ -210,54 +174,23 @@ const concerts: Record<string, ConcertEntry[]> = {
       location: "Berlin",
       address: "Cafe Theater Schalotte | Behaimstraße 22, 10585 Berlin",
       title: "Doppelkonzert mit dem Feature Chor Berlin",
-      description: (
-        <>
-          <a
-            href="https://www.ticketino.com/de/Event/Feature-Chor-Berlin-vode-Total-Choral/187300"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-accent)] hover:underline"
-          >
-            Tickets
-          </a>
-        </>
-      ),
+      tickets: "https://www.ticketino.com/de/Event/Feature-Chor-Berlin-vode-Total-Choral/187300",
+      description: <></>,
     },
     {
       datetime: new Date("2024-05-03 20:00"),
       location: "Jever",
       address: "Stadtkirche | Am Kirchplatz 13, 26441 Jever",
       title: "Doppelkonzert mit CantaMare",
-      description: (
-        <>
-          Tickets (15/10€) sind bestellbar unter{" "}
-          <a
-            href="mailto:info@popchor-cantamare.com"
-            class="text-[var(--color-accent)] hover:underline"
-          >
-            info@popchor-cantamare.com
-          </a>{" "}
-          und telefonisch unter 0170 823 5530 oder 04422 4383.
-        </>
-      ),
+      description: <></>,
     },
     {
       datetime: new Date("2024-05-04 19:30"),
       location: "Hamburg",
       address: "St. Pauli-Kirche | Pinnasberg 80, 20359 Hamburg",
       title: "Doppelkonzert mit SISTAHH",
-      description: (
-        <>
-          <a
-            href="https://www.tixforgigs.com/de-de/Event/53133"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-accent)] hover:underline"
-          >
-            Tickets
-          </a>
-        </>
-      ),
+      tickets: "https://www.tixforgigs.com/de-de/Event/53133",
+      description: <></>,
     },
     {
       datetime: new Date("2024-06-14 20:00"),
@@ -266,7 +199,7 @@ const concerts: Record<string, ConcertEntry[]> = {
       title: "Konzert im Rahmen des Black Forest Voices Festivals",
       description: (
         <>
-          Weitere Informationen und Tickets unter{" "}
+          Weitere Informationen unter{" "}
           <a
             href="https://blackforestvoices.com/"
             target="_blank"
@@ -383,13 +316,75 @@ const concerts: Record<string, ConcertEntry[]> = {
   ],
 };
 
-const Konzerte: Component = () => {
+const ConcertCard: Component<{ concert: ConcertEntry; upcoming?: boolean }> = (props) => {
   const { t, locale } = useI18n();
-  const sortedYears = Object.keys(concerts).sort(
-    (a, b) => Number.parseInt(b) - Number.parseInt(a),
+  const date = (options: Intl.DateTimeFormatOptions) =>
+    props.concert.datetime.toLocaleDateString(locale(), options);
+  return (
+    <div class="flex flex-row items-start p-4 bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20 w-full">
+      <div class="flex flex-col items-center justify-start text-center w-fit md:w-24 mr-5 shrink-0">
+        <div class="text-sm uppercase text-[var(--color-accent)] font-semibold tracking-wider">
+          {date({ month: "short" })}
+          <Show when={props.upcoming && props.concert.datetime.getFullYear() !== new Date().getFullYear()}>
+            {" "}{props.concert.datetime.getFullYear()}
+          </Show>
+        </div>
+        <div class="font-black text-3xl text-[var(--color-light-text)] my-0.5">
+          {date({ day: "2-digit" })}
+        </div>
+        <div class="text-sm text-[var(--color-light-text)]/70 font-medium">
+          {date({ weekday: "short" })}
+        </div>
+      </div>
+      <div class="flex-grow text-left">
+        <h3 class="text-xl font-bold text-[var(--color-light-text)] mb-2">
+          {props.concert.title}
+        </h3>
+        <div class="text-md mb-1">
+          <span class="font-semibold mr-2 text-[var(--color-light-text)]/80">
+            {props.concert.datetime.toLocaleTimeString(locale(), {
+              hour: "2-digit",
+              minute: "2-digit",
+            })}{" "}
+            {t("concerts.timeSuffix")}
+          </span>
+          <span class="text-[var(--color-accent)] font-medium">
+            {props.concert.location}
+          </span>
+        </div>
+        <Show when={props.concert.address}>
+          <p class="text-sm text-[var(--color-light-text)]/70 mb-2">
+            {props.concert.address}
+          </p>
+        </Show>
+        <div class="text-sm text-[var(--color-light-text)]/80 [&_a]:text-[var(--color-accent)] [&_a:hover]:underline">
+          {props.concert.description}
+        </div>
+        <Show when={props.upcoming && props.concert.tickets}>
+          {(url) => (
+            <a
+              href={url()}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center mt-3 min-h-10 px-4 rounded-md bg-[var(--color-accent)] text-white font-bold hover:bg-[var(--color-accent-hover)] transition-colors"
+            >
+              {t("concerts.tickets")}
+            </a>
+          )}
+        </Show>
+      </div>
+    </div>
   );
+};
+
+const Konzerte: Component = () => {
+  const { t } = useI18n();
   const [selectedYear, setSelectedYear] = createSignal<string>("");
   const now = new Date();
+  // The archive only offers years that already have a past concert.
+  const sortedYears = Object.keys(concerts)
+    .filter((year) => concerts[year].some((c) => c.datetime <= now))
+    .sort((a, b) => Number.parseInt(b) - Number.parseInt(a));
 
   const yearConcerts = createMemo(() => {
     const selected = selectedYear();
@@ -445,53 +440,7 @@ const Konzerte: Component = () => {
             >
               <div class="space-y-6 mb-12">
                 <For each={allUpcomingConcertsGlobal()}>
-                  {(concert) => (
-                    <div class="flex flex-row items-start p-4 bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
-                      <div class="flex flex-col items-center justify-start text-center w-fit md:w-24 mr-5 shrink-0 mb-0">
-                        <div class="text-sm uppercase text-[var(--color-accent)] font-semibold tracking-wider">
-                          {concert.datetime.toLocaleDateString(locale(), {
-                            month: "short",
-                          })}
-                        </div>
-                        <div class="font-black text-3xl text-[var(--color-light-text)] my-0.5">
-                          {concert.datetime.getDate().toLocaleString(locale(), {
-                            minimumIntegerDigits: 2,
-                          })}
-                        </div>
-                        <div class="text-sm text-[var(--color-light-text)]/70 font-medium">
-                          {concert.datetime.toLocaleDateString(locale(), {
-                            weekday: "short",
-                          })}
-                          .
-                        </div>
-                      </div>
-                      <div class="flex-grow text-left">
-                        <h3 class="text-xl font-bold text-[var(--color-light-text)] mb-2">
-                          {concert.title}
-                        </h3>
-                        <div class="text-md mb-1">
-                          <span class="font-semibold mr-2 text-[var(--color-light-text)]/80">
-                            {concert.datetime.toLocaleTimeString(locale(), {
-                              hour: "2-digit",
-                              minute: "2-digit",
-                            })}{" "}
-                            {t("concerts.timeSuffix", {}, "Uhr")}
-                          </span>
-                          <span class="text-[var(--color-accent)] font-medium">
-                            {concert.location}
-                          </span>
-                        </div>
-                        <Show when={concert.address}>
-                          <p class="text-sm text-[var(--color-light-text)]/70 mb-2">
-                            {concert.address}
-                          </p>
-                        </Show>
-                        <div class="text-sm text-[var(--color-light-text)]/80 prose prose-xs prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline">
-                          {concert.description}
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                  {(concert) => <ConcertCard concert={concert} upcoming />}
                 </For>
               </div>
             </Show>
@@ -524,62 +473,13 @@ const Konzerte: Component = () => {
                 when={yearConcerts().past.length > 0}
                 fallback={
                   <p class="text-center md:text-left text-lg text-[var(--color-light-text)]/60 italic">
-                    Für das Jahr {selectedYear()} sind keine vergangenen
-                    Konzerte im Archiv.
+                    {t("concerts.noPastForYearFallback")}
                   </p>
                 }
               >
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
                   <For each={yearConcerts().past}>
-                    {(concert) => (
-                      <div class="flex flex-row items-start p-4 bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20 w-full">
-                        <div class="flex flex-col items-center justify-center text-center w-fit md:w-24 mr-5 shrink-0">
-                          <div class="text-sm uppercase text-[var(--color-accent)] font-semibold tracking-wider">
-                            {concert.datetime.toLocaleDateString(locale(), {
-                              month: "short",
-                            })}
-                          </div>
-                          <div class="font-black text-3xl text-[var(--color-light-text)] my-0.5">
-                            {concert.datetime
-                              .getDate()
-                              .toLocaleString(locale(), {
-                                minimumIntegerDigits: 2,
-                              })}
-                          </div>
-                          <div class="text-sm text-[var(--color-light-text)]/70 font-medium">
-                            {concert.datetime.toLocaleDateString(locale(), {
-                              weekday: "short",
-                            })}
-                            .
-                          </div>
-                        </div>
-                        <div class="flex-grow text-left">
-                          <h3 class="text-xl font-bold text-[var(--color-light-text)] mb-2">
-                            {concert.title}
-                          </h3>
-                          <div class="text-md mb-1">
-                            <span class="font-semibold mr-2 text-[var(--color-light-text)]/80">
-                              {concert.datetime.toLocaleTimeString(locale(), {
-                                hour: "2-digit",
-                                minute: "2-digit",
-                              })}{" "}
-                              {t("concerts.timeSuffix", {}, "Uhr")}
-                            </span>
-                            <span class="text-[var(--color-accent)] font-medium">
-                              {concert.location}
-                            </span>
-                          </div>
-                          <Show when={concert.address}>
-                            <p class="text-sm text-[var(--color-light-text)]/70 mb-2">
-                              {concert.address}
-                            </p>
-                          </Show>
-                          <div class="text-sm text-[var(--color-light-text)]/80 prose prose-xs prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline">
-                            {concert.description}
-                          </div>
-                        </div>
-                      </div>
-                    )}
+                    {(concert) => <ConcertCard concert={concert} />}
                   </For>
                 </div>
               </Show>

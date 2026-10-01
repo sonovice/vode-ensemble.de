@@ -1,5 +1,6 @@
 import { type Component, For, Show, createSignal, onMount } from "solid-js";
 import { useI18n } from "../i18n";
+import { youtubeEmbedUrl } from "../components/YouTubeEmbed";
 import "../styles/academy.css";
 
 // The material is a growing pool used across workshops, so it is organised by
@@ -24,21 +25,21 @@ const categories: { key: string; pieces: Piece[] }[] = [
         pieces: [
             { id: "cloudy-day", key: "cloudyDay", title: "Cloudy Day", credit: "vode academy / Katharina Gärtner", tutorial: "uq88tT1HozU", scores: [{ file: "Cloudy Day - vode academy 2025.pdf", pages: 1 }], usedIn: chorMachtSchule },
             { id: "the-voice-inside", key: "voiceInside", title: "The Voice Inside", credit: "vode academy / Katharina Gärtner", tutorial: "P-acKt7PhW8", scores: [{ file: "The Voice Inside - vode academy 2025.pdf", pages: 1 }], usedIn: chorMachtSchule },
-            { id: "quodlibet-lion", key: "lion", title: "Quodlibet Lion", credit: "Saint Mesa / Manuel Grunden / Feli Ammer / Aurora", tutorial: "wvnHlf83Oz8", scores: [{ file: "Quodlibet Lion - vode academy 2025.pdf", pages: 1 }], usedIn: chorMachtSchule },
+            { id: "quodlibet-lion", key: "lion", title: "Quodlibet Lion", credit: "Saint Mesa / Manuel Grunden / Felicitas Ammer / Aurora", tutorial: "wvnHlf83Oz8", scores: [{ file: "Quodlibet Lion - vode academy 2025.pdf", pages: 1 }], usedIn: chorMachtSchule },
         ],
     },
     {
         key: "songs",
         pieces: [
             { id: "lovely-day", key: "lovelyDay", title: "Lovely Day", credit: "vode academy / Katharina Gärtner", scores: [{ file: "Lovely Day - vode academy.pdf", pages: 1 }] },
-            { id: "on-your-way", key: "onYourWay", title: "On Your Way", credit: "vode academy / Feli Ammer", scores: [{ file: "On Your Way - vode academy.pdf", pages: 1 }] },
+            { id: "on-your-way", key: "onYourWay", title: "On Your Way", credit: "vode academy / Felicitas Ammer", scores: [{ file: "On Your Way - vode academy.pdf", pages: 1 }] },
         ],
     },
     {
         key: "arrangements",
         pieces: [
             {
-                id: "whenever-i-sing", key: "wheneverISing", title: "Whenever I sing", credit: "vode academy / Feli Ammer",
+                id: "whenever-i-sing", key: "wheneverISing", title: "Whenever I sing", credit: "vode academy / Felicitas Ammer",
                 scores: [
                     { file: "Whenever I sing - a cappella - vode academy.pdf", pages: 11, versionKey: "aCappella" },
                     { file: "Whenever I sing - SA und Klavier - vode academy.pdf", pages: 5, versionKey: "saPiano" },
@@ -111,7 +112,7 @@ const MaterialPiece: Component<{ piece: Piece }> = (props) => {
                 {id => (
                     <div class="academy-piece-tutorial">
                         <iframe
-                            src={`https://www.youtube.com/embed/${id()}?enablejsapi=1&autoplay=1&rel=0`}
+                            src={youtubeEmbedUrl(id())}
                             title={`${props.piece.title} – Tutorial`}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen

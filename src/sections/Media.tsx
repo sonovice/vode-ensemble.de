@@ -1,5 +1,6 @@
 import { type Component, For, createMemo } from "solid-js";
 import { useI18n } from "../i18n";
+import YouTubeEmbed from "../components/YouTubeEmbed";
 
 const Media: Component = () => {
   const { t } = useI18n();
@@ -48,7 +49,7 @@ const Media: Component = () => {
 
   const videos = createMemo(() => [
     {
-      src: "https://www.youtube.com/embed/UWVHe51-kG8?enablejsapi=1",
+      id: "UWVHe51-kG8",
       title: "Bli-Blip (vode & New York Voices)",
       description: [
         "Original Arrangement: Darmon Meader & Michael Abene",
@@ -60,18 +61,18 @@ const Media: Component = () => {
       ],
     },
     {
-      src: "https://www.youtube.com/embed/GxzoyGThUiQ?enablejsapi=1",
+      id: "GxzoyGThUiQ",
       title: "Back in the High Life Again (Steve Winwood Cover)",
       description: [
         "Arrangement: Julia Dollison & Kerry Marsh",
         `${t("media.credits.musicalDirection", {}, "Musikalische Leitung")}: Katharina Gärtner`,
         `Video: Dominik Moos`,
-        `${t("media.credits.recording", {}, "Aufnahme")}: Feli Ammer & Manuel Grunden`,
+        `${t("media.credits.recording", {}, "Aufnahme")}: Felicitas Ammer & Manuel Grunden`,
         `Mix: Julius Gass`,
       ],
     },
     {
-      src: "https://www.youtube.com/embed/qs1Xteyb9j4?enablejsapi=1",
+      id: "qs1Xteyb9j4",
       title: "In My Life (The Beatles Cover)",
       description: [
         "Arrangement: Darmon Meader",
@@ -96,18 +97,11 @@ const Media: Component = () => {
         </h1>
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div class="w-full text-left">
-            <p class="text-lg md:text-xl text-gray-300 mb-4">
+            <p class="text-lg md:text-xl text-gray-300">
               {t(
                 "media.paragraph1",
                 {},
                 "Hier findest du eine Auswahl unserer neuesten Aufnahmen, Videos und unser Presse-Kit.",
-              )}
-            </p>
-            <p class="text-gray-400">
-              {t(
-                "media.paragraph2",
-                {},
-                "Wir arbeiten ständig an neuem Material. Besuch uns bald wieder, um nichts zu verpassen.",
               )}
             </p>
           </div>
@@ -164,16 +158,7 @@ const Media: Component = () => {
             <For each={videos()}>
               {(video) => (
                 <div class="bg-[var(--color-surface-alt)] rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl ring-1 ring-[var(--color-light-text)]/20">
-                  <div class="aspect-video mb-4">
-                    <iframe
-                      class="w-full h-full rounded-t-lg"
-                      src={video.src}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                    />
-                  </div>
+                  <YouTubeEmbed id={video.id} title={video.title} class="rounded-b-none" />
                   <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-[var(--color-light-text)]">
                       {video.title}

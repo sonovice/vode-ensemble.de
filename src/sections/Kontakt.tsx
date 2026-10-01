@@ -67,7 +67,7 @@ const Kontakt: Component = () => {
                         </h2>
                         <p
                             class="text-lg text-[var(--color-light-text)]/80 mb-4"
-                            innerHTML={t('contact.paragraph3', {}, 'Für Buchungsanfragen oder sonstige Anliegen erreichst du Maria Waloschek und Feli Ammer über <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.')}
+                            innerHTML={t('contact.paragraph3', {}, 'Für Buchungsanfragen oder sonstige Anliegen erreichst du Maria Anna Waloschek und Felicitas Ammer über <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.')}
                         />
                     </div>
                 </div>

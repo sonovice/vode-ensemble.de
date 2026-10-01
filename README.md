@@ -1,36 +1,40 @@
-## Usage
+# vode-ensemble.de
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+Website of the vocal ensemble vode (vode e.V.), built with [SolidJS](https://solidjs.com), Vite and Tailwind CSS.
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
-
-```bash
-$ npm install # or pnpm install or yarn install
+```sh
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # writes dist/
+npm run serve    # serves dist/ locally, like GitHub Pages
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+Pushes to `main` are deployed to GitHub Pages by `.github/workflows/deploy.yml`.
 
-## Available Scripts
+## Where things live
 
-In the project directory, you can run:
+| What | Where |
+| --- | --- |
+| Texts (German and English) | `src/i18n/de.ts`, `src/i18n/en.ts` |
+| Concerts | `concerts` in `src/sections/Konzerte.tsx`; a `tickets` URL shows a button while the concert is upcoming |
+| Members and directors | `src/sections/Ensemble.tsx`, portraits in `public/images/portraits` |
+| Recordings and videos | `src/sections/Media.tsx`, audio in `public/audio` |
+| Academy films | `src/data/films.ts` |
+| Academy scores and tutorials | `src/pages/AcademyMaterial.tsx`, PDFs in `public/material` |
+| Press kit | `src/data/pressKit.ts`, see `tools/presskit/README.md` |
+| Routes | `src/App.tsx` |
+| Page titles, descriptions, share images | `src/data/pages.ts` |
+| Privacy policy and legal notice | `src/pages/Impressum.tsx` |
 
-### `npm run dev` or `npm start`
+## Adding a page
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Add the route in `src/App.tsx` and an entry in `src/data/pages.ts`. The build writes one HTML file per entry (`tools/page-meta.ts`), so GitHub Pages answers the page with status 200 and its own title and share preview, and the page is added to `sitemap.xml` unless `sitemap` is `false`.
 
-The page will reload if you make edits.<br>
+## YouTube videos
 
-### `npm run build`
+Embed videos with `src/components/YouTubeEmbed.tsx`. It shows a local poster and only loads the player from youtube-nocookie.com after a click, as the privacy policy describes. Put the poster at `public/images/video/<id>.jpg`, for example a copy of `https://i.ytimg.com/vi/<id>/maxresdefault.jpg`.
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+## Tools
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
-
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+- `tools/presskit` builds the press kit PDFs and ZIP.
+- `tools/youtube-thumbnail` renders YouTube thumbnails in the site's look.

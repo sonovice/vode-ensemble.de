@@ -15,15 +15,8 @@ const en: BaseDictionary = {
 	hero: {
 		mainTitle: "Vocal Jazz",
 		subTitle: "& Pop",
-	},
-	feature: {
-		sectionTag: "New",
-		title: "vode × New York Voices",
-		songTitle: "Bli-Blip",
-		intro: 'Over a year in the making – we\'re thrilled to finally share our secret collaboration with the legendary <a href="https://newyorkvoices.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">New York Voices</a>!',
-		story1: 'It all began at the Black Forest Voices Festival in June 2024, where Kim Nazarian from the <a href="https://newyorkvoices.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">New York Voices</a> coached our ensemble. From this encounter, the idea for this special collaboration was born.',
-		story2: "The arrangement originally comes from Darmon Meader (New York Voices) and Michael Abene. Our bassist Manuel Grunden transformed it into a pure a cappella version – while also taking on production, mixing, and video editing.",
-		story3: 'In November 2024, we recorded our part at Fattoria Musica with <a href="https://juliusgass.de/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">Julius Gass</a>. A year after the first meeting, we shot the music video at the beautiful Cafe Cup in Detmold – with great support from <a href="https://larshenrik.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent)] hover:underline">Lars Henrik</a>.',
+		concerts: "Concerts",
+		listen: "Listen",
 	},
 	ensemble: {
 		sectionTag: "About us",
@@ -44,7 +37,7 @@ const en: BaseDictionary = {
 		voiceBass: "Bass",
 		leadershipTitle: "Leadership",
 		leadershipParagraph:
-			"Solo, compositional, or organizational parts are taken on by various members. The overall artistic responsibility for the rehearsal process and concert design lies with Katharina Gärtner and Simon Herten. The organizational management of the ensemble and booking are handled by Feli Ammer and Maria Waloschek.",
+			"Solo, compositional, or organizational parts are taken on by various members. The overall artistic responsibility for the rehearsal process and concert design lies with Katharina Gärtner and Simon Herten. The organizational management of the ensemble and booking are handled by Felicitas Ammer and Maria Anna Waloschek.",
 		websiteLinkText: "Website",
 		maybeYouName: "Maybe you?",
 		maybeYouDescriptionBass:
@@ -62,6 +55,7 @@ const en: BaseDictionary = {
 		pastTitle: "Past Concerts",
 		noPastForYearFallback: "No concerts archived for this year.",
 		timeSuffix: "", // Rely on toLocaleTimeString for AM/PM etc.
+		tickets: "Tickets",
 	},
 	academy: {
 		title: "vode academy", // Or simply "Academy"
@@ -210,8 +204,6 @@ const en: BaseDictionary = {
 		title: "Insights and Press Material",
 		paragraph1:
 			"Here you will find a selection of our latest recordings, videos, and our press kit.",
-		paragraph2:
-			"We are constantly working on new material. Check back soon for the latest updates.",
 		instagramAriaLabel: "Vode Ensemble on Instagram",
 		facebookAriaLabel: "Vode Ensemble on Facebook",
 		recordingsTitle: "Recordings",
@@ -247,7 +239,7 @@ const en: BaseDictionary = {
 			'For even more, including exclusive insights, backstage news, and the opportunity to actively support us, you can find our <a href="#support" class="text-[var(--color-accent)] hover:underline">Community Updates</a> here.',
 		subtitle2: "Booking & Inquiries",
 		paragraph3:
-			'For booking or general inquiries, you can reach Maria Waloschek and Feli Ammer at <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
+			'For booking or general inquiries, you can reach Maria Anna Waloschek and Felicitas Ammer at <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
 	},
 	adventskalender: {
 		sectionTag: "Advent Calendar",
@@ -261,33 +253,32 @@ const en: BaseDictionary = {
 		backIconTitle: "Back arrow",
 	},
 	support: {
-		imageAlt: "Supporting Vode Ensemble",
 		sectionTag: "Support",
-		title: "Support Us",
-		introParagraph1:
-			"Our projects are sustained by the great commitment of all ensemble members and the financial help of our supporters. Every contribution helps us to carry out rehearsal phases and concerts, commission new compositions and arrangements, finance room rentals, and realize recordings and videos.",
-		introParagraph2:
-			"As a non-profit association, we are able to issue certificates for contributions and donations. If required, please write to us at: mail@vode-ensemble.de",
-		friendsTitle: "Friends and Patrons",
-		friendsParagraph1:
-			"Become part of the vode community by supporting our work with a regular contribution of your choice. This gives you access to our community updates, a behind-the-scenes look at how new project ideas are developed, insights into our rehearsals, and of course, you'll be the first to know about new concerts. This form of support allows for long-term planning and is therefore very valuable to us.",
-		friendsParagraph2:
-			'For more information, write to us at <a href="mailto:mail@vode–ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode–ensemble.de</a>.',
-		donationsTitle: "Donations",
-		donationsParagraph1:
-			"If you would like to support us with a one-time donation, we gratefully accept donations via bank transfer.",
-		// PayPal account temporarily blocked / PayPal-Konto vorübergehend gesperrt
-		// paypalButtonText: "Donate via PayPal",
-		donationsReferenceLabel: "Reference:",
-		donationsReferenceValue: "Donation",
-		sponsorsTitle: "Sponsors",
-		sponsorsParagraph1:
-			"To show our appreciation, we also want to give something back and publicly thank sponsors for their cultural commitment. Sponsors are acknowledged on concert posters, flyers, or program booklets by featuring their logos or names. Additionally, we promote our sponsors through our digital channels.",
-		closingParagraph:
-			"Thank you! Your financial contributions make culture possible and allow us to create musical encounters together!",
+		title: "Support us",
+		intro: "Behind every concert are rehearsal weekends, new arrangements, venue hire, recordings and videos. We carry much of it through our own commitment – and it is made possible by the people who support us.",
+		membersTitle: "Become a supporting member",
+		membersText: "A regular contribution of an amount you choose lets us plan ahead. In return, our community updates bring you close: insights into rehearsals, new project ideas and concert dates before anyone else.",
+		membersAction: "Become a member",
+		membersSubject: "Supporting membership at vode",
+		donationsTitle: "Make a donation",
+		donationsText: "Every transfer helps, whatever the amount.",
+		recipient: "Recipient",
+		bank: "Bank",
+		reference: "Reference",
+		referenceValue: "Spende",
+		copyIban: "Copy IBAN",
+		ibanCopied: "IBAN copied",
+		sponsorsTitle: "Become a sponsor",
+		sponsorsText: "Companies and foundations that support us are credited on posters, flyers and in programmes, and thanked publicly on our channels.",
+		sponsorsAction: "Ask about sponsorship",
+		sponsorsSubject: "Sponsorship for vode",
+		receipt: '<strong class="text-[var(--color-light-text)]">Thank you!</strong> As a non-profit association, we are happy to issue a donation receipt. Just write to us at <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
 	},
 	lightbox: {
 		close: "Close image",
+	},
+	video: {
+		play: "Play video",
 	},
 	academyPage: {
 		title: "vode academy",
@@ -314,7 +305,6 @@ const en: BaseDictionary = {
 		filmReleaseOn: "The film will be released on",
 		teaser: "A glimpse of “Chor macht Schule”",
 		teaserPosterAlt: "Participants warming up with movement",
-		play: "Play video",
 		offerTitle: "Work with vode",
 		offerIntro: "Choir directors, schools and organisers can work with us in several ways. The scope and ensemble size depend on the project.",
 		expertTitle: "Coaching on a specific topic",

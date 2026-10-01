@@ -15,7 +15,7 @@ interface Singer {
 
 const members: Record<string, Singer[]> = {
     "Sopran": [
-        { name: "Feli Ammer", image: "/images/portraits/f_grunden_1.jpg", website: "https://instagram.com/feliammer", description: "Sängerin, Musikpädagogin" },
+        { name: "Felicitas Ammer", image: "/images/portraits/f_grunden_1.jpg", website: "https://instagram.com/feliammer", description: "Sängerin, Musikpädagogin" },
         { name: "Tabea Sawatzky", image: "/images/portraits/t_sawatzky_1.jpg" },
         { name: "Liane Prager", image: "/images/portraits/l_prager_1.jpg" },
         { name: "Kristina Hügel", image: "/images/portraits/k_huegel_2.jpg" },
@@ -261,7 +261,7 @@ const Ensemble: Component = () => {
                     </p>
 
                     {(() => {
-                        const leitungNames = ["Katharina Gärtner", "Simon Herten", "Feli Ammer", "Maria Anna Waloschek"];
+                        const leitungNames = ["Katharina Gärtner", "Simon Herten", "Felicitas Ammer", "Maria Anna Waloschek"];
                         const leitungMembers: Singer[] = [];
 
                         for (const part of voicePartOrder) {

@@ -11,7 +11,7 @@ const Impressum: Component = () => {
                     </p>
                 </div>
 
-                <h2 class="text-2xl font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
+                <h2 class="text-2xl font-semibold mb-2">Angaben gemäß § 5 DDG</h2>
                 <p class="mb-1">vode e.V.</p>
                 <p class="mb-1">Mauerstr. 46</p>
                 <p class="mb-4">33602 Bielefeld</p>
@@ -233,7 +233,57 @@ const Impressum: Component = () => {
                 </p>
 
                 <h3 class="text-xl font-semibold mt-6 mb-2">
-                    5. Ihre Rechte als betroffene Person
+                    5. Eingebettete YouTube-Videos
+                </h3>
+                <p class="mb-2">
+                    Auf unserer Website zeigen wir Videos, die bei YouTube veröffentlicht
+                    sind. Anbieter ist die Google Ireland Limited, Gordon House, Barrow
+                    Street, Dublin 4, Irland. Beim Aufruf unserer Seiten wird zunächst
+                    nur ein Vorschaubild von unserem eigenen Server geladen; es werden
+                    dabei keine Daten an YouTube übertragen.
+                </p>
+                <p class="mb-2">
+                    Erst wenn Sie ein Video durch Klick starten, wird der Player im
+                    erweiterten Datenschutzmodus von www.youtube-nocookie.com geladen.
+                    Dabei werden insbesondere Ihre IP-Adresse, Informationen zu Ihrem
+                    Browser und die aufgerufene Seite an YouTube bzw. Google übermittelt;
+                    eine Übermittlung in die USA ist möglich. Google ist unter dem EU-U.S.
+                    Data Privacy Framework zertifiziert. YouTube kann beim Abspielen
+                    Cookies oder vergleichbare Technologien einsetzen.
+                </p>
+                <p class="mb-2">
+                    Rechtsgrundlage ist Ihre Einwilligung, die Sie durch den Klick auf das
+                    Video erteilen (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Sie
+                    können sie für die Zukunft widerrufen, indem Sie keine weiteren Videos
+                    starten und die Cookies von YouTube in Ihrem Browser löschen. Weitere
+                    Informationen finden Sie in der Datenschutzerklärung von Google: 
+                    <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-[var(--color-accent)] hover:underline"
+                    >
+                        https://policies.google.com/privacy
+                    </a>
+                </p>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">
+                    6. Newsletter und soziale Netzwerke
+                </h3>
+                <p class="mb-2">
+                    Unsere Website enthält einfache Links zu unserer Newsletter-Anmeldung
+                    beim Versanddienst Mailchimp (The Rocket Science Group LLC, USA) sowie
+                    zu unseren Profilen bei Instagram und Facebook (Meta Platforms Ireland
+                    Limited). Erst wenn Sie einem solchen Link folgen, verlassen Sie
+                    unsere Website; für die Verarbeitung Ihrer Daten auf diesen Seiten
+                    gelten die Datenschutzhinweise des jeweiligen Anbieters. Für die
+                    Anmeldung zu unserem Newsletter ist das Mailchimp-Formular
+                    maßgeblich, in dem Sie Ihre Einwilligung erteilen und das Ihnen auch
+                    die Abmeldung ermöglicht.
+                </p>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">
+                    7. Ihre Rechte als betroffene Person
                 </h3>
                 <p class="mb-2">
                     Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit
@@ -274,7 +324,7 @@ const Impressum: Component = () => {
                 </p>
 
                 <h3 class="text-xl font-semibold mt-6 mb-2">
-                    6. Beschwerderecht bei der zuständigen Aufsichtsbehörde
+                    8. Beschwerderecht bei der zuständigen Aufsichtsbehörde
                 </h3>
                 <p class="mb-2">
                     Unbeschadet eines anderweitigen verwaltungsrechtlichen oder
@@ -307,7 +357,7 @@ const Impressum: Component = () => {
                 </p>
 
                 <h3 class="text-xl font-semibold mt-6 mb-2">
-                    7. Änderung dieser Datenschutzerklärung
+                    9. Änderung dieser Datenschutzerklärung
                 </h3>
                 <p class="mb-2">
                     Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie
@@ -316,7 +366,7 @@ const Impressum: Component = () => {
                     z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt
                     dann die neue Datenschutzerklärung.
                 </p>
-                <p class="font-semibold">Stand: Mai 2024</p>
+                <p class="font-semibold">Stand: Oktober 2026</p>
             </section>
         </div>
     );

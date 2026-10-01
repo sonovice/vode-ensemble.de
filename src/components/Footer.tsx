@@ -7,7 +7,7 @@ const Footer: Component = () => {
                 <div>Copyright © {new Date().getFullYear()} vode e.V.</div>
                 <div class="hidden sm:block">&nbsp;|&nbsp;</div>
                 <div>
-                    <a href="impressum" class="underline">Impressum</a>
+                    <a href="/impressum" class="underline">Impressum</a>
                 </div>
             </div>
 

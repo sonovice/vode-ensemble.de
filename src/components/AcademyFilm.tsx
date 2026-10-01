@@ -1,6 +1,7 @@
-import { type Component, Show, createSignal } from "solid-js";
+import { type Component, Show } from "solid-js";
 import { useI18n } from "../i18n";
 import AcademyStill from "./AcademyStill";
+import YouTubeEmbed from "./YouTubeEmbed";
 import { documentary, teaser } from "../data/films";
 
 type Film = { youtubeId?: string; releaseAt?: Date; poster: string };
@@ -19,7 +20,6 @@ const releasedId = (film: Film) =>
 
 const AcademyFilm: Component<{ kind: keyof typeof academyFilms; sizes: string; caption?: boolean }> = (props) => {
     const { t, locale } = useI18n();
-    const [playing, setPlaying] = createSignal(false);
     const film = () => academyFilms[props.kind];
     const title = () => t(`academyPage.${props.kind}`);
     const soonNote = () => {
@@ -36,33 +36,13 @@ const AcademyFilm: Component<{ kind: keyof typeof academyFilms; sizes: string; c
             <Show
                 when={releasedId(film())}
                 fallback={
-                    <div class="academy-video-frame">
+                    <div class="video-frame">
                         <AcademyStill name={film().poster} alt={t(`academyPage.${props.kind}PosterAlt`)} sizes={props.sizes} />
                         <p class="academy-video-soon">{soonNote()}</p>
                     </div>
                 }
             >
-                {id => (
-                    <Show
-                        when={playing()}
-                        fallback={
-                            <button type="button" class="academy-video-frame academy-video-button" onClick={() => setPlaying(true)} aria-label={`${t('academyPage.play')}: ${title()}`}>
-                                <AcademyStill name={film().poster} alt="" sizes={props.sizes} />
-                                <span class="academy-video-play" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 4v16l13-8z" /></svg>
-                                </span>
-                            </button>
-                        }
-                    >
-                        <iframe
-                            class="academy-video-frame"
-                            src={`https://www.youtube.com/embed/${id()}?enablejsapi=1&autoplay=1&rel=0`}
-                            title={title()}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                        />
-                    </Show>
-                )}
+                {id => <YouTubeEmbed id={id()} title={title()} poster={<AcademyStill name={film().poster} alt="" sizes={props.sizes} />} />}
             </Show>
             <Show when={props.caption}>
                 <figcaption>{title()}</figcaption>

@@ -55,6 +55,10 @@ const Hero: Component = () => {
                     <span class="block text-6xl md:text-8xl lg:text-9xl">{t('hero.mainTitle', {}, 'Vocal Jazz')}</span>
                     <span class="block text-6xl md:text-8xl lg:text-9xl mt-1 md:mt-2">{t('hero.subTitle', {}, '& Pop')}</span>
                 </h1>
+                <div class="mt-8 md:mt-10 flex flex-wrap justify-center gap-3">
+                    <a href="#konzerte" class="inline-flex items-center min-h-12 px-6 rounded-lg bg-[var(--color-accent)] text-white font-bold hover:bg-[var(--color-accent-hover)] transition-colors">{t('hero.concerts')}</a>
+                    <a href="#media" class="inline-flex items-center min-h-12 px-6 rounded-lg border border-white/70 bg-black/30 text-white font-bold hover:bg-black/50 transition-colors">{t('hero.listen')}</a>
+                </div>
             </div>
         </div>
     );

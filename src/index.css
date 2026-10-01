@@ -67,3 +67,17 @@ h2 {
 .animate-lightbox-in {
     animation: lightbox-in 0.2s ease-out;
 }
+
+/* Click-to-load YouTube player (components/YouTubeEmbed.tsx) */
+@layer components {
+    .video-frame { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 0; border-radius: .5rem; background: var(--color-dark-alt); }
+    .video-frame img { width: 100%; height: 100%; object-fit: cover; }
+    .video-button { cursor: pointer; }
+    .video-play { position: absolute; inset: 0; display: grid; place-items: center; }
+    .video-play svg { width: 4.5rem; height: 4.5rem; padding: 1.25rem; background: var(--color-accent); border-radius: 50%; color: #fff; transition: background-color .2s; }
+    .video-button:hover .video-play svg { background: var(--color-accent-hover); }
+    .video-button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+        .video-play svg { transition: none; }
+    }
+}
