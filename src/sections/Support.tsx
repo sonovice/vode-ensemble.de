@@ -42,9 +42,9 @@ const Support: Component = () => {
                 </div>
 
                 <div class="mt-12 md:mt-16 grid gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
-                    <Way number="01" title={t('support.membersTitle') ?? ""} text={t('support.membersText') ?? ""}>
-                        <a href={mailto(t('support.membersSubject'))} class={`${buttonClass} bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)]`}>
-                            {t('support.membersAction')}
+                    <Way number="01" title={t('support.friendsTitle') ?? ""} text={t('support.friendsText') ?? ""}>
+                        <a href={mailto(t('support.friendsSubject'))} class={`${buttonClass} bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)]`}>
+                            {t('support.friendsAction')}
                         </a>
                     </Way>
 
