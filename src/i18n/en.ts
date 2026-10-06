@@ -347,7 +347,7 @@ const en: BaseDictionary = {
 		versions: {
 			aCappella: "A cappella",
 			saPiano: "SA and piano",
-			pianoPart: "Piano part",
+			pianoAccompaniment: "Piano accompaniment",
 		},
 		categories: {
 			rounds: {

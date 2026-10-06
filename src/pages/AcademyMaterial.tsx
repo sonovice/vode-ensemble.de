@@ -43,7 +43,7 @@ const categories: { key: string; pieces: Piece[] }[] = [
                 scores: [
                     { file: "Whenever I sing - a cappella - vode academy.pdf", pages: 11, versionKey: "aCappella" },
                     { file: "Whenever I sing - SA und Klavier - vode academy.pdf", pages: 5, versionKey: "saPiano" },
-                    { file: "Whenever I sing - Klavierstimme - vode academy.pdf", pages: 5, versionKey: "pianoPart" },
+                    { file: "Whenever I sing - Klavierbegleitung - vode academy.pdf", pages: 5, versionKey: "pianoAccompaniment" },
                 ],
             },
         ],
