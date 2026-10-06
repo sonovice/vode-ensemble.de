@@ -348,6 +348,7 @@ const de: BaseDictionary = {
 		versions: {
 			aCappella: "A cappella",
 			saPiano: "SA und Klavier",
+			pianoPart: "Klavierstimme",
 		},
 		categories: {
 			rounds: {
