@@ -18,8 +18,8 @@ const formats = [
 ];
 
 // Project names are proper nouns; descriptive titles are translated.
-const pastProjects: { year: number; name?: string; titleKey?: string; href?: string }[] = [
-    { year: 2026, titleKey: "marienmuenster" },
+const pastProjects: { year: number; name?: string; titleKey?: string; noteKey?: string; href?: string }[] = [
+    { year: 2026, titleKey: "marienmuenster", noteKey: "marienmuensterFunding", href: "https://www.radiohochstift.de/service/veranstaltungstipps/122148.html" },
     { year: 2025, name: "Chor macht Schule", href: "/academy-2025" },
     { year: 2023, titleKey: "vechta", href: "https://www.mynewsdesk.com/de/universitaet-vechta/pressreleases/konzerte-musikstudierende-der-uni-vechta-treten-bei-aussergewoehnlichen-kooperationsprojekten-auf-3239461" },
 ];
@@ -131,13 +131,18 @@ const AcademyPage: Component = () => {
                         <For each={pastProjects}>{project => (
                             <li>
                                 <span>{project.year}</span>
-                                <Show when={project.href} fallback={projectTitle(project)}>
-                                    {href => (
-                                        <a href={href()} {...(href().startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
-                                            {projectTitle(project)}
-                                        </a>
-                                    )}
-                                </Show>
+                                <div>
+                                    <Show when={project.href} fallback={projectTitle(project)}>
+                                        {href => (
+                                            <a href={href()} {...(href().startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                                                {projectTitle(project)}
+                                            </a>
+                                        )}
+                                    </Show>
+                                    <Show when={project.noteKey}>
+                                        {noteKey => <p class="academy-archive-note">{t(`academyPage.${noteKey()}`)}</p>}
+                                    </Show>
+                                </div>
                             </li>
                         )}</For>
                     </ul>

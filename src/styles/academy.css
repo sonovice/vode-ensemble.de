@@ -81,6 +81,7 @@
 .academy-archive span { color: var(--color-light); }
 .academy-archive a { text-decoration: underline; }
 .academy-archive a:hover { color: var(--color-light); }
+.academy-archive-note { margin-top: .25rem; font-size: .875rem; color: var(--color-light); max-width: 34rem; }
 
 /* Home teaser */
 .academy-intro-grid { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 5rem); }
