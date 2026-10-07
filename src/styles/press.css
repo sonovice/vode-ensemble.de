@@ -15,6 +15,10 @@
 .press-button:hover { background: var(--color-accent-hover); }
 .press-button-secondary { background: transparent; color: var(--color-light-text); border-color: rgb(245 245 245 / .45); }
 .press-button-secondary:hover { background: var(--color-surface-alt); }
+.press-quote { max-width: 68ch; margin-top: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--color-accent); }
+.press-quote blockquote { line-height: 1.6; }
+.press-quote figcaption { margin-top: .375rem; font-size: .875rem; color: var(--color-light); }
+.press-quote:last-of-type { margin-bottom: 1rem; }
 .press-link { display: inline-block; padding-block: .5rem; font-size: .875rem; text-decoration: underline; text-underline-offset: .2em; color: rgb(245 245 245 / .8); }
 .press-link:hover { color: var(--color-light-text); }
 

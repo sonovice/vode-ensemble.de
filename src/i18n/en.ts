@@ -291,6 +291,8 @@ const en: BaseDictionary = {
 		appearanceText: "Katharina Gärtner and Felicitas Ammer present “Chor macht Schule” in a workshop and try out elements of it with participants.",
 		appearanceLink: "View the workshop",
 		motivationTitle: "Why we do this",
+		participantQuote: "“You’re welcome here, you can join in, you can sing along – your voice is heard here, and it’s needed.”",
+		participantQuoteSource: "Participant, Chor macht Schule 2025",
 		motivationText: "We want people to experience how their voice is heard and needed in a group. We bring our experience in vocal coaching, teaching, sound engineering, arranging and composition. As in our own rehearsals, those involved take responsibility for the music.",
 		audienceText: "How should a line sound? What image fits a word? We work that out together. Participants experience how their own ideas change the sound.",
 		motivationSingingAlt: "vode singers singing among the participants",

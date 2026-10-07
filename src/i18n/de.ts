@@ -292,6 +292,8 @@ const de: BaseDictionary = {
 		appearanceText: "Katharina Gärtner und Felicitas Ammer stellen „Chor macht Schule“ in einem Workshop vor und probieren Elemente daraus gemeinsam aus.",
 		appearanceLink: "Zum Workshop",
 		motivationTitle: "Warum wir das tun",
+		participantQuote: "„Du bist willkommen, du kannst mitmachen, du kannst mitsingen, deine Stimme wird hier auch gehört und gebraucht.“",
+		participantQuoteSource: "Teilnehmerin, Chor macht Schule 2025",
 		motivationText: "Wir möchten, dass Menschen erleben, wie ihre Stimme in einer Gruppe gehört und gebraucht wird. Dafür bringen wir unsere Erfahrungen aus Vocal Coaching, Schule, Tontechnik, Arrangement und Komposition mit. Wie in unseren eigenen Proben übernehmen die Beteiligten Verantwortung für die Musik.",
 		audienceText: "Wie soll eine Zeile klingen? Welches Bild passt zu einem Wort? Das handeln wir gemeinsam aus. Dabei erfahren Teilnehmende, wie ihre eigenen Ideen den Klang verändern.",
 		motivationSingingAlt: "Sänger:innen von vode singen mitten zwischen den Teilnehmenden",

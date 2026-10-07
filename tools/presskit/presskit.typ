@@ -249,6 +249,12 @@
     grid(columns: (1fr, 1fr), column-gutter: 10mm,
       body((rest.join(". "),)),
       body((k.academy.at(1),)))
+    v(4mm)
+    grid(columns: (1fr, 1fr), column-gutter: 10mm,
+      ..k.academyQuotes.map(quote => block(inset: (left: 4mm), stroke: (left: 0.8mm + accent), {
+        block(below: 2mm, text(size: 9.5pt, weight: 700, hyphenate: false, quote.text))
+        text(size: 8pt, fill: muted)[#quote.name, #quote.role]
+      })))
     v(1fr)
     text(size: 9pt, weight: 700)[#k.academyLink #h(2mm) #text(fill: accent)[#data.contact.website/academy]]
   })

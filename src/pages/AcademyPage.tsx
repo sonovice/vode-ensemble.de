@@ -68,6 +68,10 @@ const AcademyPage: Component = () => {
                     </div>
                 </div>
                 <div class="container mx-auto px-4">
+                    <figure class="academy-quote">
+                        <blockquote>{t('academyPage.participantQuote')}</blockquote>
+                        <figcaption>{t('academyPage.participantQuoteSource')}</figcaption>
+                    </figure>
                     <aside class="academy-radio" aria-label={t('academyPage.radioTitle')}>
                         <img src="/audio/dlf-kultur_2025-11-11.png" alt={t('academy.audioCoverAlt')} loading="lazy" width="768" height="768" />
                         <div>

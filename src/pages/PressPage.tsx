@@ -149,6 +149,12 @@ const PressPage: Component = () => {
                     <div>
                         <h2>{k().academyTitle}</h2>
                         <p class="press-copy">{k().academy[1]}</p>
+                        <For each={k().academyQuotes}>{quote => (
+                            <figure class="press-quote">
+                                <blockquote>{quote.text}</blockquote>
+                                <figcaption>{quote.name}, {quote.role}</figcaption>
+                            </figure>
+                        )}</For>
                         <a class="press-link" href="/academy">{k().academyLink}</a>
 
                         <h2 class="press-subsection">{k().videosTitle}</h2>

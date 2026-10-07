@@ -118,6 +118,11 @@ const de = {
         "Singen ist für uns mehr als Kunst – es ist Haltung. In einer Gruppe zu musizieren bedeutet, auf sich selbst zu hören und der eigenen Stimme Raum zu geben, aber genauso auf die anderen Stimmen Acht zu geben. Das ist es, was am Ende zu einem harmonischen Miteinander führt – auf der Bühne wie im Leben.",
         "Bei vode bringen rund 20 Musiker:innen ganz unterschiedliche Kompetenzen zusammen: Vocal Coaching, Schulpädagogik, Tontechnik, Arrangement und Komposition. Aus dieser Vielfalt ist eine besondere Probenkultur entstanden, in der jede:r Einzelne das Gesamtergebnis mitgestaltet. Dieses Prinzip – dass es auf jede einzelne Stimme ankommt – geben wir in Workshops, Coachings und Chorprojekten weiter, etwa 2025 bei „Chor macht Schule“ mit Jugendlichen aus Schulchören der Region.",
     ],
+    // From the film "Chor macht Schule"; wording lightly smoothed, meaning unchanged.
+    academyQuotes: [
+        { text: "„Die Idee ist, dass wir uns als Chor mit in die Probe setzen, zwischen die Teilnehmenden, damit sich das sofort mischt und man auch als Gruppe zusammenfindet.“", name: "Tobias Hägele", role: "Sänger bei vode" },
+        { text: "„Ein großes Erfolgserlebnis in der Arbeit mit Jugendlichen ist für mich, dass man sieht, dass hinter den Augen etwas passiert.“", name: "Katharina Gärtner", role: "Leiterin von vode" },
+    ],
     academyLink: "Mehr zur vode academy",
     stillCredit: "Standbild aus „Chor macht Schule“ · Film: Roman Schauerte",
     downloadsTitle: "Fotos, Logos & Texte",
@@ -215,6 +220,10 @@ const en: PressKitText = {
     academy: [
         "For us, singing is more than art – it is an attitude. Making music in a group means listening to yourself and giving your own voice space, but equally paying attention to the other voices. That is what ultimately leads to harmony – on stage as in life.",
         "At vode, around 20 musicians bring together very different skills: vocal coaching, school teaching, sound engineering, arranging and composition. This diversity has shaped a distinctive rehearsal culture in which everyone helps shape the result. We pass on this principle – that every single voice matters – in workshops, coaching sessions and choral projects, such as “Chor macht Schule” in 2025 with young people from school choirs in the region.",
+    ],
+    academyQuotes: [
+        { text: "“The idea is that we as a choir sit in on the rehearsal, right among the participants, so that everything mixes straight away and people come together as a group.”", name: "Tobias Hägele", role: "singer with vode" },
+        { text: "“For me, one of the great rewards of working with young people is seeing that something is happening behind their eyes.”", name: "Katharina Gärtner", role: "director of vode" },
     ],
     academyLink: "More about vode academy",
     stillCredit: "Still from “Chor macht Schule” · film: Roman Schauerte",

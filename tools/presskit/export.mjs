@@ -34,7 +34,7 @@ for (const [lang, k] of Object.entries(pressKit)) {
         section(k.texts.standard, k.standard),
         section(k.texts.long, k.long),
         leadership,
-        section(k.academyTitle, k.academy),
+        section(k.academyTitle, [...k.academy, ...k.academyQuotes.map(q => `${q.text}\n${q.name}, ${q.role}`)]),
         `${k.contactTitle}\n${"=".repeat(k.contactTitle.length)}\n\n${pressContact.name} · ${pressContact.email} · ${pressContact.website}\n`,
     ].join("\n"));
 }
