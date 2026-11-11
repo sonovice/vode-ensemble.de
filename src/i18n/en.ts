@@ -37,7 +37,7 @@ const en: BaseDictionary = {
 		voiceBass: "Bass",
 		leadershipTitle: "Leadership",
 		leadershipParagraph:
-			"Solo, compositional, or organizational parts are taken on by various members. The overall artistic responsibility for the rehearsal process and concert design lies with Katharina Gärtner and Simon Herten. The organizational management of the ensemble and booking are handled by Felicitas Ammer and Maria Anna Waloschek.",
+			"Solo, compositional, or organizational parts are taken on by various members. The overall artistic responsibility for the rehearsal process and concert design lies with Katharina Gärtner and Simon Herten. The organizational management of the ensemble is handled by Felicitas Ammer and Maria Anna Waloschek; booking is handled by Maria Anna Waloschek.",
 		websiteLinkText: "Website",
 		maybeYouName: "Maybe you?",
 		maybeYouDescriptionBass:
@@ -239,7 +239,7 @@ const en: BaseDictionary = {
 			'For even more, including exclusive insights, backstage news, and the opportunity to actively support us, you can find our <a href="#support" class="text-[var(--color-accent)] hover:underline">Community Updates</a> here.',
 		subtitle2: "Booking & Inquiries",
 		paragraph3:
-			'For booking or general inquiries, you can reach Maria Anna Waloschek and Felicitas Ammer at <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
+			'For booking or general inquiries, you can reach Maria Anna Waloschek at <a href="mailto:mail@vode-ensemble.de" class="text-[var(--color-accent)] hover:underline">mail@vode-ensemble.de</a>.',
 	},
 	adventskalender: {
 		sectionTag: "Advent Calendar",
